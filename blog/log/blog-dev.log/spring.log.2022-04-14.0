@@ -1,0 +1,761 @@
+2022-04-14 17:53:45.834  INFO 11340 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 11340 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 17:53:45.838  INFO 11340 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 17:53:45.887  INFO 11340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 17:53:45.888  INFO 11340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 17:53:46.499  INFO 11340 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 17:53:46.512  INFO 11340 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2022-04-14 17:53:47.266  INFO 11340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 17:53:47.274  INFO 11340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 17:53:47.274  INFO 11340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 17:53:47.378  INFO 11340 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 17:53:47.378  INFO 11340 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1490 ms
+2022-04-14 17:53:47.598  INFO 11340 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 17:53:47.639  INFO 11340 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 17:53:47.751  INFO 11340 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 17:53:47.839  INFO 11340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 17:53:48.195  INFO 11340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 17:53:48.212  INFO 11340 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 17:53:48.418  INFO 11340 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 17:53:48.428  INFO 11340 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 17:53:48.441  WARN 11340 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [D:\java-2018-12\blog\target\classes\com\ws\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+2022-04-14 17:53:48.441  INFO 11340 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 17:53:48.445  INFO 11340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 17:53:48.457  INFO 11340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 17:53:48.459  INFO 11340 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-14 17:53:48.467  INFO 11340 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-14 17:53:48.487 ERROR 11340 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [D:\java-2018-12\blog\target\classes\com\ws\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:448)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.ws.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 22 common frames omitted
+Caused by: java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at com.ws.aspect.LogAspect.<init>(LogAspect.java:14)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 24 common frames omitted
+
+2022-04-14 17:55:16.035  INFO 8748 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 8748 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 17:55:16.037  INFO 8748 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 17:55:16.084  INFO 8748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 17:55:16.085  INFO 8748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 17:55:16.649  INFO 8748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 17:55:16.659  INFO 8748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2022-04-14 17:55:17.208  INFO 8748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 17:55:17.214  INFO 8748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 17:55:17.215  INFO 8748 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 17:55:17.311  INFO 8748 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 17:55:17.311  INFO 8748 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1225 ms
+2022-04-14 17:55:17.488  INFO 8748 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 17:55:17.521  INFO 8748 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 17:55:17.600  INFO 8748 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 17:55:17.667  INFO 8748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 17:55:17.967  INFO 8748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 17:55:17.981  INFO 8748 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 17:55:18.126  INFO 8748 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 17:55:18.134  INFO 8748 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 17:55:18.146  WARN 8748 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [D:\java-2018-12\blog\target\classes\com\ws\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+2022-04-14 17:55:18.146  INFO 8748 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 17:55:18.150  INFO 8748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 17:55:18.158  INFO 8748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 17:55:18.159  INFO 8748 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-14 17:55:18.167  INFO 8748 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-14 17:55:18.184 ERROR 8748 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [D:\java-2018-12\blog\target\classes\com\ws\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:448)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.ws.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 22 common frames omitted
+Caused by: java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at com.ws.aspect.LogAspect.<init>(LogAspect.java:14)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 24 common frames omitted
+
+2022-04-14 17:56:09.136  INFO 5404 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 5404 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 17:56:09.136  INFO 5404 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 17:56:09.167  INFO 5404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 17:56:09.167  INFO 5404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 17:56:09.652  INFO 5404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 17:56:09.667  INFO 5404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2022-04-14 17:56:10.301  INFO 5404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 17:56:10.317  INFO 5404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 17:56:10.317  INFO 5404 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 17:56:10.410  INFO 5404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 17:56:10.410  INFO 5404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1243 ms
+2022-04-14 17:56:10.598  INFO 5404 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 17:56:10.645  INFO 5404 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 17:56:10.739  INFO 5404 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 17:56:10.832  INFO 5404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 17:56:11.145  INFO 5404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 17:56:11.160  INFO 5404 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 17:56:11.332  INFO 5404 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 17:56:11.348  INFO 5404 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 17:56:11.363  WARN 5404 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [D:\java-2018-12\blog\target\classes\com\ws\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+2022-04-14 17:56:11.363  INFO 5404 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 17:56:11.380  INFO 5404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 17:56:11.387  INFO 5404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 17:56:11.387  INFO 5404 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-14 17:56:11.402  INFO 5404 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-14 17:56:11.418 ERROR 5404 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [D:\java-2018-12\blog\target\classes\com\ws\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:448)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.ws.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 22 common frames omitted
+Caused by: java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at com.ws.aspect.LogAspect.<init>(LogAspect.java:14)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 24 common frames omitted
+
+2022-04-14 17:58:32.949  INFO 7140 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 7140 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 17:58:32.949  INFO 7140 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 17:58:32.996  INFO 7140 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 17:58:32.996  INFO 7140 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 17:58:33.488  INFO 7140 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 17:58:33.504  INFO 7140 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2022-04-14 17:58:34.176  INFO 7140 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 17:58:34.176  INFO 7140 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 17:58:34.176  INFO 7140 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 17:58:34.285  INFO 7140 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 17:58:34.285  INFO 7140 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1289 ms
+2022-04-14 17:58:34.489  INFO 7140 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 17:58:34.535  INFO 7140 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 17:58:34.645  INFO 7140 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 17:58:34.723  INFO 7140 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 17:58:35.113  INFO 7140 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 17:58:35.129  INFO 7140 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 17:58:35.348  INFO 7140 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 17:58:35.363  INFO 7140 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 17:58:35.379  WARN 7140 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [D:\java-2018-12\blog\target\classes\com\ws\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+2022-04-14 17:58:35.379  INFO 7140 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 17:58:35.395  INFO 7140 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 17:58:35.395  INFO 7140 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 17:58:35.395  INFO 7140 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-14 17:58:35.410  INFO 7140 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-14 17:58:35.426 ERROR 7140 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [D:\java-2018-12\blog\target\classes\com\ws\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:448)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.ws.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ws.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 22 common frames omitted
+Caused by: java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at com.ws.aspect.LogAspect.<init>(LogAspect.java:14)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 24 common frames omitted
+
+2022-04-14 18:04:28.283  INFO 7236 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 7236 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 18:04:28.285  INFO 7236 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 18:04:28.316  INFO 7236 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 18:04:28.317  INFO 7236 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 18:04:28.757  INFO 7236 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 18:04:28.766  INFO 7236 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-04-14 18:04:29.326  INFO 7236 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 18:04:29.333  INFO 7236 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 18:04:29.333  INFO 7236 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 18:04:29.431  INFO 7236 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 18:04:29.431  INFO 7236 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1114 ms
+2022-04-14 18:04:29.611  INFO 7236 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 18:04:29.645  INFO 7236 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 18:04:29.726  INFO 7236 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 18:04:29.791  INFO 7236 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 18:04:30.088  INFO 7236 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 18:04:30.100  INFO 7236 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 18:04:30.253  INFO 7236 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 18:04:30.262  INFO 7236 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 18:04:30.353  WARN 7236 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 18:04:30.641  INFO 7236 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 18:04:30.864  INFO 7236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 18:04:30.896  INFO 7236 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 18:04:30.905  INFO 7236 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 3.158 seconds (JVM running for 4.001)
+2022-04-14 18:04:31.045  INFO 7236 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 18:04:31.046  INFO 7236 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 18:04:31.047  INFO 7236 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-14 18:06:37.039  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 6004 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 18:06:37.039  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 18:06:37.127  INFO 6004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 18:06:37.127  INFO 6004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 18:06:37.637  INFO 6004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 18:06:37.647  INFO 6004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-04-14 18:06:38.214  INFO 6004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 18:06:38.220  INFO 6004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 18:06:38.221  INFO 6004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 18:06:38.317  INFO 6004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 18:06:38.317  INFO 6004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1189 ms
+2022-04-14 18:06:38.485  INFO 6004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 18:06:38.516  INFO 6004 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 18:06:38.595  INFO 6004 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 18:06:38.661  INFO 6004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 18:06:38.969  INFO 6004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 18:06:38.983  INFO 6004 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 18:06:39.142  INFO 6004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 18:06:39.150  INFO 6004 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 18:06:39.238  WARN 6004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 18:06:39.480  INFO 6004 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 18:06:39.691  INFO 6004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 18:06:39.724  INFO 6004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 18:06:39.733  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 3.275 seconds (JVM running for 4.028)
+2022-04-14 18:06:39.766  INFO 6004 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 18:06:39.766  INFO 6004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 18:06:39.767  INFO 6004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-14 18:06:39.848  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : -------------doBefore-----------
+2022-04-14 18:06:39.857  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : {}index
+2022-04-14 18:06:39.857  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : --------------doAfter--------------
+2022-04-14 18:06:42.992  INFO 6004 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : -------------doBefore-----------
+2022-04-14 18:06:42.992  INFO 6004 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : {}index
+2022-04-14 18:06:42.993  INFO 6004 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : --------------doAfter--------------
+2022-04-14 18:06:43.949  INFO 6004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : -------------doBefore-----------
+2022-04-14 18:06:43.949  INFO 6004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : {}index
+2022-04-14 18:06:43.949  INFO 6004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : --------------doAfter--------------
+2022-04-14 18:08:03.946  INFO 6004 --- [Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 18:08:03.949  INFO 6004 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 18:08:03.955  INFO 6004 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 18:08:04.216  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 6004 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 18:08:04.217  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 18:08:04.419  INFO 6004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 18:08:04.421  INFO 6004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-04-14 18:08:04.654  INFO 6004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 18:08:04.655  INFO 6004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 18:08:04.655  INFO 6004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 18:08:04.691  INFO 6004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 18:08:04.691  INFO 6004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 472 ms
+2022-04-14 18:08:04.746  INFO 6004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 18:08:04.749  INFO 6004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-04-14 18:08:04.768  INFO 6004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-04-14 18:08:04.768  INFO 6004 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 18:08:04.781  INFO 6004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 18:08:04.781  INFO 6004 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 18:08:04.820  WARN 6004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 18:08:05.005  INFO 6004 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 18:08:05.170  INFO 6004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 18:08:05.181  INFO 6004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 18:08:05.184  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 1.022 seconds (JVM running for 89.48)
+2022-04-14 18:08:05.186  INFO 6004 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-14 18:08:14.194  INFO 6004 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 18:08:14.195  INFO 6004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 18:08:14.196  INFO 6004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-14 18:08:14.203  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : -------------doBefore-----------
+2022-04-14 18:08:14.209  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 18:08:14.209  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : --------------doAfter--------------
+2022-04-14 18:08:15.189  INFO 6004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : -------------doBefore-----------
+2022-04-14 18:08:15.190  INFO 6004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 18:08:15.190  INFO 6004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : --------------doAfter--------------
+2022-04-14 20:13:31.258  INFO 6004 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:13:31.260  INFO 6004 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-04-14 20:13:31.269  INFO 6004 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-04-14 20:13:31.457  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 6004 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 20:13:31.457  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 20:13:31.624  INFO 6004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 20:13:31.626  INFO 6004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-14 20:13:31.800  INFO 6004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 20:13:31.801  INFO 6004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 20:13:31.802  INFO 6004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 20:13:31.822  INFO 6004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 20:13:31.823  INFO 6004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 362 ms
+2022-04-14 20:13:31.893  INFO 6004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 20:13:31.897  INFO 6004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-04-14 20:13:31.918  INFO 6004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-04-14 20:13:31.918  INFO 6004 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 20:13:31.935  INFO 6004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 20:13:31.935  INFO 6004 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:13:31.982  WARN 6004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 20:13:32.327  INFO 6004 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 20:13:32.614  INFO 6004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 20:13:32.649  INFO 6004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 20:13:32.655  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 1.238 seconds (JVM running for 7616.951)
+2022-04-14 20:13:32.657  INFO 6004 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-14 20:13:33.919  INFO 6004 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 20:13:33.921  INFO 6004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 20:13:33.922  INFO 6004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-14 20:13:33.932  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : org.apache.catalina.connector.RequestFacade@7834e123
+2022-04-14 20:13:33.937  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 20:13:34.164  INFO 6004 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:13:34.165  INFO 6004 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-04-14 20:13:34.170  INFO 6004 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-04-14 20:13:34.322  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 6004 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 20:13:34.323  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 20:13:34.432  INFO 6004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 20:13:34.433  INFO 6004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-04-14 20:13:34.521  INFO 6004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 20:13:34.522  INFO 6004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 20:13:34.522  INFO 6004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 20:13:34.537  INFO 6004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 20:13:34.537  INFO 6004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 213 ms
+2022-04-14 20:13:34.576  INFO 6004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 20:13:34.578  INFO 6004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-04-14 20:13:34.592  INFO 6004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-04-14 20:13:34.593  INFO 6004 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 20:13:34.601  INFO 6004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 20:13:34.602  INFO 6004 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:13:34.630  WARN 6004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 20:13:34.754  INFO 6004 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 20:13:34.900  INFO 6004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 20:13:34.910  INFO 6004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 20:13:34.914  INFO 6004 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 0.616 seconds (JVM running for 7619.209)
+2022-04-14 20:13:34.915  INFO 6004 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-14 20:13:34.970  INFO 6004 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 20:13:34.971  INFO 6004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 20:13:34.971  INFO 6004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-04-14 20:13:34.978  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : org.apache.catalina.connector.RequestFacade@43f0dd0c
+2022-04-14 20:13:34.980  INFO 6004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 20:14:22.078  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 9804 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 20:14:22.079  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 20:14:22.117  INFO 9804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 20:14:22.118  INFO 9804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 20:14:22.556  INFO 9804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 20:14:22.566  INFO 9804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-04-14 20:14:23.112  INFO 9804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 20:14:23.119  INFO 9804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 20:14:23.119  INFO 9804 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 20:14:23.207  INFO 9804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 20:14:23.207  INFO 9804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1089 ms
+2022-04-14 20:14:23.381  INFO 9804 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 20:14:23.413  INFO 9804 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 20:14:23.494  INFO 9804 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 20:14:23.560  INFO 9804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 20:14:23.854  INFO 9804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 20:14:23.869  INFO 9804 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 20:14:24.019  INFO 9804 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 20:14:24.027  INFO 9804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:14:24.111  WARN 9804 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 20:14:24.394  INFO 9804 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 20:14:24.609  INFO 9804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 20:14:24.640  INFO 9804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 20:14:24.648  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 3.137 seconds (JVM running for 3.921)
+2022-04-14 20:14:28.643  INFO 9804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 20:14:28.643  INFO 9804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 20:14:28.644  INFO 9804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-14 20:14:28.719  INFO 9804 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : org.apache.catalina.connector.RequestFacade@202964e2
+2022-04-14 20:14:28.727  INFO 9804 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 20:15:55.615  INFO 9804 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : org.apache.catalina.connector.RequestFacade@202964e2
+2022-04-14 20:15:55.616  INFO 9804 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 20:17:54.377  INFO 9804 --- [Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:17:54.380  INFO 9804 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 20:17:54.385  INFO 9804 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 20:17:54.585  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 9804 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 20:17:54.585  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 20:17:54.769  INFO 9804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 20:17:54.770  INFO 9804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-14 20:17:54.961  INFO 9804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 20:17:54.962  INFO 9804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 20:17:54.962  INFO 9804 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 20:17:54.998  INFO 9804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 20:17:54.998  INFO 9804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 411 ms
+2022-04-14 20:17:55.053  INFO 9804 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 20:17:55.056  INFO 9804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-04-14 20:17:55.075  INFO 9804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-04-14 20:17:55.076  INFO 9804 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 20:17:55.088  INFO 9804 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 20:17:55.088  INFO 9804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:17:55.126  WARN 9804 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 20:17:55.327  INFO 9804 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 20:17:55.617  INFO 9804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 20:17:55.659  INFO 9804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 20:17:55.666  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 1.121 seconds (JVM running for 214.94)
+2022-04-14 20:17:55.669  INFO 9804 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-14 20:17:57.137  INFO 9804 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:17:57.139  INFO 9804 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-04-14 20:17:57.146  INFO 9804 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-04-14 20:17:57.315  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 9804 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 20:17:57.315  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 20:17:57.447  INFO 9804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 20:17:57.449  INFO 9804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-14 20:17:57.548  INFO 9804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 20:17:57.549  INFO 9804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 20:17:57.549  INFO 9804 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 20:17:57.564  INFO 9804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 20:17:57.564  INFO 9804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 247 ms
+2022-04-14 20:17:57.610  INFO 9804 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 20:17:57.612  INFO 9804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-04-14 20:17:57.627  INFO 9804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-04-14 20:17:57.628  INFO 9804 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 20:17:57.639  INFO 9804 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 20:17:57.639  INFO 9804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:17:57.673  WARN 9804 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 20:17:57.816  INFO 9804 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 20:17:57.970  INFO 9804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 20:17:57.993  INFO 9804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 20:17:57.996  INFO 9804 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 0.714 seconds (JVM running for 217.269)
+2022-04-14 20:17:57.997  INFO 9804 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-14 20:18:06.773  INFO 15336 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 15336 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 20:18:06.774  INFO 15336 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 20:18:06.811  INFO 15336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 20:18:06.811  INFO 15336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 20:18:07.273  INFO 15336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 20:18:07.283  INFO 15336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-04-14 20:18:07.856  INFO 15336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 20:18:07.863  INFO 15336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 20:18:07.863  INFO 15336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 20:18:07.951  INFO 15336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 20:18:07.952  INFO 15336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1140 ms
+2022-04-14 20:18:08.132  INFO 15336 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 20:18:08.165  INFO 15336 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 20:18:08.251  INFO 15336 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 20:18:08.319  INFO 15336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 20:18:08.618  INFO 15336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 20:18:08.632  INFO 15336 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 20:18:08.788  INFO 15336 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 20:18:08.796  INFO 15336 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:18:08.881  WARN 15336 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 20:18:09.138  INFO 15336 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 20:18:09.341  INFO 15336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 20:18:09.371  INFO 15336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 20:18:09.378  INFO 15336 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 3.186 seconds (JVM running for 4.282)
+2022-04-14 20:18:12.400  INFO 15336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 20:18:12.401  INFO 15336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 20:18:12.402  INFO 15336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-14 20:18:12.477  INFO 15336 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/3/hello', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[3, hello]}
+2022-04-14 20:18:12.486  INFO 15336 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 20:50:22.941  INFO 14004 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 14004 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 20:50:22.942  INFO 14004 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 20:50:22.978  INFO 14004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 20:50:22.979  INFO 14004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 20:50:23.451  INFO 14004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 20:50:23.460  INFO 14004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-04-14 20:50:24.027  INFO 14004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 20:50:24.034  INFO 14004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 20:50:24.035  INFO 14004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 20:50:24.149  INFO 14004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 20:50:24.149  INFO 14004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1170 ms
+2022-04-14 20:50:24.377  INFO 14004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 20:50:24.409  INFO 14004 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 20:50:24.495  INFO 14004 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 20:50:24.571  INFO 14004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 20:50:24.871  INFO 14004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 20:50:24.885  INFO 14004 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 20:50:25.032  INFO 14004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 20:50:25.041  INFO 14004 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 20:50:25.122  WARN 14004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 20:50:25.398  INFO 14004 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 20:50:25.641  INFO 14004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 20:50:25.671  INFO 14004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 20:50:25.679  INFO 14004 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 3.272 seconds (JVM running for 4.079)
+2022-04-14 20:50:40.272  INFO 14004 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 20:50:40.272  INFO 14004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 20:50:40.273  INFO 14004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-14 20:50:40.342  INFO 14004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 20:50:40.350  INFO 14004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 20:50:42.702  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 20:50:42.702  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 20:50:42.883  INFO 14004 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 20:50:42.884  INFO 14004 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 20:51:02.682  INFO 14004 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 20:51:02.683  INFO 14004 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:00:04.287  INFO 14004 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:00:04.287  INFO 14004 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:01:46.651  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:01:46.652  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:25.868  INFO 14004 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:25.868  INFO 14004 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:29.683  INFO 14004 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:29.683  INFO 14004 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:32.151  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:32.152  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:43.502  INFO 14004 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:43.503  INFO 14004 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:45.731  INFO 14004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:45.732  INFO 14004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:53.040  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:53.040  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:54.102  INFO 14004 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:54.103  INFO 14004 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:55.297  INFO 14004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:55.297  INFO 14004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:57.340  INFO 14004 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:57.340  INFO 14004 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:18:59.271  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:18:59.272  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:01.309  INFO 14004 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:01.309  INFO 14004 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:05.166  INFO 14004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:05.166  INFO 14004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:07.598  INFO 14004 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:07.598  INFO 14004 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:10.279  INFO 14004 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:10.280  INFO 14004 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:10.428  INFO 14004 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:10.429  INFO 14004 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:26.938  INFO 14004 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:26.938  INFO 14004 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:28.444  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:28.444  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:29.196  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:29.196  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:30.010  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:30.010  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:35.359  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:35.360  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:35.860  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:35.860  INFO 14004 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:37.660  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:37.661  INFO 14004 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:39.219  INFO 14004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:39.219  INFO 14004 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:40.780  INFO 14004 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:40.780  INFO 14004 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:19:48.026  INFO 14004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:19:48.027  INFO 14004 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:32:21.748  INFO 11940 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 11940 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 21:32:21.748  INFO 11940 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 21:32:21.779  INFO 11940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-14 21:32:21.779  INFO 11940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-14 21:32:22.216  INFO 11940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 21:32:22.216  INFO 11940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-04-14 21:32:22.756  INFO 11940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 21:32:22.756  INFO 11940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 21:32:22.756  INFO 11940 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 21:32:22.849  INFO 11940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 21:32:22.849  INFO 11940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1055 ms
+2022-04-14 21:32:23.037  INFO 11940 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 21:32:23.068  INFO 11940 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-04-14 21:32:23.162  INFO 11940 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 21:32:23.224  INFO 11940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 21:32:23.539  INFO 11940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 21:32:23.539  INFO 11940 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 21:32:23.680  INFO 11940 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 21:32:23.695  INFO 11940 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 21:32:23.758  WARN 11940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 21:32:24.008  INFO 11940 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 21:32:24.228  INFO 11940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 21:32:24.259  INFO 11940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 21:32:24.259  INFO 11940 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 3.174 seconds (JVM running for 3.933)
+2022-04-14 21:33:27.389  INFO 11940 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 21:33:27.389  INFO 11940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 21:33:27.391  INFO 11940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-04-14 21:33:27.459  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:27.467  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:30.192  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:30.193  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:30.609  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:30.609  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:30.693  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:30.693  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:30.776  INFO 11940 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:30.776  INFO 11940 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:30.876  INFO 11940 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:30.877  INFO 11940 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:31.309  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:31.309  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:31.626  INFO 11940 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:31.626  INFO 11940 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:37.675  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:37.675  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:39.808  INFO 11940 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:39.809  INFO 11940 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:43.725  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:43.725  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:44.761  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:44.761  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:45.345  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:45.345  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:45.760  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:45.761  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:45.953  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:45.954  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:54.675  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:54.675  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:54.906  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:54.906  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:56.326  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:56.326  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:56.825  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:56.825  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:59.524  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:59.525  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:33:59.959  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:33:59.959  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:00.374  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:00.374  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:02.075  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:02.076  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:02.407  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:02.407  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:05.227  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:05.227  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:07.148  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:07.148  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:08.540  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:08.541  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:08.657  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:08.657  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:09.375  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:09.375  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:34:18.628  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:34:18.628  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:35:55.445  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:35:55.446  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:35:56.479  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:35:56.480  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:35:57.458  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:35:57.458  INFO 11940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:36:00.599  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:36:00.599  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:36:03.896  INFO 11940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:36:03.897  INFO 11940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:51:25.975  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:51:25.976  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:51:29.794  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:51:29.794  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:58:52.795  INFO 11940 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 21:58:52.810  INFO 11940 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 21:58:52.810  INFO 11940 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 21:58:52.982  INFO 11940 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_191 on LAPTOP-FOCE9CMD with PID 11940 (D:\java-2018-12\blog\target\classes started by HP in D:\java-2018-12\blog)
+2022-04-14 21:58:52.982  INFO 11940 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2022-04-14 21:58:53.107  INFO 11940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 21:58:53.107  INFO 11940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-14 21:58:53.216  INFO 11940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-14 21:58:53.216  INFO 11940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 21:58:53.216  INFO 11940 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 21:58:53.248  INFO 11940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 21:58:53.248  INFO 11940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 266 ms
+2022-04-14 21:58:53.279  INFO 11940 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 21:58:53.279  INFO 11940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-04-14 21:58:53.295  INFO 11940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-04-14 21:58:53.295  INFO 11940 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 21:58:53.310  INFO 11940 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 21:58:53.310  INFO 11940 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 21:58:53.341  WARN 11940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 21:58:53.466  INFO 11940 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-14 21:58:53.607  INFO 11940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-14 21:58:53.623  INFO 11940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-14 21:58:53.623  INFO 11940 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 0.67 seconds (JVM running for 1593.291)
+2022-04-14 21:58:53.623  INFO 11940 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-14 21:59:03.530  INFO 11940 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 21:59:03.530  INFO 11940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 21:59:03.530  INFO 11940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-04-14 21:59:03.530  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 21:59:03.530  INFO 11940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 21:59:08.247  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[]}
+2022-04-14 21:59:08.247  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2022-04-14 22:04:45.491  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[]}
+2022-04-14 22:04:45.491  INFO 11940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog
+2022-04-14 22:07:23.770  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[]}
+2022-04-14 22:07:23.770  INFO 11940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : blog
+2022-04-14 22:07:24.918  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[]}
+2022-04-14 22:07:24.918  INFO 11940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2022-04-14 22:07:27.688  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 22:07:27.689  INFO 11940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
+2022-04-14 22:07:29.084  INFO 11940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[]}
+2022-04-14 22:07:29.084  INFO 11940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : index
