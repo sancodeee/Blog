@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -17,17 +18,27 @@ import java.util.List;
 @Table
 public class User {
 
+//    private static final long serialVersionUID = 5L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nickname;
+
     private String username;
+
     private String password;
+
     private String email;
+
     private String avatar;
+
     private Integer types;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 

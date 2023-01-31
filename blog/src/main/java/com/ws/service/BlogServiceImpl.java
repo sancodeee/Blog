@@ -9,6 +9,7 @@ import com.ws.util.MyBeanUtils;
 import com.ws.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -26,11 +27,13 @@ public class BlogServiceImpl implements BlogService {
     @Autowired
     private BlogRepository blogRepository;
 
+//    @Cacheable(cacheNames = "blogSpace" ,key = "#id")
     @Override
     public Blog getBlog(Long id) {
         return blogRepository.getById(id);
     }
 
+//    @Cacheable(cacheNames = "blogSpace2" , key = "#id")
     @Transactional
     @Override
     public Blog getAndConvert(Long id) {
@@ -45,6 +48,7 @@ public class BlogServiceImpl implements BlogService {
         blogRepository.updateViews(id);
         return b;
     }
+
 
     @Override
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {

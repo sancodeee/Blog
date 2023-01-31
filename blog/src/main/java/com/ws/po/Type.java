@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.NotBlank;
 import javax.persistence.*;
 //import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,8 @@ import java.util.List;
 @Entity(name = "t_type")
 @Table
 public class Type {
+
+//    private static final long serialVersionUID = 4L;
 
 
     @Id

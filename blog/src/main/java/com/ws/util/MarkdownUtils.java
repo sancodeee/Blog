@@ -1,5 +1,6 @@
 package com.ws.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.commonmark.Extension;
 import org.commonmark.ext.gfm.tables.TableBlock;
 import org.commonmark.ext.gfm.tables.TablesExtension;
@@ -13,9 +14,9 @@ import org.commonmark.renderer.html.AttributeProviderFactory;
 import org.commonmark.renderer.html.HtmlRenderer;
 
 import java.util.*;
-
+@Slf4j
 /**
- * Created by limi on 2017/10/22.
+ * Created by wangsen on 2021/8/8.
  */
 public class MarkdownUtils {
 
@@ -82,7 +83,6 @@ public class MarkdownUtils {
                 "| 斯维尔多  | 士大夫  | f啊    |\n" +
                 "| 阿什顿发  | 非固定杆 | 撒阿什顿发 |\n" +
                 "\n";
-        String a = "[imCoding 爱编程](http://www.lirenmi.cn)";
-        System.out.println(markdownToHtmlExtensions(a));
+        System.out.println(markdownToHtmlExtensions(table));
     }
 }

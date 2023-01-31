@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,6 +16,8 @@ import java.util.List;
 @Entity(name = "t_blog")
 @Table
 public class Blog {
+
+//    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,8 +36,10 @@ public class Blog {
     private boolean commentabled;
     private boolean published;
     private boolean recommend;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
