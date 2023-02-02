@@ -13,6 +13,7 @@ import org.commonmark.renderer.html.AttributeProviderContext;
 import org.commonmark.renderer.html.AttributeProviderFactory;
 import org.commonmark.renderer.html.HtmlRenderer;
 
+import java.awt.event.WindowFocusListener;
 import java.util.*;
 @Slf4j
 /**
@@ -50,13 +51,7 @@ public class MarkdownUtils {
         HtmlRenderer renderer = HtmlRenderer.builder()
                 .extensions(headingAnchorExtensions)
                 .extensions(tableExtension)
-                .attributeProviderFactory(new AttributeProviderFactory() {
-                    @Override
-                    public AttributeProvider create(AttributeProviderContext context) {
-                        return new CustomAttributeProvider();
-                    }
-                })
-                .build();
+                .attributeProviderFactory(context -> new CustomAttributeProvider()).build();
         return renderer.render(document);
     }
 
@@ -83,6 +78,6 @@ public class MarkdownUtils {
                 "| 斯维尔多  | 士大夫  | f啊    |\n" +
                 "| 阿什顿发  | 非固定杆 | 撒阿什顿发 |\n" +
                 "\n";
-        System.out.println(markdownToHtmlExtensions(table));
+        log.info(markdownToHtmlExtensions(table));
     }
 }

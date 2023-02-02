@@ -8,12 +8,18 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: true
-#  cache:
-#    type: redis
-#  redis:
-#    host: 101.42.176.44
-#    port: 6379
-#    client-type: lettuce
+  redis:
+    host: 101.42.176.44
+    port: 6379
+    client-type: lettuce
+
+  cache:
+    type: redis
+    redis:
+      time-to-live: 1800s  #有效时长
+      cache-null-values: false #是否允许空值
+      use-key-prefix: true  #是否使用前缀名
+      key-prefix: blog_  #追加自定义前缀
 
 logging:
   level:

@@ -4,8 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
-//import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,14 +16,14 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name = "t_type")
 @Table
-public class Type {
+public class Type implements Serializable {
 
-//    private static final long serialVersionUID = 4L;
-
+    private static final long serialVersionUID = 1387125026528110194L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotBlank(message = "分类名称不能为空")
     private String name;
 

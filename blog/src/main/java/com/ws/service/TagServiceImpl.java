@@ -27,14 +27,14 @@ public class TagServiceImpl implements TagService {
         return tagRepository.save(tag);
     }
 
-//    @Cacheable(cacheNames = "tagSpace" , key = "#id")
+    @Cacheable(cacheNames = "tagSpace" , key = "#id")
     @Transactional
     @Override
     public Tag getTag(Long id) {
         return tagRepository.getById(id);
     }
 
-//    @Cacheable(cacheNames = "tagSpace2" , key = "#name")
+    @Cacheable(cacheNames = "tagSpace2" , key = "#name")
     @Override
     public Tag getTagByName(String name) {
         return tagRepository.findByName(name);
@@ -86,7 +86,6 @@ public class TagServiceImpl implements TagService {
         BeanUtils.copyProperties(tag,t);
         return tagRepository.save(t);
     }
-
 
 
     @Transactional

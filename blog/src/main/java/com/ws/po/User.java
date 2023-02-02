@@ -1,6 +1,5 @@
 package com.ws.po;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,9 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name = "t_user")
 @Table
-public class User {
+public class User implements Serializable {
 
-//    private static final long serialVersionUID = 5L;
+    private static final long serialVersionUID = -9065991871093999188L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

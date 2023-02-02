@@ -15,9 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name = "t_blog")
 @Table
-public class Blog {
+public class Blog implements Serializable {
 
-//    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -5541812433648018526L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,13 +28,21 @@ public class Blog {
     @Basic(fetch = FetchType.LAZY)
     @Lob
     private String content;
+
     private String firstPicture;
+
     private String flag;
+
     private Integer views;
+
     private boolean appreciation;
+
     private boolean shareStatement;
+
     private boolean commentabled;
+
     private boolean published;
+
     private boolean recommend;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -60,14 +68,13 @@ public class Blog {
 
     private String description;
 
-
     public void init() {
         this.tagIds = tagsToIds(this.getTags());
     }
 
     private String tagsToIds(List<Tag> tags) {
         if (!tags.isEmpty()) {
-            StringBuffer ids = new StringBuffer();
+            StringBuilder ids = new StringBuilder();
             boolean flag = false;
             for (Tag tag : tags) {
                 if (flag) {
@@ -82,5 +89,4 @@ public class Blog {
             return tagIds;
         }
     }
-
 }

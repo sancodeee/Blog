@@ -1,0 +1,819 @@
+2023-02-01 11:10:59.041  INFO 95944 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 95944 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 11:10:59.047  INFO 95944 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 11:10:59.110  INFO 95944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 11:10:59.110  INFO 95944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 11:10:59.987  INFO 95944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 11:11:00.101  INFO 95944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 5 JPA repository interfaces.
+2023-02-01 11:11:01.072  INFO 95944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 11:11:01.084  INFO 95944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 11:11:01.084  INFO 95944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 11:11:01.246  INFO 95944 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 11:11:01.246  INFO 95944 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2135 ms
+2023-02-01 11:11:01.422  INFO 95944 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 11:11:01.495  INFO 95944 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 11:11:01.691  INFO 95944 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 11:11:01.847  INFO 95944 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 11:11:02.704  INFO 95944 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 11:11:02.731  INFO 95944 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 11:11:04.108  INFO 95944 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 11:11:04.121  INFO 95944 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:11:05.171  WARN 95944 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 11:11:05.465  INFO 95944 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 11:11:05.887  INFO 95944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 11:11:05.921  INFO 95944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 11:11:05.931  INFO 95944 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 7.643 seconds (JVM running for 10.657)
+2023-02-01 11:11:19.034  INFO 95944 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 11:11:19.034  INFO 95944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 11:11:19.036  INFO 95944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-02-01 11:11:19.070  INFO 95944 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 11:11:19.282  WARN 95944 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:11:19.308  WARN 95944 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:11:19.332  INFO 95944 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 11:11:20.375  INFO 95944 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:11:20.435  INFO 95944 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:11:22.365  INFO 95944 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:11:22.522  INFO 95944 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:11:25.594  INFO 95944 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:11:25.660  INFO 95944 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:11:26.704  INFO 95944 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:11:26.764  INFO 95944 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:11:26.837  INFO 95944 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:11:26.900  INFO 95944 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:11:32.952  INFO 95944 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:11:33.050  INFO 95944 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:11:33.859  INFO 95944 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:11:33.947  INFO 95944 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:11:33.993  INFO 95944 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 11:11:34.089  INFO 95944 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:11:35.592  INFO 95944 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:11:35.651  INFO 95944 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:11:37.488  INFO 95944 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:11:37.545  INFO 95944 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:13:49.418  INFO 95944 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/4', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 4, {}]}
+2023-02-01 11:13:49.493  INFO 95944 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:13:49.502  INFO 95944 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/5', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 5, {}]}
+2023-02-01 11:13:49.570  INFO 95944 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:13:50.608  INFO 95944 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/4', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 4, {}]}
+2023-02-01 11:13:50.670  INFO 95944 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:13:50.733  INFO 95944 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 2, {}]}
+2023-02-01 11:13:50.794  INFO 95944 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:13:52.117  INFO 95944 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/4', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 4, {}]}
+2023-02-01 11:13:52.179  INFO 95944 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:14:29.714  INFO 95944 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/10', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 10, {}]}
+2023-02-01 11:14:29.802  INFO 95944 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:14:29.864  INFO 95944 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 2, {}]}
+2023-02-01 11:14:29.925  INFO 95944 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:14:41.217  INFO 95944 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/10', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 10, {}]}
+2023-02-01 11:14:41.301  INFO 95944 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:14:57.785  INFO 95944 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/11', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 11, {}]}
+2023-02-01 11:14:57.862  INFO 95944 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:15:30.292  INFO 108808 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 108808 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 11:15:30.295  INFO 108808 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 11:15:30.379  INFO 108808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 11:15:30.380  INFO 108808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 11:15:31.608  INFO 108808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 11:15:31.715  INFO 108808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 5 JPA repository interfaces.
+2023-02-01 11:15:33.363  INFO 108808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 11:15:33.380  INFO 108808 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 11:15:33.381  INFO 108808 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 11:15:33.739  INFO 108808 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 11:15:33.740  INFO 108808 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3359 ms
+2023-02-01 11:15:33.952  INFO 108808 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 11:15:34.002  INFO 108808 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 11:15:34.170  INFO 108808 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 11:15:34.347  INFO 108808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 11:15:36.831  INFO 108808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 11:15:36.863  INFO 108808 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 11:15:38.829  INFO 108808 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 11:15:38.845  INFO 108808 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:15:40.383  WARN 108808 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 11:15:40.711  INFO 108808 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 11:15:41.259  INFO 108808 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 11:15:41.298  INFO 108808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 11:15:41.309  INFO 108808 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 11.868 seconds (JVM running for 14.732)
+2023-02-01 11:16:16.309  INFO 105860 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 105860 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 11:16:16.311  INFO 105860 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 11:16:16.385  INFO 105860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 11:16:16.385  INFO 105860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 11:16:17.390  INFO 105860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 11:16:17.513  INFO 105860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 5 JPA repository interfaces.
+2023-02-01 11:16:18.610  INFO 105860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 11:16:18.622  INFO 105860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 11:16:18.623  INFO 105860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 11:16:18.894  INFO 105860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 11:16:18.895  INFO 105860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2509 ms
+2023-02-01 11:16:19.278  INFO 105860 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 11:16:19.356  INFO 105860 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 11:16:19.844  INFO 105860 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 11:16:20.058  INFO 105860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 11:16:21.818  INFO 105860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 11:16:21.858  INFO 105860 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 11:16:23.420  INFO 105860 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 11:16:23.435  INFO 105860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:16:25.100  WARN 105860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 11:16:25.394  INFO 105860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 11:16:25.862  INFO 105860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 11:16:25.906  INFO 105860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 11:16:25.918  INFO 105860 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 10.348 seconds (JVM running for 12.002)
+2023-02-01 11:19:25.150  INFO 105860 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 11:19:25.151  INFO 105860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 11:19:25.152  INFO 105860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-01 11:19:25.183  INFO 105860 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 11:19:25.418  WARN 105860 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:19:25.445  WARN 105860 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:19:25.487  INFO 105860 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 11:19:26.765  INFO 105860 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:19:26.869  INFO 105860 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:19:27.636  INFO 105860 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:19:27.827  INFO 105860 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:19:27.862  INFO 105860 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:19:27.998  INFO 105860 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:19:28.673  INFO 105860 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:19:28.756  INFO 105860 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:19:28.801  INFO 105860 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:19:28.876  INFO 105860 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:19:36.320  INFO 105860 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:19:36.392  INFO 105860 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:19:37.750  INFO 105860 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:19:37.815  INFO 105860 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:19:38.805  INFO 105860 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:19:38.889  INFO 105860 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:19:38.936  INFO 105860 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:19:38.982  INFO 105860 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:19:41.702  INFO 105860 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:19:41.831  INFO 105860 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:19:42.719  INFO 105860 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:19:42.778  INFO 105860 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:19:42.872  INFO 105860 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 11:19:42.921  INFO 105860 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:30:28.006  INFO 105860 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/6', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 6, {}]}
+2023-02-01 11:30:28.088  INFO 105860 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:31:48.601  INFO 105860 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:31:48.607  INFO 105860 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-01 11:31:48.779  INFO 105860 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-01 11:31:49.106  INFO 105860 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 105860 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 11:31:49.106  INFO 105860 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 11:31:49.422  INFO 105860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 11:31:49.482  INFO 105860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+2023-02-01 11:31:49.738  INFO 105860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 11:31:49.739  INFO 105860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 11:31:49.740  INFO 105860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 11:31:49.831  INFO 105860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 11:31:49.831  INFO 105860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 722 ms
+2023-02-01 11:31:49.925  INFO 105860 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 11:31:49.932  INFO 105860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-02-01 11:31:50.163  INFO 105860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-02-01 11:31:50.164  INFO 105860 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 11:31:50.614  INFO 105860 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 11:31:50.614  INFO 105860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:31:51.142  WARN 105860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 11:31:51.297  INFO 105860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 11:31:51.467  INFO 105860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 11:31:51.480  INFO 105860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 11:31:51.485  INFO 105860 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 2.444 seconds (JVM running for 937.57)
+2023-02-01 11:31:51.488  INFO 105860 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   GenericCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration unknown cache type (CacheCondition)
+
+   NoOpCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration unknown cache type (CacheCondition)
+
+   SimpleCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration unknown cache type (CacheCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-02-01 11:32:29.500  INFO 102296 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 102296 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 11:32:29.502  INFO 102296 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 11:32:29.622  INFO 102296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 11:32:29.623  INFO 102296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 11:32:30.807  INFO 102296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 11:32:30.928  INFO 102296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 5 JPA repository interfaces.
+2023-02-01 11:32:32.768  INFO 102296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 11:32:32.785  INFO 102296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 11:32:32.786  INFO 102296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 11:32:33.083  INFO 102296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 11:32:33.084  INFO 102296 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3459 ms
+2023-02-01 11:32:33.392  INFO 102296 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 11:32:33.461  INFO 102296 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 11:32:33.655  INFO 102296 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 11:32:33.818  INFO 102296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 11:32:35.362  INFO 102296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 11:32:35.392  INFO 102296 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 11:32:39.015  INFO 102296 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 11:32:39.037  INFO 102296 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:32:41.188  WARN 102296 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 11:32:41.537  INFO 102296 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 11:32:42.056  INFO 102296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 11:32:42.094  INFO 102296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 11:32:42.106  INFO 102296 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 13.274 seconds (JVM running for 15.244)
+2023-02-01 11:33:23.981  INFO 102920 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 102920 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 11:33:23.983  INFO 102920 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 11:33:24.083  INFO 102920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 11:33:24.083  INFO 102920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 11:33:25.070  INFO 102920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 11:33:25.071  INFO 102920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 11:33:25.204  INFO 102920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 5 JPA repository interfaces.
+2023-02-01 11:33:25.226  INFO 102920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 11:33:25.228  INFO 102920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-01 11:33:25.253  INFO 102920 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.BlogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:33:25.254  INFO 102920 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.CommentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:33:25.254  INFO 102920 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:33:25.255  INFO 102920 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TypeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:33:25.256  INFO 102920 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:33:25.256  INFO 102920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2023-02-01 11:33:26.433  INFO 102920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 11:33:26.450  INFO 102920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 11:33:26.450  INFO 102920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 11:33:26.738  INFO 102920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 11:33:26.739  INFO 102920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2654 ms
+2023-02-01 11:33:26.989  INFO 102920 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 11:33:27.044  INFO 102920 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 11:33:27.175  INFO 102920 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 11:33:27.298  INFO 102920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 11:33:28.383  INFO 102920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 11:33:28.403  INFO 102920 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 11:33:29.589  INFO 102920 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 11:33:29.606  INFO 102920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:33:30.808  WARN 102920 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 11:33:31.080  INFO 102920 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 11:33:31.934  INFO 102920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 11:33:31.968  INFO 102920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 11:33:31.979  INFO 102920 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 8.731 seconds (JVM running for 10.804)
+2023-02-01 11:34:01.378  INFO 102920 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 11:34:01.379  INFO 102920 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 11:34:01.382  INFO 102920 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-02-01 11:34:01.439  INFO 102920 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 11:34:01.757  WARN 102920 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:34:01.793  WARN 102920 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:34:01.833  INFO 102920 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 11:34:03.212  INFO 102920 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:34:03.327  INFO 102920 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:34:04.101  INFO 102920 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:34:04.294  INFO 102920 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:34:05.191  INFO 102920 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:34:05.287  INFO 102920 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:34:05.330  INFO 102920 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:34:05.392  INFO 102920 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:34:30.251  INFO 102920 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:34:30.315  INFO 102920 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:34:31.105  INFO 102920 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:34:31.175  INFO 102920 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:34:31.220  INFO 102920 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:34:31.251  INFO 102920 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:34:38.357  INFO 102920 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:34:38.422  INFO 102920 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:34:39.451  INFO 102920 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:34:39.512  INFO 102920 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:34:39.597  INFO 102920 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 11:34:39.710  INFO 102920 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:34:47.416  INFO 102920 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:34:47.473  INFO 102920 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:34:47.881  INFO 102920 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:34:47.929  INFO 102920 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:34:48.766  INFO 102920 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-01 11:34:48.822  INFO 102920 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:34:49.462  INFO 102920 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:34:49.515  INFO 102920 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:34:49.553  INFO 102920 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-01 11:34:49.642  INFO 102920 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:35:03.521  INFO 102920 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-01 11:35:03.579  INFO 102920 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:35:04.221  INFO 102920 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:35:04.278  INFO 102920 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-01 11:35:04.326  INFO 102920 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:35:04.378  INFO 102920 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:37:39.134  INFO 107892 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 107892 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 11:37:39.137  INFO 107892 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 11:37:39.212  INFO 107892 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 11:37:39.224  INFO 107892 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 11:37:40.247  INFO 107892 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 11:37:40.248  INFO 107892 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 11:37:40.364  INFO 107892 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 5 JPA repository interfaces.
+2023-02-01 11:37:40.381  INFO 107892 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 11:37:40.383  INFO 107892 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-01 11:37:40.407  INFO 107892 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.BlogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:37:40.408  INFO 107892 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.CommentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:37:40.408  INFO 107892 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:37:40.409  INFO 107892 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TypeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:37:40.410  INFO 107892 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:37:40.410  INFO 107892 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2023-02-01 11:37:41.496  INFO 107892 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 11:37:41.519  INFO 107892 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 11:37:41.520  INFO 107892 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 11:37:41.988  INFO 107892 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 11:37:41.989  INFO 107892 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2764 ms
+2023-02-01 11:37:42.277  INFO 107892 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 11:37:42.349  INFO 107892 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 11:37:42.529  INFO 107892 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 11:37:42.648  INFO 107892 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 11:37:43.732  INFO 107892 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 11:37:43.754  INFO 107892 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 11:37:44.815  INFO 107892 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 11:37:44.824  INFO 107892 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:37:46.003  WARN 107892 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 11:37:46.332  INFO 107892 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 11:37:47.119  INFO 107892 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 11:37:47.153  INFO 107892 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 11:37:47.163  INFO 107892 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 8.962 seconds (JVM running for 11.24)
+2023-02-01 11:37:49.247  INFO 107892 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 11:37:49.247  INFO 107892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 11:37:49.248  INFO 107892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-01 11:37:49.280  INFO 107892 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 11:37:49.438  WARN 107892 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:37:49.456  WARN 107892 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:37:49.480  INFO 107892 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 11:37:50.459  INFO 107892 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:37:50.513  INFO 107892 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:37:51.902  INFO 107892 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:37:52.012  INFO 107892 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:37:52.895  INFO 107892 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:37:52.949  INFO 107892 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:37:53.010  INFO 107892 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:37:53.067  INFO 107892 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:38:14.218  INFO 107892 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.post', args=[Comment(id=null, nickname=sen, email=1376474892@qq.com, content=你写的吗, avatar=null, createTime=null, blog=Blog(id=3, title=null, content=null, firstPicture=null, flag=null, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds=null, description=null), replyComments=[], parentComment=Comment(id=8, nickname=null, email=null, content=null, avatar=null, createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false), adminComment=false), org.apache.catalina.session.StandardSessionFacade@1a64cab2]}
+2023-02-01 11:38:14.313  INFO 107892 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : redirect:/comments/3
+2023-02-01 11:38:14.329  INFO 107892 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:38:14.369  INFO 107892 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:38:21.560  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:38:21.630  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:38:22.180  INFO 107892 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:38:22.233  INFO 107892 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:38:22.266  INFO 107892 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:38:22.315  INFO 107892 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:38:27.802  INFO 107892 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 11:38:27.919  INFO 107892 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 11:38:28.445  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:38:28.495  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:38:30.599  INFO 107892 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:38:30.659  INFO 107892 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:38:31.747  INFO 107892 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:38:31.806  INFO 107892 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:38:31.921  INFO 107892 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 11:38:31.961  INFO 107892 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:38:54.922  INFO 107892 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-01 11:38:55.048  INFO 107892 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-01 11:38:55.621  INFO 107892 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:38:55.734  INFO 107892 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:38:56.310  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:38:56.414  INFO 107892 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 11:38:56.423  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:38:56.491  INFO 107892 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:38:58.423  INFO 107892 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:38:58.499  INFO 107892 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:38:59.043  INFO 107892 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:38:59.126  INFO 107892 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:38:59.149  INFO 107892 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 11:38:59.196  INFO 107892 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:39:00.458  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:39:00.583  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:39:01.746  INFO 107892 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-01 11:39:01.829  INFO 107892 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 11:39:02.540  INFO 107892 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:39:02.601  INFO 107892 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:39:03.592  INFO 107892 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-01 11:39:03.689  INFO 107892 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-01 11:39:04.486  INFO 107892 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:39:04.551  INFO 107892 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:39:04.881  INFO 107892 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/11', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 11, {}]}
+2023-02-01 11:39:04.938  INFO 107892 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-01 11:39:05.643  INFO 107892 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:39:05.707  INFO 107892 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:39:06.576  INFO 107892 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:39:06.623  INFO 107892 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:39:06.683  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:39:06.725  INFO 107892 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:41:00.931  INFO 103260 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 103260 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 11:41:00.933  INFO 103260 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 11:41:01.013  INFO 103260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 11:41:01.013  INFO 103260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 11:41:02.021  INFO 103260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 11:41:02.022  INFO 103260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 11:41:02.155  INFO 103260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 5 JPA repository interfaces.
+2023-02-01 11:41:02.176  INFO 103260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 11:41:02.178  INFO 103260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-01 11:41:02.201  INFO 103260 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.BlogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:41:02.203  INFO 103260 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.CommentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:41:02.204  INFO 103260 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:41:02.205  INFO 103260 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TypeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:41:02.206  INFO 103260 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 11:41:02.206  INFO 103260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2023-02-01 11:41:03.476  INFO 103260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 11:41:03.490  INFO 103260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 11:41:03.491  INFO 103260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 11:41:03.716  INFO 103260 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 11:41:03.716  INFO 103260 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2702 ms
+2023-02-01 11:41:03.901  INFO 103260 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 11:41:03.949  INFO 103260 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 11:41:04.064  INFO 103260 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 11:41:04.164  INFO 103260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 11:41:05.213  INFO 103260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 11:41:05.234  INFO 103260 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 11:41:06.506  INFO 103260 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 11:41:06.515  INFO 103260 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 11:41:07.449  WARN 103260 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 11:41:07.701  INFO 103260 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 11:41:08.512  INFO 103260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 11:41:08.549  INFO 103260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 11:41:08.559  INFO 103260 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 8.354 seconds (JVM running for 10.306)
+2023-02-01 11:41:30.840  INFO 103260 --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 11:41:30.841  INFO 103260 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 11:41:30.842  INFO 103260 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-01 11:41:32.851  INFO 103260 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 11:41:33.064  WARN 103260 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:41:33.091  WARN 103260 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 11:41:33.116  INFO 103260 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 11:41:34.100  INFO 103260 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:41:34.158  INFO 103260 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:41:35.124  INFO 103260 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:41:35.218  INFO 103260 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 11:41:35.291  INFO 103260 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:41:35.310  INFO 103260 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:41:36.027  INFO 103260 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:41:36.085  INFO 103260 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:41:36.141  INFO 103260 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 11:41:36.235  INFO 103260 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 11:41:41.345  INFO 103260 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:41:41.412  INFO 103260 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:41:41.451  INFO 103260 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 11:41:41.507  INFO 103260 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 11:41:42.258  INFO 103260 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 11:41:42.320  INFO 103260 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 11:41:42.390  INFO 103260 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 11:41:42.434  INFO 103260 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:14:59.340  INFO 104648 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 104648 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 14:14:59.342  INFO 104648 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 14:14:59.398  INFO 104648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 14:14:59.399  INFO 104648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 14:15:00.568  INFO 104648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:15:00.569  INFO 104648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 14:15:00.747  INFO 104648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159 ms. Found 5 JPA repository interfaces.
+2023-02-01 14:15:00.775  INFO 104648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:15:00.777  INFO 104648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-01 14:15:00.884  INFO 104648 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.BlogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:15:00.885  INFO 104648 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.CommentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:15:00.886  INFO 104648 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:15:00.887  INFO 104648 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TypeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:15:00.888  INFO 104648 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:15:00.889  INFO 104648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2023-02-01 14:15:01.981  INFO 104648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 14:15:01.993  INFO 104648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 14:15:01.993  INFO 104648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 14:15:02.160  INFO 104648 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 14:15:02.160  INFO 104648 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2760 ms
+2023-02-01 14:15:02.366  INFO 104648 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 14:15:02.448  INFO 104648 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 14:15:02.627  INFO 104648 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 14:15:02.759  INFO 104648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 14:15:03.581  INFO 104648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 14:15:03.606  INFO 104648 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 14:15:04.712  INFO 104648 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 14:15:04.722  INFO 104648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 14:15:05.744  WARN 104648 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 14:15:06.042  INFO 104648 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 14:15:06.780  INFO 104648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 14:15:06.815  INFO 104648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 14:15:06.826  INFO 104648 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 8.56 seconds (JVM running for 11.089)
+2023-02-01 14:15:19.345  INFO 104648 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 14:15:19.345  INFO 104648 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 14:15:19.346  INFO 104648 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-01 14:15:19.385  INFO 104648 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:15:19.595  INFO 104648 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:15:19.677  INFO 104648 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:15:19.746  INFO 104648 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:15:20.832  INFO 104648 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:15:20.887  INFO 104648 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:15:20.925  INFO 104648 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 14:15:21.000  INFO 104648 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:15:35.018  INFO 104648 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:15:35.116  WARN 104648 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 14:15:35.129  WARN 104648 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 14:15:35.149  INFO 104648 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:15:35.901  INFO 104648 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:15:36.021  INFO 104648 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:15:37.735  INFO 104648 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 14:15:37.789  INFO 104648 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:15:38.663  INFO 104648 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:15:38.730  INFO 104648 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:15:38.826  INFO 104648 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 14:15:38.869  INFO 104648 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:18:42.971  INFO 104648 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-01 14:18:43.030  INFO 104648 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:24:39.202  INFO 105736 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 105736 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 14:24:39.203  INFO 105736 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 14:24:39.313  INFO 105736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 14:24:39.313  INFO 105736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 14:24:40.337  INFO 105736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:24:40.338  INFO 105736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 14:24:40.473  INFO 105736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 5 JPA repository interfaces.
+2023-02-01 14:24:40.491  INFO 105736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:24:40.492  INFO 105736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-01 14:24:40.513  INFO 105736 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.BlogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:24:40.514  INFO 105736 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.CommentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:24:40.515  INFO 105736 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:24:40.515  INFO 105736 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TypeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:24:40.516  INFO 105736 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:24:40.517  INFO 105736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2023-02-01 14:24:42.214  INFO 105736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 14:24:42.232  INFO 105736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 14:24:42.233  INFO 105736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 14:24:42.536  INFO 105736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 14:24:42.537  INFO 105736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3223 ms
+2023-02-01 14:24:42.782  INFO 105736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 14:24:42.952  INFO 105736 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 14:24:43.240  INFO 105736 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 14:24:43.441  INFO 105736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 14:24:44.682  INFO 105736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 14:24:44.713  INFO 105736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 14:24:46.258  INFO 105736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 14:24:46.271  INFO 105736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 14:24:47.298  WARN 105736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 14:24:47.579  INFO 105736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 14:24:48.415  INFO 105736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 14:24:48.462  INFO 105736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 14:24:48.473  INFO 105736 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 9.941 seconds (JVM running for 11.88)
+2023-02-01 14:25:03.491  INFO 105736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 14:25:03.491  INFO 105736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 14:25:03.492  INFO 105736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-02-01 14:25:03.516  INFO 105736 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:25:03.671  WARN 105736 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 14:25:03.687  WARN 105736 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 14:25:03.713  INFO 105736 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:25:04.685  INFO 105736 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:25:04.735  INFO 105736 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:25:06.324  INFO 105736 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:25:06.506  INFO 105736 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:25:06.520  INFO 105736 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:25:06.651  INFO 105736 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:25:07.447  INFO 105736 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:25:07.544  INFO 105736 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 14:25:07.572  INFO 105736 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:25:07.681  INFO 105736 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:25:29.236  INFO 105736 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:25:29.368  INFO 105736 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:25:29.978  INFO 105736 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:25:30.030  INFO 105736 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:25:30.041  INFO 105736 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 14:25:30.081  INFO 105736 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:25:36.733  INFO 105736 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:25:36.857  INFO 105736 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:25:37.399  INFO 105736 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:25:37.448  INFO 105736 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:25:38.980  INFO 105736 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.AboutShowController.about', args=[]}
+2023-02-01 14:25:38.984  INFO 105736 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : about
+2023-02-01 14:25:39.553  INFO 105736 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:25:39.663  INFO 105736 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:25:40.268  INFO 105736 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:25:40.320  INFO 105736 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:25:41.169  INFO 105736 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:25:41.240  INFO 105736 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:25:41.994  INFO 105736 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:25:42.047  INFO 105736 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:25:42.120  INFO 105736 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 14:25:42.169  INFO 105736 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:26:18.065  INFO 105736 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 14:26:18.148  INFO 105736 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:26:19.784  INFO 105736 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:26:19.843  INFO 105736 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:26:19.970  INFO 105736 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2023-02-01 14:26:20.022  INFO 105736 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:33:35.573  INFO 105736 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-01 14:33:35.724  INFO 105736 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 14:33:36.608  INFO 105736 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:33:36.708  INFO 105736 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:33:36.782  INFO 105736 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-01 14:33:36.996  INFO 105736 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-01 14:33:38.163  INFO 105736 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:33:38.244  INFO 105736 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:33:38.664  INFO 105736 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.ArchiveShowController.archives', args=[{}]}
+2023-02-01 14:33:38.882  INFO 105736 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : archives
+2023-02-01 14:33:39.392  INFO 105736 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:33:39.460  INFO 105736 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:33:39.827  INFO 105736 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-01 14:33:39.891  INFO 105736 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:33:41.550  INFO 105736 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:33:41.618  INFO 105736 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:33:41.682  INFO 105736 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-01 14:33:41.816  INFO 105736 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:37:54.372  INFO 105512 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 105512 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 14:37:54.374  INFO 105512 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 14:37:54.464  INFO 105512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 14:37:54.464  INFO 105512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 14:37:55.696  INFO 105512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:37:55.697  INFO 105512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 14:37:55.848  INFO 105512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 5 JPA repository interfaces.
+2023-02-01 14:37:55.871  INFO 105512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:37:55.873  INFO 105512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-01 14:37:55.901  INFO 105512 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.BlogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:37:55.903  INFO 105512 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.CommentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:37:55.904  INFO 105512 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:37:55.905  INFO 105512 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TypeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:37:55.906  INFO 105512 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:37:55.906  INFO 105512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-02-01 14:37:57.885  INFO 105512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 14:37:57.910  INFO 105512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 14:37:57.914  INFO 105512 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 14:37:58.209  INFO 105512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 14:37:58.210  INFO 105512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3745 ms
+2023-02-01 14:37:58.380  INFO 102348 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 102348 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 14:37:58.382  INFO 102348 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 14:37:58.552  INFO 102348 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 14:37:58.552  INFO 102348 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 14:37:58.636  INFO 105512 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 14:37:58.920  INFO 105512 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 14:37:59.147  INFO 105512 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 14:37:59.297  INFO 105512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 14:37:59.916  INFO 102348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:37:59.918  INFO 102348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 14:38:00.103  INFO 102348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169 ms. Found 5 JPA repository interfaces.
+2023-02-01 14:38:00.126  INFO 102348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:38:00.127  INFO 102348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-01 14:38:00.153  INFO 102348 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.BlogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:00.155  INFO 102348 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.CommentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:00.156  INFO 102348 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:00.157  INFO 102348 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TypeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:00.158  INFO 102348 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:00.158  INFO 102348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-02-01 14:38:00.881  INFO 105512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 14:38:00.923  INFO 105512 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 14:38:02.591  INFO 102348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 14:38:02.705  INFO 102348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 14:38:02.706  INFO 102348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 14:38:03.249  INFO 102348 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 14:38:03.250  INFO 102348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4697 ms
+2023-02-01 14:38:03.835  INFO 105512 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 14:38:03.857  INFO 105512 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 14:38:04.408  INFO 102348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 14:38:04.746  INFO 102348 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 14:38:05.164  INFO 102348 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 14:38:05.763  INFO 102348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 14:38:07.379  WARN 105512 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 14:38:07.875  INFO 105512 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 14:38:08.278  INFO 102348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 14:38:08.307  INFO 102348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 14:38:09.265  INFO 105512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 14:38:09.330  INFO 105512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 14:38:09.344  INFO 105512 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 15.872 seconds (JVM running for 19.435)
+2023-02-01 14:38:09.719  INFO 102348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 14:38:09.729  INFO 102348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 14:38:11.105  WARN 102348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 14:38:11.472  INFO 102348 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 14:38:12.392  WARN 102348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-02-01 14:38:12.421  WARN 102348 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2023-02-01 14:38:12.442  INFO 102348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 14:38:12.447  INFO 102348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-01 14:38:12.640  INFO 102348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-01 14:38:12.642  INFO 102348 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-01 14:38:12.656  INFO 102348 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-01 14:38:12.680 ERROR 102348 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-02-01 14:38:20.830  INFO 105512 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 14:38:20.839  INFO 105512 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-01 14:38:21.039  INFO 105512 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-01 14:38:42.091  INFO 104360 --- [main] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 104360 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-01 14:38:42.093  INFO 104360 --- [main] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-01 14:38:42.164  INFO 104360 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-01 14:38:42.164  INFO 104360 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-01 14:38:43.428  INFO 104360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:38:43.429  INFO 104360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-01 14:38:43.585  INFO 104360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 5 JPA repository interfaces.
+2023-02-01 14:38:43.621  INFO 104360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-01 14:38:43.622  INFO 104360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-01 14:38:43.650  INFO 104360 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.BlogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:43.651  INFO 104360 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.CommentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:43.652  INFO 104360 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:43.652  INFO 104360 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.TypeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:43.653  INFO 104360 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ws.dao.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-02-01 14:38:43.654  INFO 104360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2023-02-01 14:38:44.928  INFO 104360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-01 14:38:44.959  INFO 104360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 14:38:44.959  INFO 104360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-01 14:38:45.135  INFO 104360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 14:38:45.136  INFO 104360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2971 ms
+2023-02-01 14:38:45.496  INFO 104360 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-01 14:38:45.551  INFO 104360 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-01 14:38:45.726  INFO 104360 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-01 14:38:45.855  INFO 104360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-01 14:38:46.151  INFO 104360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-01 14:38:46.172  INFO 104360 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-01 14:38:47.553  INFO 104360 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-01 14:38:47.571  INFO 104360 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-01 14:38:48.681  WARN 104360 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-01 14:38:49.046  INFO 104360 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-01 14:38:50.144  INFO 104360 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-01 14:38:50.197  INFO 104360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 14:38:50.211  INFO 104360 --- [main] com.ws.BlogApplication                   : Started BlogApplication in 9.512 seconds (JVM running for 15.404)
+2023-02-01 14:39:05.890  INFO 104360 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 14:39:05.891  INFO 104360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 14:39:05.892  INFO 104360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-01 14:39:05.935  INFO 104360 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:39:06.194  WARN 104360 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 14:39:06.228  WARN 104360 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-01 14:39:06.256  INFO 104360 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:39:07.795  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:39:07.887  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:39:09.174  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:39:09.309  INFO 104360 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:39:09.401  INFO 104360 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:39:09.439  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:39:10.288  INFO 104360 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:39:10.353  INFO 104360 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:39:10.413  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 14:39:10.614  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:40:58.662  INFO 104360 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:40:58.759  INFO 104360 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:40:59.738  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:40:59.828  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:40:59.892  INFO 104360 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 14:40:59.955  INFO 104360 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:41:03.092  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-01 14:41:03.242  INFO 104360 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-01 14:41:03.248  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-01 14:41:03.357  INFO 104360 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 14:46:27.211  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-01 14:46:27.313  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:46:46.676  INFO 104360 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/4', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 4, {}]}
+2023-02-01 14:46:46.761  INFO 104360 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 14:46:46.789  INFO 104360 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/6', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 6, {}]}
+2023-02-01 14:46:46.876  INFO 104360 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 14:47:15.529  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/', ip='10.8.81.15', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:47:15.795  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:47:22.714  INFO 104360 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/footer/newblog', ip='10.8.81.15', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:47:22.816  INFO 104360 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:47:37.084  INFO 104360 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/', ip='10.8.81.14', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:47:37.230  INFO 104360 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:47:37.901  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/footer/newblog', ip='10.8.81.14', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:47:37.978  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:47:49.510  INFO 104360 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/', ip='10.8.81.15', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:47:49.744  INFO 104360 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:47:50.544  INFO 104360 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/footer/newblog', ip='10.8.81.15', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:47:50.610  INFO 104360 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:47:53.810  INFO 104360 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/', ip='10.8.81.14', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:47:54.101  INFO 104360 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:47:55.406  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/footer/newblog', ip='10.8.81.14', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:47:55.509  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:47:58.572  INFO 104360 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/blog/3', ip='10.8.81.14', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-01 14:47:58.697  INFO 104360 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-01 14:47:59.324  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/footer/newblog', ip='10.8.81.14', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:47:59.399  INFO 104360 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/comments/3', ip='10.8.81.14', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 14:47:59.435  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:47:59.499  INFO 104360 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:47:59.590  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/', ip='10.8.78.178', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-01 14:47:59.786  INFO 104360 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2023-02-01 14:48:03.597  INFO 104360 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/footer/newblog', ip='10.8.78.178', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:48:03.750  INFO 104360 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-01 14:48:25.238  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/comments', ip='10.8.81.14', classMethod='com.ws.web.CommentController.post', args=[Comment(id=null, nickname=杨婕, email=2503331368@qq.com, content=这个不是我写的哦, avatar=null, createTime=null, blog=Blog(id=3, title=null, content=null, firstPicture=null, flag=null, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds=null, description=null), replyComments=[], parentComment=Comment(id=11, nickname=null, email=null, content=null, avatar=null, createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false), adminComment=false), org.apache.catalina.session.StandardSessionFacade@1c62d6bb]}
+2023-02-01 14:48:25.677  INFO 104360 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : redirect:/comments/3
+2023-02-01 14:48:25.696  INFO 104360 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/comments/3;jsessionid=2302A4E366FC8D5F2CB047EAEA5490F1', ip='10.8.81.14', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-01 14:48:25.753  INFO 104360 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-01 14:48:37.248  INFO 104360 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/types/-1', ip='10.8.81.14', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-01 14:48:37.422  INFO 104360 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 14:48:37.721  INFO 104360 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/types/2', ip='10.8.81.15', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 2, {}]}
+2023-02-01 14:48:37.878  INFO 104360 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : types
+2023-02-01 14:48:38.061  INFO 104360 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://10.8.81.15:8080/footer/newblog', ip='10.8.81.14', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-01 14:48:38.215  INFO 104360 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList

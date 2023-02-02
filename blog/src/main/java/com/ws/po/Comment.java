@@ -15,17 +15,22 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name = "t_comment")
 @Table
-public class Comment {
+public class Comment implements Serializable {
 
-//    private static final long serialVersionUID = 2L;
+    private static final long serialVersionUID = -362529354341985688L;
 
     @Id
     @GeneratedValue
     private Long id;
+
     private String nickname;
+
     private String email;
+
     private String content;
+
     private String avatar;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 

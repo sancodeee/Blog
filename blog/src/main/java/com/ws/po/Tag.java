@@ -14,13 +14,14 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name = "t_tag")
 @Table
-public class Tag {
+public class Tag implements Serializable {
 
-//    private static final long serialVersionUID = 3L;
+    private static final long serialVersionUID = 5161271815028452059L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
+
     private String name;
 
     @ManyToMany(mappedBy = "tags")

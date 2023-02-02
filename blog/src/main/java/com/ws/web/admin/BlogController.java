@@ -25,6 +25,7 @@ public class BlogController {
     private static final String INPUT = "admin/blogs-input";
     private static final String LIST = "admin/blogs";
     private static final String REDIRECT_LIST = "redirect:/admin/blogs";
+    private static final String MESSAGE = "message";
 
 
     @Autowired
@@ -84,11 +85,10 @@ public class BlogController {
         } else {
             b = blogService.updateBlog(blog.getId(), blog);
         }
-
         if (b == null ) {
-            attributes.addFlashAttribute("message", "操作失败");
+            attributes.addFlashAttribute(MESSAGE, "操作失败");
         } else {
-            attributes.addFlashAttribute("message", "操作成功");
+            attributes.addFlashAttribute(MESSAGE, "操作成功");
         }
         return REDIRECT_LIST;
     }
@@ -96,7 +96,7 @@ public class BlogController {
     @GetMapping("/blogs/{id}/delete")
     public String delete(@PathVariable Long id,RedirectAttributes attributes) {
         blogService.deleteBlog(id);
-        attributes.addFlashAttribute("message", "删除成功");
+        attributes.addFlashAttribute(MESSAGE, "删除成功");
         return REDIRECT_LIST;
     }
 

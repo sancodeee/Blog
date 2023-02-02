@@ -28,19 +28,18 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.save(type);
     }
 
-//    @Cacheable(cacheNames = "typeSpace" , key = "#id")
+    @Cacheable(cacheNames = "typeSpace" , key = "#id")
     @Transactional
     @Override
     public Type getType(Long id) {
         return typeRepository.getById(id);
     }
 
-//    @Cacheable(cacheNames = "typeSpace2" , key = "#name")
+    @Cacheable(cacheNames = "typeSpace2" , key = "#name")
     @Override
     public Type getTypeByName(String name) {
         return typeRepository.findByName(name);
     }
-
 
     @Transactional
     @Override
@@ -60,7 +59,6 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.findTop(pageable);
     }
 
-
     @Transactional
     @Override
     public Type updateType(Long id, Type type) {
@@ -72,10 +70,10 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.save(t);
     }
 
-
     @Transactional
     @Override
     public void deleteType(Long id) {
         typeRepository.deleteById(id);
     }
+
 }
