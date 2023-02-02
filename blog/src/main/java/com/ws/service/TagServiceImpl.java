@@ -5,13 +5,13 @@ import com.ws.dao.TagRepository;
 import com.ws.po.Tag;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,14 +27,12 @@ public class TagServiceImpl implements TagService {
         return tagRepository.save(tag);
     }
 
-    @Cacheable(cacheNames = "tagSpace" , key = "#id")
     @Transactional
     @Override
     public Tag getTag(Long id) {
         return tagRepository.getById(id);
     }
 
-    @Cacheable(cacheNames = "tagSpace2" , key = "#name")
     @Override
     public Tag getTagByName(String name) {
         return tagRepository.findByName(name);

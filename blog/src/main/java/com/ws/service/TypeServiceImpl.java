@@ -5,7 +5,6 @@ import com.ws.dao.TypeRepository;
 import com.ws.po.Type;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -28,14 +27,12 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.save(type);
     }
 
-    @Cacheable(cacheNames = "typeSpace" , key = "#id")
     @Transactional
     @Override
     public Type getType(Long id) {
         return typeRepository.getById(id);
     }
 
-    @Cacheable(cacheNames = "typeSpace2" , key = "#name")
     @Override
     public Type getTypeByName(String name) {
         return typeRepository.findByName(name);
