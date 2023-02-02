@@ -1,0 +1,12 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+  resources:
+    add-mappings: true
+  messages:
+    basename: i18n/messages
+
+
+comment.avatar: /images/avatar.png

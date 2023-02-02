@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.42.176.44:3306/blog?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  redis:
+    host: 101.42.176.44
+    port: 6379
+    client-type: lettuce
+
+  cache:
+    type: redis
+    redis:
+      time-to-live: 1800s  #有效时长
+      cache-null-values: false #是否允许空值
+      use-key-prefix: true  #是否使用前缀名
+      key-prefix: blog_  #追加自定义前缀
+
+logging:
+  level:
+    root: warn
+    com.lrm: info
+  file:
+    path: log/blog-pro.log
+server:
+  port: 8081
+
+
+
+
+
+
