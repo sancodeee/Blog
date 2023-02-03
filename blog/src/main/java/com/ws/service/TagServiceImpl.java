@@ -5,6 +5,10 @@ import com.ws.dao.TagRepository;
 import com.ws.po.Tag;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -16,23 +20,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames = "tag")
 public class TagServiceImpl implements TagService {
 
     @Autowired
     private TagRepository tagRepository;
 
+    @CachePut(key = "T(String).valueOf(#tag.id)")
     @Transactional
     @Override
     public Tag saveTag(Tag tag) {
         return tagRepository.save(tag);
     }
 
+    @Cacheable(key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public Tag getTag(Long id) {
         return tagRepository.getById(id);
     }
 
+    @Cacheable(cacheNames = "tag-name" , key = "#name")
     @Override
     public Tag getTagByName(String name) {
         return tagRepository.findByName(name);
@@ -74,6 +82,7 @@ public class TagServiceImpl implements TagService {
     }
 
 
+    @Cacheable(key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public Tag updateTag(Long id, Tag tag) {
@@ -86,6 +95,7 @@ public class TagServiceImpl implements TagService {
     }
 
 
+    @CacheEvict(key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public void deleteTag(Long id) {

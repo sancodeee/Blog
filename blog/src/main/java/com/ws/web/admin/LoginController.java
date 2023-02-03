@@ -3,6 +3,7 @@ package com.ws.web.admin;
 
 import com.ws.po.User;
 import com.ws.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
-
+@Slf4j
 @Controller
 @RequestMapping("/admin")
 public class LoginController {
@@ -34,6 +35,7 @@ public class LoginController {
                         @RequestParam String password,
                         HttpSession session,
                         RedirectAttributes attributes){
+        log.info("user对象是否属于User类：{}",userService.checkUser(username,password) instanceof User);
         User user = userService.checkUser(username,password);
         if(user != null){
             user.setPassword(null);

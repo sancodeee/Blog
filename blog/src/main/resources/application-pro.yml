@@ -4,22 +4,29 @@ spring:
     url: jdbc:mysql://101.42.176.44:3306/blog?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
+
+  data:
+    redis:
+      repositories:
+        enabled: false
+
   jpa:
     hibernate:
       ddl-auto: none
     show-sql: true
-  redis:
-    host: 101.42.176.44
-    port: 6379
-    client-type: lettuce
 
   cache:
     type: redis
     redis:
-      time-to-live: 1800s  #有效时长
+      time-to-live: 600000  #缓存有效时长ms
       cache-null-values: false #是否允许空值
-      use-key-prefix: true  #是否使用前缀名
-      key-prefix: blog_  #追加自定义前缀
+
+  redis:
+    host: 101.42.176.44
+    port: 6379
+    password:
+    timeout: 5000
+    database: 0
 
 logging:
   level:

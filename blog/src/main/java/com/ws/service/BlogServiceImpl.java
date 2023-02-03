@@ -9,6 +9,10 @@ import com.ws.util.MyBeanUtils;
 import com.ws.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -21,16 +25,20 @@ import javax.persistence.criteria.Predicate;
 import java.util.*;
 
 @Service
+@CacheConfig(cacheNames = "blog")
 public class BlogServiceImpl implements BlogService {
 
     @Autowired
     private BlogRepository blogRepository;
 
+    /*根据id查询db*/
+    @Cacheable(cacheNames = "blog" , key = "T(String).valueOf(#id)")
     @Override
     public Blog getBlog(Long id) {
         return blogRepository.getById(id);
     }
 
+    /*blog格式转换*/
     @Transactional
     @Override
     public Blog getAndConvert(Long id) {
@@ -48,7 +56,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
-        return blogRepository.findAll((root,cq, cb) -> {
+        return blogRepository.findAll((root, cq, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
             if(!"".equals(blog.getTitle()) && blog.getTitle() != null){
                 predicates.add(cb.like(root.<String>get("title"),"%"+blog.getTitle()+"%"));
@@ -104,6 +112,7 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.count();
     }
 
+    @CachePut(cacheNames = "blog" , key = "T(String).valueOf(#blog.id)")
     @Transactional
     @Override
     public Blog saveBlog(Blog blog) {
@@ -117,6 +126,7 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.save(blog);
     }
 
+    @CachePut(cacheNames = "blog" , key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public Blog updateBlog(Long id, Blog blog) {
@@ -129,6 +139,8 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.save(b);
     }
 
+    /*根据id删除blog*/
+    @CacheEvict(cacheNames = "blog" , key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public void deleteBlog(Long id) {

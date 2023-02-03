@@ -6,6 +6,8 @@ import com.ws.service.BlogService;
 import com.ws.service.TagService;
 import com.ws.service.TypeService;
 import com.ws.vo.BlogQuery;
+import lombok.extern.slf4j.Slf4j;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -17,7 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 
-
+@Slf4j
 @Controller
 @RequestMapping("/admin")
 public class BlogController {
@@ -68,6 +70,7 @@ public class BlogController {
     @GetMapping("/blogs/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         setTypeAndTag(model);
+        log.info("blog对象是否属于Blog类：{}",blogService.getBlog(id) instanceof Blog);
         Blog blog = blogService.getBlog(id);
         blog.init();
         model.addAttribute("blog",blog);

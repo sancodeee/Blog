@@ -5,6 +5,10 @@ import com.ws.dao.TypeRepository;
 import com.ws.po.Type;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -16,23 +20,27 @@ import java.util.List;
 
 
 @Service
+@CacheConfig(cacheNames = "type")
 public class TypeServiceImpl implements TypeService {
 
     @Autowired
     private TypeRepository typeRepository;
 
+    @CachePut(key = "T(String).valueOf(#type.id)")
     @Transactional
     @Override
     public Type saveType(Type type) {
         return typeRepository.save(type);
     }
 
+    @Cacheable(key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public Type getType(Long id) {
         return typeRepository.getById(id);
     }
 
+    @Cacheable(cacheNames = "type-name" , key = "#name")
     @Override
     public Type getTypeByName(String name) {
         return typeRepository.findByName(name);
@@ -56,6 +64,7 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.findTop(pageable);
     }
 
+    @Cacheable(key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public Type updateType(Long id, Type type) {
@@ -67,6 +76,7 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.save(t);
     }
 
+    @CacheEvict(key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public void deleteType(Long id) {

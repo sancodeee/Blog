@@ -3,6 +3,7 @@ package com.ws.po;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Proxy;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
