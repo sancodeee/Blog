@@ -133,10 +133,11 @@ public class BlogServiceImpl implements BlogService {
         Blog b = blogRepository.getById(id);
         if (b == null) {
             throw new NotFoundException("该博客不存在");
+        }else{
+            BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));
+            b.setUpdateTime(new Date());
+            return blogRepository.save(b);
         }
-        BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));
-        b.setUpdateTime(new Date());
-        return blogRepository.save(b);
     }
 
     /*根据id删除blog*/
