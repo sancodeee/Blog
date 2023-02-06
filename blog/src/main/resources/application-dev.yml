@@ -22,7 +22,7 @@ spring:
     redis:
       time-to-live: 600000  #缓存有效时长ms
       cache-null-values: false #是否允许空值
-    cache-names: blog,comment,tag,tag-name,type,type-name,user   #通过默认的RedisCacheManager在启动时创建其缓存空间
+    cache-names: blog,tag,tag-name,type,type-name,user   #通过默认的RedisCacheManager在启动时创建其缓存空间
 
   redis:
     host: 101.42.176.44

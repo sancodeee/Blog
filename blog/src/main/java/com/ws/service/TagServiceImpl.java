@@ -40,7 +40,6 @@ public class TagServiceImpl implements TagService {
         return tagRepository.getById(id);
     }
 
-    @Cacheable(cacheNames = "tag-name" , key = "#name")
     @Override
     public Tag getTagByName(String name) {
         return tagRepository.findByName(name);

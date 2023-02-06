@@ -40,7 +40,6 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.getById(id);
     }
 
-    @Cacheable(cacheNames = "type-name" , key = "#name")
     @Override
     public Type getTypeByName(String name) {
         return typeRepository.findByName(name);
