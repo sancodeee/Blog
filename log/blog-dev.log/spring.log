@@ -1347,3 +1347,75 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or u
 2023-02-09 16:06:10.659  INFO 46148 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : types
 2023-02-09 16:06:10.662  INFO 46148 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/10', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 10, {}]}
 2023-02-09 16:06:10.842  INFO 46148 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : types
+2023-02-09 16:42:52.475  INFO 53940 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 53940 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-09 16:42:52.476  INFO 53940 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-09 16:42:52.529  INFO 53940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-09 16:42:52.529  INFO 53940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-09 16:42:53.403  INFO 53940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-09 16:42:53.403  INFO 53940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 16:42:53.495  INFO 53940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 5 JPA repository interfaces.
+2023-02-09 16:42:54.472  INFO 53940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-09 16:42:54.482  INFO 53940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 16:42:54.482  INFO 53940 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-09 16:42:54.629  INFO 53940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 16:42:54.630  INFO 53940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2100 ms
+2023-02-09 16:42:55.023  INFO 53940 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 16:42:55.133  INFO 53940 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-09 16:42:55.333  INFO 53940 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-09 16:42:55.500  INFO 53940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 16:42:56.349  INFO 53940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 16:42:56.366  INFO 53940 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-09 16:42:57.265  INFO 53940 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 16:42:57.274  INFO 53940 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 16:42:58.336  WARN 53940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 16:42:58.656  INFO 53940 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 16:42:59.247  INFO 53940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-09 16:42:59.285  INFO 53940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-09 16:42:59.295  INFO 53940 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 7.591 seconds (JVM running for 9.784)
+2023-02-09 16:42:59.298  INFO 53940 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
+2023-02-09 16:43:02.568  INFO 53940 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 16:43:02.569  INFO 53940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 16:43:02.572  INFO 53940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-02-09 16:43:02.604  INFO 53940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-09 16:43:02.867  WARN 53940 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-09 16:43:02.886  WARN 53940 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-09 16:43:02.920  INFO 53940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-09 16:43:04.186  INFO 53940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-09 16:43:04.298  INFO 53940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-09 16:43:05.044  INFO 53940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/10', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 10, {}]}
+2023-02-09 16:43:05.148  INFO 53940 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/11', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 11, {}]}
+2023-02-09 16:43:05.165  INFO 53940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : types
+2023-02-09 16:43:05.230  INFO 53940 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : types
+2023-02-09 16:43:05.524  INFO 53940 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/5', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[5, {}]}
+2023-02-09 16:43:05.741  INFO 53940 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-09 16:43:05.793  INFO 53940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/4', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[4, {}]}
+2023-02-09 16:43:05.856  INFO 53940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-09 16:43:06.524  INFO 53940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[2, {}]}
+2023-02-09 16:43:06.592  INFO 53940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-09 16:43:07.198  INFO 53940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/blog/4', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[4, {}]}
+2023-02-09 16:43:07.267  INFO 53940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-09 16:43:08.327  INFO 53940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-09 16:43:08.432  INFO 53940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : types
+2023-02-09 16:43:09.510  INFO 53940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.AboutShowController.about', args=[]}
+2023-02-09 16:43:09.513  INFO 53940 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : about
+2023-02-09 16:43:10.292  INFO 53940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-09 16:43:10.376  INFO 53940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-09 16:43:14.483  INFO 53940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.ArchiveShowController.archives', args=[{}]}
+2023-02-09 16:43:14.678  INFO 53940 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : archives
+2023-02-09 16:43:15.310  INFO 53940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-09 16:43:15.473  INFO 53940 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-09 16:43:16.585  INFO 53940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-09 16:43:16.752  INFO 53940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-09 16:43:16.952  INFO 53940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-09 16:43:17.212  INFO 53940 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-09 16:43:18.015  INFO 53940 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-09 16:43:18.240  INFO 53940 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-09 16:43:22.673  INFO 53940 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/10', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 10, {}]}
+2023-02-09 16:43:22.902  INFO 53940 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-09 16:43:22.990  INFO 53940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 1, {}]}
+2023-02-09 16:43:23.204  INFO 53940 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-09 16:43:23.253  INFO 53940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/10', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 10, {}]}
+2023-02-09 16:43:23.490  INFO 53940 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-09 16:43:23.841  INFO 53940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-09 16:43:24.030  INFO 53940 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-09 16:43:31.881  INFO 53940 --- [http-nio-8080-exec-7] com.ws.web.admin.LoginController         : user对象是否属于User类：true
