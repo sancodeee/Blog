@@ -19,10 +19,10 @@
 <nav  th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui orange header item"><i class="strikethrough icon"></i>Senの管理后台</h2>
-            <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class=" home icon"></i> 博客 </a>
-            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class=" idea icon"></i> 分类</a>
-            <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签</a>
+            <h2 class="ui orange header item"><i class="configure icon"></i>SenのBlog管理之家</h2>
+            <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class=" home icon"></i> 博客管理</a>
+            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class=" idea icon"></i> 分类管理</a>
+            <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签管理</a>
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown item">
                     <div class="text">
