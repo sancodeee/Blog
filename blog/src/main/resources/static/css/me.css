@@ -84,6 +84,10 @@ body {
     line-height: 1.8;
 }
 
+.m-text-color{
+    color: #F2711C;
+}
+
 
 /*--------------------------margin----------------------------*/
 .m-margin-tb-tiney {

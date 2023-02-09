@@ -114,29 +114,29 @@
                 <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>
             </div>
 
-            <div class="inline fields m-opacity-background">
+            <div class="inline fields">
                 <div class="field">
-                    <div class="ui checkbox">
+                    <div class="ui checkbox editormd-logo-color">
                         <input type="checkbox" id="recommend" name="recommend" checked th:checked="*{recommend}" class="hidden">
-                        <label for="recommend">推荐</label>
+                        <label for="recommend"><h6 class="m-text-color"><i class="bookmark icon"></i>推荐</h6></label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="shareStatement" name="shareStatement" th:checked="*{shareStatement}" class="hidden">
-                        <label for="shareStatement">转载声明</label>
+                        <label for="shareStatement"><h6 class="m-text-color"><i class="share icon"></i>转载声明</h6></label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="appreciation" name="appreciation" th:checked="*{appreciation}" class="hidden">
-                        <label for="appreciation">赞赏</label>
+                        <label for="appreciation"><h6 class="m-text-color"><i class="thumbs up icon"></i>赞赏</h6></label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="commentabled" name="commentabled" th:checked="*{commentabled}" class="hidden">
-                        <label for="commentabled">评论</label>
+                        <label for="commentabled"><h6 class="m-text-color"><i class="comments icon"></i>评论</h6></label>
                     </div>
                 </div>
             </div>
