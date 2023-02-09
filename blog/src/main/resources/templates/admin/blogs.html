@@ -38,7 +38,7 @@
     <div class="ui container">
         <div class="right menu">
             <a href="#" th:href="@{/admin/blogs/input}" class="item">发布</a>
-            <a href="#" th:href="@{/admin/blogs}" class="teal active item">列表</a>
+            <a href="#" th:href="@{/admin/blogs}" class="orange active item">列表</a>
         </div>
     </div>
 </div>
@@ -66,23 +66,23 @@
                             </div>
                         </div>
 
-                        <button id="clear-btn" class="ui compact button">clear</button>
+                        <button id="clear-btn" class="ui compact green button">clear</button>
 
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">推荐</label>
+                        <label for="recommend"><h6>推荐</h6></label>
                     </div>
                 </div>
                 <div class="field">
-                    <button type="button" id="search-btn" class="ui mini teal button"><i class="search icon"></i>搜索</button>
+                    <button type="button" id="search-btn" class="ui mini orange button"><i class="search icon"></i>搜索</button>
                 </div>
             </div>
         </div>
         <div id="table-container">
-            <table th:fragment="blogList" class="ui compact teal center aligned table">
+            <table th:fragment="blogList" class="ui compact orange center aligned table">
                 <thead>
                 <tr>
                     <th></th>
@@ -104,7 +104,7 @@
                     <td th:text="${blog.published} ? '已发布':'草稿'">草稿</td>
 
                     <td>
-                        <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal button">编辑</a>
+                        <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini green button">编辑</a>
                         <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red button">删除</a>
                     </td>
                 </tr>
@@ -117,7 +117,7 @@
                             <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>
                             <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>
                         </div>
-                        <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated teal basic button m-margin-tb">新增</a>
+                        <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated orange basic button m-margin-tb">新增</a>
                     </th>
                 </tr>
                 </tfoot>

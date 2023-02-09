@@ -122,6 +122,14 @@ body {
     margin-bottom: 0.5em !important;
 }
 
+.m-margin-spacing-top {
+    margin-top: 10px;
+}
+
+.m-margin-spacing-bottom{
+    margin-bottom: 13px;
+}
+
 /*--------------------------opacity------------------------------*/
 
 .m-opacity-mini {
@@ -142,7 +150,7 @@ body {
 .m-opacity-background {
     /*background-color: azure;*/
     /*opacity: 0.5;*/
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .m-opacity-background-r {

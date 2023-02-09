@@ -17,7 +17,7 @@
 <nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui teal header item">SenのBlog</h2>
+            <h2 class="ui teal header item"><i class="strikethrough icon"></i>SenのBlog</h2>
             <a href="#" th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class=" home icon"></i> 首页 </a>
             <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class=" idea icon"></i> 分类</a>
             <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签</a>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="three wide column" >
-                <h4 class="ui inverted header m-text-thin m-text-spaced " >最新博客</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced " ><i class="chevron circle up icon"></i>最新博客</h4>
                 <div id="newblog-container">
                     <div class="ui inverted link list" th:fragment="newblogList">
                         <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newblogs}" th:text="${blog.title}">用户故事（User Story）</a>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced "><i class="user icon"></i>联系作者</h4>
                 <div class="ui inverted link list">
                     <a href="#" class="item"  th:text="#{index.qq}">QQ：1376474892</a>
                     <a href="#" class="item"  th:text="#{index.email}">Email：1376474892@qq.com</a>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Wangsen个人说明</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced "><i class="yelp icon"></i>个人说明</h4>
                 <p class="m-text-thin m-text-spaced m-opacity-mini" th:text="#{index.blogDescription}">此博客用来分享一些个人的一些技术总结供大家浏览，我个人会用来发布日常的一些技术或者感兴趣的文章</p>
             </div>
         </div>

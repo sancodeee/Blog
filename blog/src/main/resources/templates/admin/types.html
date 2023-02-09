@@ -38,7 +38,7 @@
     <div class="ui container">
         <div class="right menu">
             <a href="#" th:href="@{/admin/types/input}" class="item">新增</a>
-            <a href="#" th:href="@{/admin/types}" class="teal active item">列表</a>
+            <a href="#" th:href="@{/admin/types}" class="orange active item">列表</a>
         </div>
     </div>
 </div>
@@ -51,7 +51,7 @@
             <div class="header">提示：</div>
             <p th:text="${message}">恭喜，操作成功！</p>
         </div>
-        <table class="ui compact teal center aligned table">
+        <table class="ui compact orange center aligned table">
             <thead>
             <tr>
                 <th></th>
@@ -64,7 +64,7 @@
                 <td th:text="${iterStat.count}">1</td>
                 <td th:text="${type.name}">刻意练习清单</td>
                 <td>
-                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal button">编辑</a>
+                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini green button">编辑</a>
                     <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini red button">删除</a>
                 </td>
             </tr>
@@ -77,7 +77,7 @@
                         <a th:href="@{/admin/types(page=${page.number}-1)}" href="#" class="item" th:unless="${page.first}">上一页</a>
                         <a th:href="@{/admin/types(page=${page.number}+1)}" href="#" class="item" th:unless="${page.last}">下一页</a>
                     </div>
-                    <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated teal basic button m-margin-tb">新增</a>
+                    <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated orange basic button m-margin-tb">新增</a>
                 </th>
             </tr>
             </tfoot>
