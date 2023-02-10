@@ -13,7 +13,7 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserRepository userRepository;
 
-    @Cacheable(cacheNames = "user" , key = "#username")
+    @Cacheable(cacheNames = "user" , key = "#username" ,unless = "#result == null ")
     @Override
     public User checkUser(String username, String password) {
 

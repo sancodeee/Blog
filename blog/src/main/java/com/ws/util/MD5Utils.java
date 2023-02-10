@@ -37,7 +37,7 @@ public class MD5Utils {
     }
 
     public static void main(String[] args){
-        log.info(code("111111"));
+        log.info("密码："+code("111111"));
     }
 
 
