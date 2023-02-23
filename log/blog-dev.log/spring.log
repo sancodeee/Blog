@@ -1,33 +1,90 @@
-2023-02-17 15:34:13.834  INFO 31444 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 31444 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
-2023-02-17 15:34:13.837  INFO 31444 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
-2023-02-17 15:34:13.868  INFO 31444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-17 15:34:13.868  INFO 31444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-17 15:34:14.468  INFO 31444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-02-17 15:34:14.469  INFO 31444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-17 15:34:14.533  INFO 31444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
-2023-02-17 15:34:15.299  INFO 31444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-17 15:34:15.307  INFO 31444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-17 15:34:15.307  INFO 31444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2023-02-17 15:34:15.406  INFO 31444 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-17 15:34:15.406  INFO 31444 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1520 ms
-2023-02-17 15:34:15.574  INFO 31444 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-17 15:34:15.617  INFO 31444 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
-2023-02-17 15:34:15.721  INFO 31444 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-17 15:34:15.814  INFO 31444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-17 15:34:16.498  INFO 31444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-17 15:34:16.514  INFO 31444 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-02-17 15:34:17.333  INFO 31444 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-17 15:34:17.341  INFO 31444 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-17 15:34:18.103  WARN 31444 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17 15:34:18.372  INFO 31444 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-02-17 15:34:18.770  INFO 31444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-02-17 15:34:18.799  INFO 31444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-17 15:34:18.806  INFO 31444 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 5.447 seconds (JVM running for 6.669)
-2023-02-17 15:34:18.809  INFO 31444 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
-2023-02-17 15:34:28.448  INFO 31444 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-17 15:34:28.449  INFO 31444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-02-17 15:34:28.449  INFO 31444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-02-17 15:34:33.465 ERROR 31444 --- [http-nio-8080-exec-3] c.ws.handler.ControllerExceptionHandler  : Request URL : http://localhost:8080/admin/login,Exception : {}
+2023-02-23 09:20:31.146  WARN 36656 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=12h10s246ms464µs300ns).
+2023-02-23 11:07:35.887  INFO 36656 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 11:07:35.910  INFO 36656 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-02-23 11:07:36.023  INFO 36656 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-02-23 11:07:36.728  INFO 36656 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 36656 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-23 11:07:36.728  INFO 36656 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-23 11:07:37.298  INFO 36656 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-23 11:07:37.299  INFO 36656 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-23 11:07:37.401  INFO 36656 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 5 JPA repository interfaces.
+2023-02-23 11:07:37.736  INFO 36656 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-23 11:07:37.738  INFO 36656 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-23 11:07:37.738  INFO 36656 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-23 11:07:37.854  INFO 36656 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-23 11:07:37.854  INFO 36656 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1121 ms
+2023-02-23 11:07:38.042  INFO 36656 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-23 11:07:38.048  INFO 43936 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 43936 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-23 11:07:38.050  INFO 43936 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-23 11:07:38.050  INFO 36656 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-02-23 11:07:38.113  INFO 43936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-23 11:07:38.113  INFO 43936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-23 11:07:38.156  INFO 36656 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-02-23 11:07:38.158  INFO 36656 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-23 11:07:38.677  INFO 36656 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-23 11:07:38.678  INFO 36656 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 11:07:39.672  WARN 36656 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-23 11:07:39.679  INFO 43936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-23 11:07:39.680  INFO 43936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-23 11:07:39.788  INFO 43936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+2023-02-23 11:07:39.971  INFO 36656 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-23 11:07:40.406  INFO 36656 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-23 11:07:40.442  INFO 36656 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-02-23 11:07:40.449  INFO 36656 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 3.842 seconds (JVM running for 151268.566)
+2023-02-23 11:07:40.452  INFO 36656 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-23 11:07:40.452  INFO 36656 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
+2023-02-23 11:07:41.107  INFO 43936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-23 11:07:41.117  INFO 43936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-23 11:07:41.118  INFO 43936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-23 11:07:41.271  INFO 43936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-23 11:07:41.271  INFO 43936 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3156 ms
+2023-02-23 11:07:41.529  INFO 43936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-23 11:07:41.631  INFO 43936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-23 11:07:41.883  INFO 43936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-23 11:07:42.095  INFO 43936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-23 11:07:43.104  INFO 43936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-23 11:07:43.127  INFO 43936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-23 11:07:44.295  INFO 43936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-23 11:07:44.307  INFO 43936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 11:07:45.331  WARN 43936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-23 11:07:45.629  INFO 43936 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-23 11:07:46.212  WARN 43936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-02-23 11:07:46.240  WARN 43936 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 80 is already in use
+2023-02-23 11:07:46.244  INFO 43936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 11:07:46.247  INFO 43936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-23 11:07:46.339  INFO 43936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-23 11:07:46.341  INFO 43936 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-23 11:07:46.356  INFO 43936 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-23 11:07:46.378 ERROR 43936 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 80 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 80 or configure this application to listen on another port.
+
+2023-02-23 11:07:49.687  INFO 36656 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-23 11:07:49.689  INFO 36656 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-23 11:07:49.692  INFO 36656 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-02-23 11:07:49.695  INFO 36656 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-23 11:07:49.796  WARN 36656 --- [http-nio-80-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-23 11:07:49.807  WARN 36656 --- [http-nio-80-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-23 11:07:49.829  INFO 36656 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-23 11:07:50.624  INFO 36656 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:07:50.694  INFO 36656 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:07:52.306  INFO 36656 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:07:52.385  INFO 36656 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:07:53.427  INFO 36656 --- [http-nio-80-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:07:53.509  INFO 36656 --- [http-nio-80-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:07:53.576  INFO 36656 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-23 11:07:53.814 ERROR 36656 --- [http-nio-80-exec-6] c.ws.handler.ControllerExceptionHandler  : Request URL : http://localhost/comments/1,Exception : {}
 
 org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
 	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:69)
@@ -54,8 +111,27 @@ org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't w
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
-	at com.ws.service.UserServiceImpl$$EnhancerBySpringCGLIB$$5b78cbea.checkUser(<generated>)
-	at com.ws.web.admin.LoginController.login(LoginController.java:38)
+	at com.ws.service.CommentServiceImpl$$EnhancerBySpringCGLIB$$e28c067.listCommentByBlogId(<generated>)
+	at com.ws.web.CommentController.comments(CommentController.java:32)
+	at com.ws.web.CommentController$$FastClassBySpringCGLIB$$4aa6255c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.web.CommentController$$EnhancerBySpringCGLIB$$6d3d04f8.comments(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,8 +145,8 @@ org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't w
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -116,236 +192,81 @@ Caused by: redis.clients.jedis.exceptions.JedisDataException: READONLY You can't
 	at org.springframework.data.redis.connection.jedis.JedisInvoker.lambda$from$20(JedisInvoker.java:299)
 	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$doInvoke$2(JedisConnection.java:176)
 	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:799)
-	... 70 common frames omitted
+	... 89 common frames omitted
 
-2023-02-17 15:34:33.467  WARN 31444 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.]
-2023-02-17 15:48:31.070  INFO 31444 --- [http-nio-8080-exec-10] com.ws.web.admin.LoginController         : user对象是否属于User类：true
-2023-02-17 15:48:31.461  INFO 31444 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:48:31.503  INFO 31444 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:48:35.029  INFO 31444 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:48:35.044  INFO 31444 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:48:36.639  INFO 31444 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:48:36.656  INFO 31444 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:24.738  INFO 31444 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:24.754  INFO 31444 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:26.218  INFO 31444 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:26.240  INFO 31444 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:27.254 ERROR 31444 --- [http-nio-8080-exec-9] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-9] Exception processing template "admin/tags-input": An error happened during template parsing (template: "class path resource [templates/admin/tags-input.html]")
+2023-02-23 11:07:53.817  WARN 36656 --- [http-nio-80-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.]
+2023-02-23 11:08:40.463  INFO 36656 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-23 11:08:40.595  INFO 36656 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Result : index
+2023-02-23 11:08:41.190  INFO 36656 --- [http-nio-80-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:08:41.234  INFO 36656 --- [http-nio-80-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:08:43.350  INFO 36656 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-23 11:08:43.478  INFO 36656 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-23 11:08:44.878  INFO 36656 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-23 11:08:44.984  INFO 36656 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Result : index
+2023-02-23 11:08:45.513  INFO 36656 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:08:45.565  INFO 36656 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:08:46.216  INFO 36656 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:08:46.275  INFO 36656 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:08:46.482  INFO 36656 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:08:46.531  INFO 36656 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:08:47.431  INFO 36656 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:08:47.479  INFO 36656 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:08:47.549  INFO 36656 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-23 11:08:47.657 ERROR 36656 --- [http-nio-80-exec-2] c.ws.handler.ControllerExceptionHandler  : Request URL : http://localhost/comments/1,Exception : {}
 
-org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/tags-input.html]")
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "name" (template: "admin/tags-input" - line 55, col 63)
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
-	... 48 common frames omitted
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "name" (template: "admin/tags-input" - line 55, col 63)
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
-	at org.thymeleaf.standard.expression.SelectionVariableExpression.executeSelectionVariableExpression(SelectionVariableExpression.java:158)
-	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:92)
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
-	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
-	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
-	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
-	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
-	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
-	... 50 common frames omitted
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1021E: A problem occurred whilst attempting to access the property 'name': 'Unable to access property 'name' through getter method'
-	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:209)
-	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
-	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:91)
-	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
-	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
-	... 69 common frames omitted
-Caused by: org.springframework.expression.AccessException: Unable to access property 'name' through getter method
-	at org.springframework.expression.spel.support.ReflectivePropertyAccessor$OptimalPropertyAccessor.read(ReflectivePropertyAccessor.java:708)
-	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:204)
-	... 74 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
+org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:42)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:187)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:802)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doInvoke(JedisConnection.java:160)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$new$0(JedisConnection.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$Synchronizer.invoke(JedisInvoker.java:1027)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$DefaultSingleInvocationSpec.getOrElse(JedisInvoker.java:946)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.set(JedisStringCommands.java:116)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.set(DefaultedRedisConnection.java:295)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.lambda$put$0(DefaultRedisCacheWriter.java:105)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.execute(DefaultRedisCacheWriter.java:304)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.put(DefaultRedisCacheWriter.java:102)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:168)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:87)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:837)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:430)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.service.CommentServiceImpl$$EnhancerBySpringCGLIB$$e28c067.listCommentByBlogId(<generated>)
+	at com.ws.web.CommentController.comments(CommentController.java:32)
+	at com.ws.web.CommentController$$FastClassBySpringCGLIB$$4aa6255c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.web.CommentController$$EnhancerBySpringCGLIB$$6d3d04f8.comments(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.expression.spel.support.ReflectivePropertyAccessor$OptimalPropertyAccessor.read(ReflectivePropertyAccessor.java:704)
-	... 75 common frames omitted
-Caused by: javax.persistence.EntityNotFoundException: Unable to find com.ws.po.Tag with id 22
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$JpaEntityNotFoundDelegate.handleEntityNotFound(EntityManagerFactoryBuilderImpl.java:163)
-	at org.hibernate.proxy.AbstractLazyInitializer.checkTargetState(AbstractLazyInitializer.java:291)
-	at org.hibernate.proxy.AbstractLazyInitializer.permissiveInitialization(AbstractLazyInitializer.java:244)
-	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:172)
-	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:315)
-	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:45)
-	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95)
-	at com.ws.po.Tag$HibernateProxy$Nv2o37rd.getName(Unknown Source)
-	... 80 common frames omitted
-
-2023-02-17 15:50:27.257 ERROR 31444 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/tags-input.html]")] with root cause
-
-javax.persistence.EntityNotFoundException: Unable to find com.ws.po.Tag with id 22
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$JpaEntityNotFoundDelegate.handleEntityNotFound(EntityManagerFactoryBuilderImpl.java:163)
-	at org.hibernate.proxy.AbstractLazyInitializer.checkTargetState(AbstractLazyInitializer.java:291)
-	at org.hibernate.proxy.AbstractLazyInitializer.permissiveInitialization(AbstractLazyInitializer.java:244)
-	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:172)
-	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:315)
-	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:45)
-	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95)
-	at com.ws.po.Tag$HibernateProxy$Nv2o37rd.getName(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.expression.spel.support.ReflectivePropertyAccessor$OptimalPropertyAccessor.read(ReflectivePropertyAccessor.java:704)
-	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:204)
-	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
-	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:91)
-	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
-	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
-	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
-	at org.thymeleaf.standard.expression.SelectionVariableExpression.executeSelectionVariableExpression(SelectionVariableExpression.java:158)
-	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:92)
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
-	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
-	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
-	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
-	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
-	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
-	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
-	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
-	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
-	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
-	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
-	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
-	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
-	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
-	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
-	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
-	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
-	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:750)
-
-2023-02-17 15:50:27.261 ERROR 31444 --- [http-nio-8080-exec-9] c.ws.handler.ControllerExceptionHandler  : Request URL : http://localhost:8080/error,Exception : {}
-
-org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:310)
-	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:273)
-	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
-	at java.io.FilterOutputStream.flush(FilterOutputStream.java:140)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1193)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1008)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
-	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
-	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
-	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
@@ -358,24 +279,25 @@ org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的�
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711)
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385)
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313)
-	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:403)
-	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249)
-	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:344)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
@@ -388,37 +310,87 @@ org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的�
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
-Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at sun.nio.ch.SocketDispatcher.write0(Native Method)
-	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
-	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
-	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
-	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:469)
-	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:135)
-	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1384)
-	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:766)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:719)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:709)
-	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:573)
-	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
-	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:221)
-	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1255)
-	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:402)
-	at org.apache.coyote.Response.action(Response.java:209)
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
-	... 53 common frames omitted
+Caused by: redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:135)
+	at redis.clients.jedis.Protocol.process(Protocol.java:169)
+	at redis.clients.jedis.Protocol.read(Protocol.java:223)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:352)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:270)
+	at redis.clients.jedis.BinaryJedis.set(BinaryJedis.java:423)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker.lambda$from$20(JedisInvoker.java:299)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$doInvoke$2(JedisConnection.java:176)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:799)
+	... 89 common frames omitted
 
-2023-02-17 15:50:27.261  WARN 31444 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。]
-2023-02-17 15:50:27.262 ERROR 31444 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+2023-02-23 11:08:47.658  WARN 36656 --- [http-nio-80-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.]
+2023-02-23 11:12:06.406  INFO 36656 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-23 11:12:06.518  INFO 36656 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Result : index
+2023-02-23 11:12:07.168  INFO 36656 --- [http-nio-80-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:12:07.205  INFO 36656 --- [http-nio-80-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:12:08.332  INFO 36656 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:12:08.450  INFO 36656 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:12:09.495  INFO 36656 --- [http-nio-80-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:12:09.548  INFO 36656 --- [http-nio-80-exec-9] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:12:09.600  INFO 36656 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-23 11:12:09.701 ERROR 36656 --- [http-nio-80-exec-10] c.ws.handler.ControllerExceptionHandler  : Request URL : http://localhost/comments/1,Exception : {}
 
-java.lang.IllegalStateException: getOutputStream() has already been called for this response
-	at org.apache.catalina.connector.Response.getWriter(Response.java:584)
-	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:227)
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:364)
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:42)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:187)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:802)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doInvoke(JedisConnection.java:160)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$new$0(JedisConnection.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$Synchronizer.invoke(JedisInvoker.java:1027)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$DefaultSingleInvocationSpec.getOrElse(JedisInvoker.java:946)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.set(JedisStringCommands.java:116)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.set(DefaultedRedisConnection.java:295)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.lambda$put$0(DefaultRedisCacheWriter.java:105)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.execute(DefaultRedisCacheWriter.java:304)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.put(DefaultRedisCacheWriter.java:102)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:168)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:87)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:837)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:430)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.service.CommentServiceImpl$$EnhancerBySpringCGLIB$$e28c067.listCommentByBlogId(<generated>)
+	at com.ws.web.CommentController.comments(CommentController.java:32)
+	at com.ws.web.CommentController$$FastClassBySpringCGLIB$$4aa6255c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.web.CommentController$$EnhancerBySpringCGLIB$$6d3d04f8.comments(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
@@ -427,24 +399,25 @@ java.lang.IllegalStateException: getOutputStream() has already been called for t
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711)
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385)
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313)
-	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:403)
-	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249)
-	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:344)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
@@ -457,35 +430,196 @@ java.lang.IllegalStateException: getOutputStream() has already been called for t
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:135)
+	at redis.clients.jedis.Protocol.process(Protocol.java:169)
+	at redis.clients.jedis.Protocol.read(Protocol.java:223)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:352)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:270)
+	at redis.clients.jedis.BinaryJedis.set(BinaryJedis.java:423)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker.lambda$from$20(JedisInvoker.java:299)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$doInvoke$2(JedisConnection.java:176)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:799)
+	... 89 common frames omitted
 
-2023-02-17 15:50:27.262 ERROR 31444 --- [http-nio-8080-exec-9] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+2023-02-23 11:12:09.701  WARN 36656 --- [http-nio-80-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.]
+2023-02-23 11:14:53.074  INFO 35716 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 35716 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-23 11:14:53.076  INFO 35716 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-23 11:14:53.175  INFO 35716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-23 11:14:53.175  INFO 35716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-23 11:14:54.544  INFO 35716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-23 11:14:54.545  INFO 35716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-23 11:14:54.659  INFO 35716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 5 JPA repository interfaces.
+2023-02-23 11:14:56.261  INFO 35716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-23 11:14:56.275  INFO 35716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-23 11:14:56.276  INFO 35716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-23 11:14:56.504  INFO 35716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-23 11:14:56.504  INFO 35716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3328 ms
+2023-02-23 11:14:56.776  INFO 35716 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-23 11:14:56.828  INFO 35716 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-23 11:14:56.962  INFO 35716 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-23 11:14:57.063  INFO 35716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-23 11:14:57.838  INFO 35716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-23 11:14:57.854  INFO 35716 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-23 11:14:58.863  INFO 35716 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-23 11:14:58.871  INFO 35716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 11:14:59.870  WARN 35716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-23 11:15:00.193  INFO 35716 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-23 11:15:00.697  WARN 35716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-02-23 11:15:00.721  WARN 35716 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 80 is already in use
+2023-02-23 11:15:00.724  INFO 35716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 11:15:00.727  INFO 35716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-23 11:15:00.813  INFO 35716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-23 11:15:00.815  INFO 35716 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-23 11:15:00.826  INFO 35716 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.IllegalStateException: getOutputStream() has already been called for this response
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-23 11:15:00.839 ERROR 35716 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 80 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 80 or configure this application to listen on another port.
+
+2023-02-23 11:15:08.051  INFO 36656 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-23 11:15:08.168  INFO 36656 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Result : index
+2023-02-23 11:15:08.793  INFO 36656 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:15:08.835  INFO 36656 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:27:55.304  INFO 40504 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 40504 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-23 11:27:55.305  INFO 40504 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-23 11:27:55.347  INFO 40504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-23 11:27:55.347  INFO 40504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-23 11:27:55.974  INFO 40504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-23 11:27:55.975  INFO 40504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-23 11:27:56.049  INFO 40504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2023-02-23 11:27:56.787  INFO 40504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-23 11:27:56.795  INFO 40504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-23 11:27:56.795  INFO 40504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-23 11:27:56.919  INFO 40504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-23 11:27:56.919  INFO 40504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1571 ms
+2023-02-23 11:27:57.109  INFO 40504 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-23 11:27:57.144  INFO 40504 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2023-02-23 11:27:57.246  INFO 40504 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-23 11:27:57.336  INFO 40504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-23 11:27:58.091  INFO 40504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-23 11:27:58.104  INFO 40504 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-23 11:27:58.937  INFO 40504 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-23 11:27:58.944  INFO 40504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 11:27:59.820  WARN 40504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-23 11:28:00.081  INFO 40504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-23 11:28:00.578  INFO 40504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-23 11:28:00.628  INFO 40504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-02-23 11:28:00.639  INFO 40504 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 5.817 seconds (JVM running for 7.245)
+2023-02-23 11:28:00.641  INFO 40504 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
+2023-02-23 11:28:13.499  INFO 40504 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-23 11:28:13.499  INFO 40504 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-23 11:28:13.501  INFO 40504 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-02-23 11:28:13.535  INFO 40504 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-23 11:28:13.707  WARN 40504 --- [http-nio-80-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-23 11:28:13.746  WARN 40504 --- [http-nio-80-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2023-02-23 11:28:13.783  INFO 40504 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Result : index
+2023-02-23 11:28:15.046  INFO 40504 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:28:15.106  INFO 40504 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:28:15.417  INFO 40504 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2023-02-23 11:28:15.570  INFO 40504 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Result : tags
+2023-02-23 11:28:16.329  INFO 40504 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:28:16.458  INFO 40504 --- [http-nio-80-exec-2] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:28:17.494  INFO 40504 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:28:17.580  INFO 40504 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:28:17.641  INFO 40504 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-23 11:28:17.875 ERROR 40504 --- [http-nio-80-exec-1] c.ws.handler.ControllerExceptionHandler  : Request URL : http://localhost/comments/1,Exception : {}
+
+org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:42)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:187)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:802)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doInvoke(JedisConnection.java:160)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$new$0(JedisConnection.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$Synchronizer.invoke(JedisInvoker.java:1027)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$DefaultSingleInvocationSpec.getOrElse(JedisInvoker.java:946)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.set(JedisStringCommands.java:116)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.set(DefaultedRedisConnection.java:295)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.lambda$put$0(DefaultRedisCacheWriter.java:105)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.execute(DefaultRedisCacheWriter.java:304)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.put(DefaultRedisCacheWriter.java:102)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:168)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:87)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:837)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:430)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.service.CommentServiceImpl$$EnhancerBySpringCGLIB$$f520315f.listCommentByBlogId(<generated>)
+	at com.ws.web.CommentController.comments(CommentController.java:32)
+	at com.ws.web.CommentController$$FastClassBySpringCGLIB$$4aa6255c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.web.CommentController$$EnhancerBySpringCGLIB$$f4c0358f.comments(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711)
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385)
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313)
-	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:403)
-	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249)
-	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:344)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
@@ -498,208 +632,264 @@ org.springframework.web.util.NestedServletException: Request processing failed; 
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
-Caused by: java.lang.IllegalStateException: getOutputStream() has already been called for this response
-	at org.apache.catalina.connector.Response.getWriter(Response.java:584)
-	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:227)
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:364)
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:135)
+	at redis.clients.jedis.Protocol.process(Protocol.java:169)
+	at redis.clients.jedis.Protocol.read(Protocol.java:223)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:352)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:270)
+	at redis.clients.jedis.BinaryJedis.set(BinaryJedis.java:423)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker.lambda$from$20(JedisInvoker.java:299)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$doInvoke$2(JedisConnection.java:176)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:799)
+	... 89 common frames omitted
+
+2023-02-23 11:28:17.878  WARN 40504 --- [http-nio-80-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.]
+2023-02-23 11:29:00.524  INFO 40504 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:29:00.599  INFO 40504 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:29:01.357  INFO 40504 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:29:01.410  INFO 40504 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:29:01.467  INFO 40504 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-23 11:29:01.586 ERROR 40504 --- [http-nio-80-exec-10] c.ws.handler.ControllerExceptionHandler  : Request URL : http://localhost/comments/1,Exception : {}
+
+org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:42)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:187)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:802)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doInvoke(JedisConnection.java:160)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$new$0(JedisConnection.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$Synchronizer.invoke(JedisInvoker.java:1027)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$DefaultSingleInvocationSpec.getOrElse(JedisInvoker.java:946)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.set(JedisStringCommands.java:116)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.set(DefaultedRedisConnection.java:295)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.lambda$put$0(DefaultRedisCacheWriter.java:105)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.execute(DefaultRedisCacheWriter.java:304)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.put(DefaultRedisCacheWriter.java:102)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:168)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:87)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:837)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:430)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.service.CommentServiceImpl$$EnhancerBySpringCGLIB$$f520315f.listCommentByBlogId(<generated>)
+	at com.ws.web.CommentController.comments(CommentController.java:32)
+	at com.ws.web.CommentController$$FastClassBySpringCGLIB$$4aa6255c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.web.CommentController$$EnhancerBySpringCGLIB$$f4c0358f.comments(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	... 36 common frames omitted
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:135)
+	at redis.clients.jedis.Protocol.process(Protocol.java:169)
+	at redis.clients.jedis.Protocol.read(Protocol.java:223)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:352)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:270)
+	at redis.clients.jedis.BinaryJedis.set(BinaryJedis.java:423)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker.lambda$from$20(JedisInvoker.java:299)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$doInvoke$2(JedisConnection.java:176)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:799)
+	... 89 common frames omitted
 
-2023-02-17 15:50:30.616  INFO 31444 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:30.646  INFO 31444 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:33.520  INFO 31444 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:33.537  INFO 31444 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:36.145  INFO 31444 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:36.158  INFO 31444 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:38.090  INFO 31444 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:38.099  INFO 31444 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:40.171  INFO 31444 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:40.179  INFO 31444 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:45.969  INFO 31444 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:45.977  INFO 31444 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:49.361  INFO 31444 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:49.384  INFO 31444 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 15:50:53.686  INFO 31444 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 15:50:53.702  INFO 31444 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:03:12.230  INFO 31444 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:03:12.253  INFO 31444 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:03:14.795  INFO 31444 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:03:14.811  INFO 31444 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:03:17.226  INFO 31444 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:03:17.235  INFO 31444 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:03:19.174  INFO 31444 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:03:19.190  INFO 31444 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:03:21.725  INFO 31444 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:03:21.734  INFO 31444 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:03:25.576  INFO 31444 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:03:25.588  INFO 31444 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:03:28.195  INFO 31444 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:03:28.216  INFO 31444 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:03:36.029  INFO 31444 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:03:36.038  INFO 31444 --- [http-nio-8080-exec-7] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:43:06.003  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 32036 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
-2023-02-17 16:43:06.005  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
-2023-02-17 16:43:06.045  INFO 32036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-17 16:43:06.045  INFO 32036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-17 16:43:06.594  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-02-17 16:43:06.595  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-17 16:43:06.653  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
-2023-02-17 16:43:07.284  INFO 32036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-17 16:43:07.290  INFO 32036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-17 16:43:07.291  INFO 32036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2023-02-17 16:43:07.407  INFO 32036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-17 16:43:07.407  INFO 32036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1361 ms
-2023-02-17 16:43:07.588  INFO 32036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-17 16:43:07.614  INFO 32036 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
-2023-02-17 16:43:07.694  INFO 32036 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-17 16:43:07.770  INFO 32036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-17 16:43:08.552  INFO 32036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-17 16:43:08.566  INFO 32036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-02-17 16:43:09.377  INFO 32036 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-17 16:43:09.383  INFO 32036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-17 16:43:10.235  WARN 32036 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17 16:43:10.483  INFO 32036 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-02-17 16:43:10.883  INFO 32036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-02-17 16:43:10.918  INFO 32036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-17 16:43:10.926  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 5.433 seconds (JVM running for 6.707)
-2023-02-17 16:43:10.928  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
-2023-02-17 16:43:59.030  INFO 32036 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-17 16:43:59.031  INFO 32036 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-02-17 16:43:59.032  INFO 32036 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-02-17 16:43:59.054  INFO 32036 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2023-02-17 16:43:59.154  WARN 32036 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2023-02-17 16:43:59.191  WARN 32036 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2023-02-17 16:43:59.217  INFO 32036 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : index
-2023-02-17 16:44:00.255  INFO 32036 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:00.273  INFO 32036 --- [http-nio-8080-exec-1] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:44:03.349  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2023-02-17 16:44:03.433  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : index
-2023-02-17 16:44:05.062  INFO 32036 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2023-02-17 16:44:05.135  INFO 32036 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : types
-2023-02-17 16:44:05.333  INFO 32036 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2023-02-17 16:44:05.412  INFO 32036 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : types
-2023-02-17 16:44:06.171  INFO 32036 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:06.192  INFO 32036 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:44:08.351  INFO 32036 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.ArchiveShowController.archives', args=[{}]}
-2023-02-17 16:44:08.430  INFO 32036 --- [http-nio-8080-exec-10] com.ws.aspect.LogAspect                  : Result : archives
-2023-02-17 16:44:08.518  INFO 32036 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2023-02-17 16:44:08.599  INFO 32036 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : tags
-2023-02-17 16:44:08.735  INFO 32036 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2023-02-17 16:44:08.818  INFO 32036 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : tags
-2023-02-17 16:44:09.068  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/19', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 19, {}]}
-2023-02-17 16:44:09.131  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : types
-2023-02-17 16:44:09.729  INFO 32036 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:09.740  INFO 32036 --- [http-nio-8080-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:44:12.874  INFO 32036 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.ArchiveShowController.archives', args=[{}]}
-2023-02-17 16:44:12.934  INFO 32036 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : archives
-2023-02-17 16:44:13.351  INFO 32036 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:13.373  INFO 32036 --- [http-nio-8080-exec-8] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:44:15.693  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.AboutShowController.about', args=[]}
-2023-02-17 16:44:15.695  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : about
-2023-02-17 16:44:16.482  INFO 32036 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:16.498  INFO 32036 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:44:18.511  INFO 32036 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2023-02-17 16:44:18.591  INFO 32036 --- [http-nio-8080-exec-6] com.ws.aspect.LogAspect                  : Result : index
-2023-02-17 16:44:19.139  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:19.150  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:44:21.861  INFO 32036 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2023-02-17 16:44:21.930  INFO 32036 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : types
-2023-02-17 16:44:29.716  INFO 32036 --- [http-nio-8080-exec-7] com.ws.web.admin.LoginController         : user对象是否属于User类：true
-2023-02-17 16:44:30.240  INFO 32036 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:30.254  INFO 32036 --- [http-nio-8080-exec-9] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:44:35.812  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:35.822  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:44:45.255  INFO 32036 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:44:45.272  INFO 32036 --- [http-nio-8080-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:45:03.597  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:45:03.614  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:45:07.200  INFO 32036 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:45:07.220  INFO 32036 --- [http-nio-8080-exec-2] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:45:16.346  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
-2023-02-17 16:45:16.380  INFO 32036 --- [http-nio-8080-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
-2023-02-17 16:46:45.585  INFO 32036 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-02-17 16:46:45.588  INFO 32036 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-02-17 16:46:45.666  INFO 32036 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-02-17 16:46:46.436  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 32036 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
-2023-02-17 16:46:46.436  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
-2023-02-17 16:46:46.805  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-02-17 16:46:46.806  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-17 16:46:46.841  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
-2023-02-17 16:46:46.993  INFO 32036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-17 16:46:46.994  INFO 32036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-17 16:46:46.994  INFO 32036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2023-02-17 16:46:47.031  INFO 32036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-17 16:46:47.031  INFO 32036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 592 ms
-2023-02-17 16:46:47.106  INFO 32036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-17 16:46:47.109  INFO 32036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-02-17 16:46:47.236  INFO 32036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-02-17 16:46:47.236  INFO 32036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-02-17 16:46:47.520  INFO 32036 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-17 16:46:47.521  INFO 32036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-17 16:46:47.915  WARN 32036 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17 16:46:48.030  INFO 32036 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-02-17 16:46:48.184  INFO 32036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-02-17 16:46:48.199  INFO 32036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-17 16:46:48.203  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 1.965 seconds (JVM running for 223.984)
-2023-02-17 16:46:48.206  INFO 32036 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-02-17 16:46:48.206  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
-2023-02-17 16:50:45.256  INFO 32036 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-02-17 16:50:45.257  INFO 32036 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2023-02-17 16:50:45.354  INFO 32036 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2023-02-17 16:50:53.631  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 32036 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
-2023-02-17 16:50:53.631  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
-2023-02-17 16:50:53.882  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-02-17 16:50:53.883  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-17 16:50:53.884  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
-2023-02-17 16:50:54.108  INFO 32036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-17 16:50:54.109  INFO 32036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-17 16:50:54.110  INFO 32036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2023-02-17 16:50:54.171  INFO 32036 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-02-17 16:50:54.171  INFO 32036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 537 ms
-2023-02-17 16:50:54.238  INFO 32036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-17 16:50:54.242  INFO 32036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-02-17 16:50:54.404  INFO 32036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-02-17 16:50:54.405  INFO 32036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-02-17 16:50:54.445  INFO 32036 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-17 16:50:54.446  INFO 32036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-17 16:50:54.478  WARN 32036 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17 16:50:54.574  INFO 32036 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-02-17 16:50:54.690  INFO 32036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-02-17 16:50:54.709  INFO 32036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-17 16:50:54.714  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 1.145 seconds (JVM running for 470.494)
-2023-02-17 16:50:54.716  INFO 32036 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-02-17 16:50:54.716  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
-2023-02-17 16:51:08.117  INFO 32036 --- [Thread-26] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-02-17 16:51:08.118  INFO 32036 --- [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2023-02-17 16:51:08.218  INFO 32036 --- [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2023-02-17 16:51:08.478  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 32036 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
-2023-02-17 16:51:08.478  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
-2023-02-17 16:51:08.788  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-02-17 16:51:08.789  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-17 16:51:08.842  INFO 32036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
-2023-02-17 16:51:08.999  INFO 32036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-17 16:51:09.000  INFO 32036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-17 16:51:09.000  INFO 32036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2023-02-17 16:51:09.044  INFO 32036 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-02-17 16:51:09.044  INFO 32036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 562 ms
-2023-02-17 16:51:09.116  INFO 32036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-17 16:51:09.120  INFO 32036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2023-02-17 16:51:09.206  INFO 32036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2023-02-17 16:51:09.206  INFO 32036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-02-17 16:51:09.442  INFO 32036 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-17 16:51:09.442  INFO 32036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-17 16:51:10.034  WARN 32036 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17 16:51:10.174  INFO 32036 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-02-17 16:51:10.365  INFO 32036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-02-17 16:51:10.383  INFO 32036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-17 16:51:10.392  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 1.965 seconds (JVM running for 486.174)
-2023-02-17 16:51:10.394  INFO 32036 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-02-17 16:51:10.395  INFO 32036 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
-2023-02-17 17:06:35.928  INFO 32036 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-17 17:06:35.929  INFO 32036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-02-17 17:06:35.930  INFO 32036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-23 11:29:01.587  WARN 40504 --- [http-nio-80-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.]
+2023-02-23 11:30:35.043  INFO 40504 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:30:35.147  INFO 40504 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:30:36.689  INFO 40504 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:30:36.749  INFO 40504 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:30:36.815  INFO 40504 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-23 11:30:36.964 ERROR 40504 --- [http-nio-80-exec-1] c.ws.handler.ControllerExceptionHandler  : Request URL : http://localhost/comments/1,Exception : {}
+
+org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:42)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:187)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:802)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doInvoke(JedisConnection.java:160)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$new$0(JedisConnection.java:69)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$Synchronizer.invoke(JedisInvoker.java:1027)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker$DefaultSingleInvocationSpec.getOrElse(JedisInvoker.java:946)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.set(JedisStringCommands.java:116)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.set(DefaultedRedisConnection.java:295)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.lambda$put$0(DefaultRedisCacheWriter.java:105)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.execute(DefaultRedisCacheWriter.java:304)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.put(DefaultRedisCacheWriter.java:102)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:168)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:87)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:837)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:430)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.service.CommentServiceImpl$$EnhancerBySpringCGLIB$$f520315f.listCommentByBlogId(<generated>)
+	at com.ws.web.CommentController.comments(CommentController.java:32)
+	at com.ws.web.CommentController$$FastClassBySpringCGLIB$$4aa6255c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.ws.web.CommentController$$EnhancerBySpringCGLIB$$f4c0358f.comments(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:135)
+	at redis.clients.jedis.Protocol.process(Protocol.java:169)
+	at redis.clients.jedis.Protocol.read(Protocol.java:223)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:352)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:270)
+	at redis.clients.jedis.BinaryJedis.set(BinaryJedis.java:423)
+	at org.springframework.data.redis.connection.jedis.JedisInvoker.lambda$from$20(JedisInvoker.java:299)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.lambda$doInvoke$2(JedisConnection.java:176)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.doWithJedis(JedisConnection.java:799)
+	... 89 common frames omitted
+
+2023-02-23 11:30:36.965  WARN 40504 --- [http-nio-80-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: READONLY You can't write against a read only replica.; nested exception is redis.clients.jedis.exceptions.JedisDataException: READONLY You can't write against a read only replica.]
+2023-02-23 11:34:22.504  INFO 40504 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:34:22.572  INFO 40504 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:34:23.170  INFO 40504 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:34:23.233  INFO 40504 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:34:23.267  INFO 40504 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-23 11:34:23.393  INFO 40504 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Result : blog :: commentList
+2023-02-23 11:34:29.145  INFO 40504 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2023-02-23 11:34:29.263  INFO 40504 --- [http-nio-80-exec-8] com.ws.aspect.LogAspect                  : Result : index
+2023-02-23 11:34:30.018  INFO 40504 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:34:30.081  INFO 40504 --- [http-nio-80-exec-4] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:34:34.796  INFO 40504 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[1, {}]}
+2023-02-23 11:34:34.866  INFO 40504 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-23 11:34:35.413  INFO 40504 --- [http-nio-80-exec-3] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-23 11:34:35.468  INFO 40504 --- [http-nio-80-exec-3] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-23 11:34:35.509  INFO 40504 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[1, {}]}
+2023-02-23 11:34:35.541  INFO 40504 --- [http-nio-80-exec-10] com.ws.aspect.LogAspect                  : Result : blog :: commentList
