@@ -4,8 +4,6 @@ import com.ws.dao.CommentRepository;
 import com.ws.po.Comment;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -15,13 +13,11 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-@CacheConfig(cacheNames = "comment")
 public class CommentServiceImpl implements CommentService {
 
     @Autowired
     private CommentRepository commentRepository;
 
-    @Cacheable(key = "T(String).valueOf(#blogId)")
     @Override
     public List<Comment> listCommentByBlogId(Long blogId) {
         Sort sort = Sort.by("createTime");
