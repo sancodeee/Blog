@@ -9,29 +9,34 @@
     <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
     <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
     <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
-    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.css" th:href="@{/lib/editormd/css/editormd.css}">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.css"
+          th:href="@{/lib/editormd/css/editormd.css}">
     <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
 
 
 <!--       导航栏       -->
-<nav  th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui orange header item"><i class="configure icon"></i>SenのBlog管理之家</h2>
-            <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class=" home icon"></i> 博客管理</a>
-            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class=" idea icon"></i> 分类管理</a>
-            <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签管理</a>
+            <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i
+                    class=" home icon"></i> 博客管理</a>
+            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i
+                    class=" idea icon"></i> 分类管理</a>
+            <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide"
+               th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签管理</a>
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="https://picsum.photos/seed/picsum/100/100" alt="" class="ui avatar image" th:src="@{${session.user.avatar}}">
+                        <img src="https://picsum.photos/seed/picsum/100/100" alt="" class="ui avatar image"
+                             th:src="@{${session.user.avatar}}">
                         <span th:text="${session.user.nickname}">王森</span>
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a href="#" th:href = "@{/admin/logout}" class="item"> 注销 </a>
+                        <a href="#" th:href="@{/admin/logout}" class="item"> 注销 </a>
                     </div>
                 </div>
             </div>
@@ -43,7 +48,6 @@
 </nav>
 
 
-
 <!--底部footer-->
 <footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
@@ -51,15 +55,18 @@
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
-                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image" alt="" style="width: 110px">
+                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image"
+                             alt="" style="width: 110px">
                     </div>
                 </div>
             </div>
-            <div class="three wide column" >
-                <h4 class="ui inverted header m-text-thin m-text-spaced " ><i class="chevron circle up icon"></i>最新博客</h4>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced "><i class="chevron circle up icon"></i>最新博客
+                </h4>
                 <div id="newblog-container">
                     <div class="ui inverted link list" th:fragment="newblogList">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newblogs}" th:text="${blog.title}">用户故事（User Story）</a>
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin"
+                           th:each="blog : ${newblogs}" th:text="${blog.title}">用户故事（User Story）</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +98,8 @@
     <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
     <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
     <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
-    <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+    <script src="../static/lib/waypoints/jquery.waypoints.min.js"
+            th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
 </th:block>
 
 </body>

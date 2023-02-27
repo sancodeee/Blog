@@ -18,35 +18,35 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class CommentController {
 
-        @Autowired
-        private CommentService commentService;
+    @Autowired
+    private CommentService commentService;
 
-        @Autowired
-        private BlogService blogService;
+    @Autowired
+    private BlogService blogService;
 
-        @Value("${comment.avatar}")
-        private String avatar;
+    @Value("${comment.avatar}")
+    private String avatar;
 
-        @GetMapping("/comments/{blogId}")
-        public String comments(@PathVariable Long blogId, Model model) {
-            model.addAttribute("comments", commentService.listCommentByBlogId(blogId));
-            return "blog :: commentList";
+    @GetMapping("/comments/{blogId}")
+    public String comments(@PathVariable Long blogId, Model model) {
+        model.addAttribute("comments", commentService.listCommentByBlogId(blogId));
+        return "blog :: commentList";
+    }
+
+
+    @PostMapping("/comments")
+    public String post(Comment comment, HttpSession session) {
+        Long blogId = comment.getBlog().getId();
+        comment.setBlog(blogService.getBlog(blogId));
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
+            comment.setAvatar(user.getAvatar());
+            comment.setAdminComment(true);
+        } else {
+            comment.setAvatar(avatar);
         }
-
-
-        @PostMapping("/comments")
-        public String post(Comment comment, HttpSession session) {
-            Long blogId = comment.getBlog().getId();
-            comment.setBlog(blogService.getBlog(blogId));
-            User user = (User) session.getAttribute("user");
-            if (user != null) {
-                comment.setAvatar(user.getAvatar());
-                comment.setAdminComment(true);
-            } else {
-                comment.setAvatar(avatar);
-            }
-            commentService.saveComment(comment);
-            return "redirect:/comments/" + blogId;
-        }
+        commentService.saveComment(comment);
+        return "redirect:/comments/" + blogId;
+    }
 
 }

@@ -289,3 +289,77 @@ Caused by: redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authenticat
 2023-02-24 11:38:54.352  INFO 27128 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-02-24 11:38:54.354  INFO 27128 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
 2023-02-24 11:38:54.487  INFO 27128 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-02-24 11:38:55.038  INFO 27128 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 27128 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-24 11:38:55.038  INFO 27128 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-24 11:38:55.406  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-24 11:38:55.406  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24 11:38:55.462  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 5 JPA repository interfaces.
+2023-02-24 11:38:55.709  INFO 27128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-24 11:38:55.710  INFO 27128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-24 11:38:55.710  INFO 27128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-24 11:38:55.793  INFO 27128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-24 11:38:55.794  INFO 27128 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 753 ms
+2023-02-24 11:38:56.012  INFO 27128 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24 11:38:56.019  INFO 27128 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-02-24 11:38:56.145  INFO 27128 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-02-24 11:38:56.146  INFO 27128 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-24 11:38:56.618  INFO 27128 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24 11:38:56.620  INFO 27128 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 11:38:57.836  WARN 27128 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commentController': Unsatisfied dependency expressed through field 'commentService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ws.service.CommentService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-02-24 11:38:57.838  INFO 27128 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 11:38:57.839  INFO 27128 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-02-24 11:38:57.989  INFO 27128 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-02-24 11:38:57.990  INFO 27128 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-24 11:38:58.004  INFO 27128 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-24 11:38:58.044 ERROR 27128 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field commentService in com.ws.web.CommentController required a bean of type 'com.ws.service.CommentService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.ws.service.CommentService' in your configuration.
+
+2023-02-24 11:39:00.753  INFO 27128 --- [restartedMain] com.ws.BlogApplication                   : Starting BlogApplication using Java 1.8.0_341 on wangsen with PID 27128 (D:\workspace\Blog\blog\target\classes started by wangsen in D:\workspace\Blog)
+2023-02-24 11:39:00.753  INFO 27128 --- [restartedMain] com.ws.BlogApplication                   : The following 1 profile is active: "dev"
+2023-02-24 11:39:01.080  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-24 11:39:01.080  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24 11:39:01.134  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 5 JPA repository interfaces.
+2023-02-24 11:39:01.402  INFO 27128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-24 11:39:01.403  INFO 27128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-24 11:39:01.403  INFO 27128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-02-24 11:39:01.479  INFO 27128 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-02-24 11:39:01.479  INFO 27128 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 720 ms
+2023-02-24 11:39:01.568  INFO 27128 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24 11:39:01.571  INFO 27128 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-02-24 11:39:01.663  INFO 27128 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-02-24 11:39:01.663  INFO 27128 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-24 11:39:01.931  INFO 27128 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24 11:39:01.932  INFO 27128 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 11:39:02.354  WARN 27128 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24 11:39:02.488  INFO 27128 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-24 11:39:02.689  INFO 27128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-24 11:39:02.715  INFO 27128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-02-24 11:39:02.719  INFO 27128 --- [restartedMain] com.ws.BlogApplication                   : Started BlogApplication in 2.074 seconds (JVM running for 886.065)
+2023-02-24 11:39:02.720  INFO 27128 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-24 11:39:02.720  INFO 27128 --- [restartedMain] com.ws.BlogApplication                   : ---启动成功！---
+2023-02-24 11:40:15.141  INFO 27128 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-24 11:40:15.142  INFO 27128 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-24 11:40:15.144  INFO 27128 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-24 11:40:15.149  INFO 27128 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/blog/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.blog', args=[3, {}]}
+2023-02-24 11:40:15.252  INFO 27128 --- [http-nio-80-exec-1] com.ws.aspect.LogAspect                  : Result : blog
+2023-02-24 11:40:16.038  INFO 27128 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.IndexController.newblogs', args=[{}]}
+2023-02-24 11:40:16.105  INFO 27128 --- [http-nio-80-exec-5] com.ws.aspect.LogAspect                  : Result : _fragments :: newblogList
+2023-02-24 11:40:16.109  INFO 27128 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Request : RequestLog{url='http://localhost/comments/3', ip='0:0:0:0:0:0:0:1', classMethod='com.ws.web.CommentController.comments', args=[3, {}]}
+2023-02-24 11:40:16.160  INFO 27128 --- [http-nio-80-exec-6] com.ws.aspect.LogAspect                  : Result : blog :: commentList
