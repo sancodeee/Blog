@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
+
 @Slf4j
 @Controller
 @RequestMapping("/admin")
@@ -22,11 +23,12 @@ public class LoginController {
     private UserService userService;
 
     @GetMapping
-    public  String loginPage(){
+    public String loginPage() {
         return "admin/login";
     }
+
     @GetMapping("/login")
-    public String loginPage1(){
+    public String loginPage1() {
         return "admin/login";
     }
 
@@ -34,21 +36,21 @@ public class LoginController {
     public String login(@RequestParam String username,
                         @RequestParam String password,
                         HttpSession session,
-                        RedirectAttributes attributes){
-        log.info("user对象是否属于User类：{}",userService.checkUser(username,password) instanceof User);
-        User user = userService.checkUser(username,password);
-        if(user != null){
+                        RedirectAttributes attributes) {
+        log.info("user对象是否属于User类：{}", userService.checkUser(username, password) instanceof User);
+        User user = userService.checkUser(username, password);
+        if (user != null) {
             user.setPassword(null);
-            session.setAttribute("user",user);
+            session.setAttribute("user", user);
             return "admin/index";
         } else {
-            attributes.addFlashAttribute("message","用户名或密码错误");
+            attributes.addFlashAttribute("message", "用户名或密码错误");
             return "redirect:/admin";
         }
     }
 
     @GetMapping("/logout")
-    public String logout(HttpSession session){
+    public String logout(HttpSession session) {
         session.removeAttribute("user");
         return "redirect:/admin";
     }

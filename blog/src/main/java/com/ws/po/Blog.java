@@ -24,7 +24,7 @@ public class Blog implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title ;
+    private String title;
 
     @Basic(fetch = FetchType.LAZY)
     @Lob
@@ -55,7 +55,7 @@ public class Blog implements Serializable {
     @ManyToOne
     private Type type;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST} , fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
     private List<Tag> tags = new ArrayList<>();
 
     @ManyToOne

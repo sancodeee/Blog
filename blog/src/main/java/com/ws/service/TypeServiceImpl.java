@@ -58,8 +58,8 @@ public class TypeServiceImpl implements TypeService {
 
     @Override
     public List<Type> listTypeTop(Integer size) {
-        Sort sort =Sort.by(Sort.Direction.DESC,"blogs.size");
-        Pageable pageable = PageRequest.of(0,size,sort);
+        Sort sort = Sort.by(Sort.Direction.DESC, "blogs.size");
+        Pageable pageable = PageRequest.of(0, size, sort);
         return typeRepository.findTop(pageable);
     }
 
@@ -71,7 +71,7 @@ public class TypeServiceImpl implements TypeService {
         if (t == null) {
             throw new NotFoundException("不存在该类型");
         }
-        BeanUtils.copyProperties(type,t);
+        BeanUtils.copyProperties(type, t);
         return typeRepository.save(t);
     }
 

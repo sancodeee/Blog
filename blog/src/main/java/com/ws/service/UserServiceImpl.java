@@ -8,12 +8,12 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
 
-    @Cacheable(cacheNames = "user" , key = "#username" ,unless = "#result == null ")
+    @Cacheable(cacheNames = "user", key = "#username", unless = "#result == null ")
     @Override
     public User checkUser(String username, String password) {
 
