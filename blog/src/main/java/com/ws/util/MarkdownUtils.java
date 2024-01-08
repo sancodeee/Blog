@@ -9,24 +9,24 @@ import org.commonmark.node.Link;
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.AttributeProvider;
-import org.commonmark.renderer.html.AttributeProviderContext;
-import org.commonmark.renderer.html.AttributeProviderFactory;
 import org.commonmark.renderer.html.HtmlRenderer;
 
-import java.awt.event.WindowFocusListener;
 import java.util.*;
 
-@Slf4j
 /**
- * Created by wangsen on 2021/8/8.
+ * MarkdownUtils
+ *
+ * @author wangsen
+ * @date 2021/8/8
  */
+@Slf4j
 public class MarkdownUtils {
 
     /**
      * markdown格式转换成HTML格式
      *
-     * @param markdown
-     * @return
+     * @param markdown 减价
+     * @return {@link String}
      */
     public static String markdownToHtml(String markdown) {
         Parser parser = Parser.builder().build();
@@ -39,22 +39,17 @@ public class MarkdownUtils {
      * 增加扩展[标题锚点，表格生成]
      * Markdown转换成HTML
      *
-     * @param markdown
-     * @return
+     * @param markdown 减价
+     * @return {@link String}
      */
     public static String markdownToHtmlExtensions(String markdown) {
         //h标题生成id
         Set<Extension> headingAnchorExtensions = Collections.singleton(HeadingAnchorExtension.create());
         //转换table的HTML
         List<Extension> tableExtension = Arrays.asList(TablesExtension.create());
-        Parser parser = Parser.builder()
-                .extensions(tableExtension)
-                .build();
+        Parser parser = Parser.builder().extensions(tableExtension).build();
         Node document = parser.parse(markdown);
-        HtmlRenderer renderer = HtmlRenderer.builder()
-                .extensions(headingAnchorExtensions)
-                .extensions(tableExtension)
-                .attributeProviderFactory(context -> new CustomAttributeProvider()).build();
+        HtmlRenderer renderer = HtmlRenderer.builder().extensions(headingAnchorExtensions).extensions(tableExtension).attributeProviderFactory(context -> new CustomAttributeProvider()).build();
         return renderer.render(document);
     }
 
@@ -76,11 +71,7 @@ public class MarkdownUtils {
 
 
     public static void main(String[] args) {
-        String table = "| hello | hi   | 哈哈哈   |\n" +
-                "| ----- | ---- | ----- |\n" +
-                "| 斯维尔多  | 士大夫  | f啊    |\n" +
-                "| 阿什顿发  | 非固定杆 | 撒阿什顿发 |\n" +
-                "\n";
+        String table = "| hello | hi   | 哈哈哈   |\n" + "| ----- | ---- | ----- |\n" + "| 斯维尔多  | 士大夫  | f啊    |\n" + "| 阿什顿发  | 非固定杆 | 撒阿什顿发 |\n" + "\n";
         log.info(markdownToHtmlExtensions(table));
     }
 }
