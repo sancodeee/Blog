@@ -7,9 +7,17 @@ import java.beans.PropertyDescriptor;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * bean工具类
+ *
+ * @author wangsen
+ * @date 2022/03/08
+ */
 public class MyBeanUtils {
 
-    //工具类中都是静态方法时，为了避免别的类会创建该工具类对象 ，应该将构造方法改为私有
+    /**
+     * 工具类中都是静态方法时，为了避免别的类会创建该工具类对象 ，应该将构造方法改为私有
+     */
     private MyBeanUtils() {
         throw new IllegalStateException("Utility class");
     }
@@ -17,8 +25,8 @@ public class MyBeanUtils {
     /**
      * 获取所有的属性值为空属性名数组
      *
-     * @param source
-     * @return
+     * @param source 源
+     * @return {@link String}
      */
     public static String[] getNullPropertyNames(Object source) {
         BeanWrapper beanWrapper = new BeanWrapperImpl(source);
@@ -30,7 +38,7 @@ public class MyBeanUtils {
                 nullPropertyNames.add(propertyName);
             }
         }
-        return nullPropertyNames.toArray(new String[nullPropertyNames.size()]);
+        return nullPropertyNames.toArray(new String[0]);
     }
 
 }

@@ -5,11 +5,15 @@ import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
-import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-//控制台打印接口文档地址
+/**
+ * Swagger打印配置
+ *
+ * @author wangsen
+ * @date 2023/01/09
+ */
 @Component
 @Slf4j
 public class SwaggerPrintConfig implements ApplicationListener<WebServerInitializedEvent> {

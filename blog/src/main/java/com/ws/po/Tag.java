@@ -3,13 +3,18 @@ package com.ws.po;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 标签
+ *
+ * @author wangsen
+ * @date 2022/03/08
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,7 +26,7 @@ public class Tag implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+    private Long id;
 
     private String name;
 

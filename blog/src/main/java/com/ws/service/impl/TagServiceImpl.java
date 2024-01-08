@@ -1,10 +1,9 @@
-package com.ws.service;
+package com.ws.service.impl;
 
-import com.ws.NotFoundException;
 import com.ws.dao.TagRepository;
 import com.ws.po.Tag;
+import com.ws.service.TagService;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -23,8 +22,11 @@ import java.util.List;
 @CacheConfig(cacheNames = "tag")
 public class TagServiceImpl implements TagService {
 
-    @Autowired
-    private TagRepository tagRepository;
+    private final TagRepository tagRepository;
+
+    public TagServiceImpl(TagRepository tagRepository) {
+        this.tagRepository = tagRepository;
+    }
 
     @CachePut(key = "T(String).valueOf(#tag.id)")
     @Transactional
@@ -63,7 +65,6 @@ public class TagServiceImpl implements TagService {
         return tagRepository.findTop(pageable);
     }
 
-
     @Override
     public List<Tag> listTag(String ids) { //1,2,3
         return tagRepository.findAllById(convertToList(ids));
@@ -72,9 +73,9 @@ public class TagServiceImpl implements TagService {
     private List<Long> convertToList(String ids) {
         List<Long> list = new ArrayList<>();
         if (!"".equals(ids) && ids != null) {
-            String[] idarray = ids.split(",");
-            for (int i = 0; i < idarray.length; i++) {
-                list.add(new Long(idarray[i]));
+            String[] idArray = ids.split(",");
+            for (String s : idArray) {
+                list.add(new Long(s));
             }
         }
         return list;
@@ -86,9 +87,6 @@ public class TagServiceImpl implements TagService {
     @Override
     public Tag updateTag(Long id, Tag tag) {
         Tag t = tagRepository.getById(id);
-        if (t == null) {
-            throw new NotFoundException("不存在该标签");
-        }
         BeanUtils.copyProperties(tag, t);
         return tagRepository.save(t);
     }

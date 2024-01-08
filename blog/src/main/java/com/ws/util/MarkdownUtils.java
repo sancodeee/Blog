@@ -11,7 +11,10 @@ import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.AttributeProvider;
 import org.commonmark.renderer.html.HtmlRenderer;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * MarkdownUtils
@@ -46,7 +49,7 @@ public class MarkdownUtils {
         //h标题生成id
         Set<Extension> headingAnchorExtensions = Collections.singleton(HeadingAnchorExtension.create());
         //转换table的HTML
-        List<Extension> tableExtension = Arrays.asList(TablesExtension.create());
+        List<Extension> tableExtension = Collections.singletonList(TablesExtension.create());
         Parser parser = Parser.builder().extensions(tableExtension).build();
         Node document = parser.parse(markdown);
         HtmlRenderer renderer = HtmlRenderer.builder().extensions(headingAnchorExtensions).extensions(tableExtension).attributeProviderFactory(context -> new CustomAttributeProvider()).build();

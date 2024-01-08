@@ -3,7 +3,6 @@ package com.ws.po;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Proxy;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
@@ -12,6 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * 分类
+ *
+ * @author wangsen
+ * @date 2022/03/08
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

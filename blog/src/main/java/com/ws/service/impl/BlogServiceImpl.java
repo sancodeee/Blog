@@ -1,14 +1,13 @@
-package com.ws.service;
+package com.ws.service.impl;
 
-import com.ws.NotFoundException;
 import com.ws.dao.BlogRepository;
 import com.ws.po.Blog;
 import com.ws.po.Type;
+import com.ws.service.BlogService;
 import com.ws.util.MarkdownUtils;
 import com.ws.util.MyBeanUtils;
 import com.ws.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -24,28 +23,44 @@ import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Predicate;
 import java.util.*;
 
+/**
+ * 博客服务实现
+ *
+ * @author wangsen
+ * @date 2022/03/08
+ */
 @Service
 @CacheConfig(cacheNames = "blog")
 public class BlogServiceImpl implements BlogService {
 
-    @Autowired
-    private BlogRepository blogRepository;
+    private final BlogRepository blogRepository;
 
-    /*根据id查询db*/
+    public BlogServiceImpl(BlogRepository blogRepository) {
+        this.blogRepository = blogRepository;
+    }
+
+    /**
+     * 根据id查询db
+     *
+     * @param id id
+     * @return {@link Blog}
+     */
     @Cacheable(cacheNames = "blog", key = "T(String).valueOf(#id)")
     @Override
     public Blog getBlog(Long id) {
         return blogRepository.getById(id);
     }
 
-    /*blog格式转换*/
+    /**
+     * blog格式转换
+     *
+     * @param id id
+     * @return {@link Blog}
+     */
     @Transactional
     @Override
     public Blog getAndConvert(Long id) {
         Blog blog = blogRepository.getById(id);
-        if (blog == null) {
-            throw new NotFoundException("该博客不存在！");
-        }
         Blog b = new Blog();
         BeanUtils.copyProperties(blog, b);
         String content = b.getContent();
@@ -54,6 +69,13 @@ public class BlogServiceImpl implements BlogService {
         return b;
     }
 
+    /**
+     * 博客列表-分页查询
+     *
+     * @param pageable 可分页
+     * @param blog     博客
+     * @return {@link Page}<{@link Blog}>
+     */
     @Override
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
         return blogRepository.findAll((root, cq, cb) -> {
@@ -67,11 +89,17 @@ public class BlogServiceImpl implements BlogService {
             if (blog.isRecommend()) {
                 predicates.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
             }
-            cq.where(predicates.toArray(new Predicate[predicates.size()]));
+            cq.where(predicates.toArray(new Predicate[0]));
             return null;
         }, pageable);
     }
 
+    /**
+     * 博客列表
+     *
+     * @param pageable 可分页
+     * @return {@link Page}<{@link Blog}>
+     */
     @Override
     public Page<Blog> listBlog(Pageable pageable) {
         return blogRepository.findAll(pageable);
@@ -131,13 +159,9 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Blog updateBlog(Long id, Blog blog) {
         Blog b = blogRepository.getById(id);
-        if (b == null) {
-            throw new NotFoundException("该博客不存在");
-        } else {
-            BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));
-            b.setUpdateTime(new Date());
-            return blogRepository.save(b);
-        }
+        BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));
+        b.setUpdateTime(new Date());
+        return blogRepository.save(b);
     }
 
     /*根据id删除blog*/

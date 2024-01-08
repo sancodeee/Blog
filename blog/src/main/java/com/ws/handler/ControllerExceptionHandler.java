@@ -1,4 +1,5 @@
 package com.ws.handler;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;
@@ -15,15 +16,15 @@ public class ControllerExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ModelAndView exceptionHander(HttpServletRequest request, Exception e) throws Exception {
-        logger.error("Request URL : {},Exception : {}",request.getRequestURL(),e);
+        logger.error("Request URL : {},Exception : {}", request.getRequestURL(), e);
 
-        if(AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class)!=null){
+        if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null) {
             throw e;
         }
 
         ModelAndView mv = new ModelAndView();
-        mv.addObject("url",request.getRequestURL());
-        mv.addObject("exception",e);
+        mv.addObject("url", request.getRequestURL());
+        mv.addObject("exception", e);
         mv.setViewName("error/error");
         return mv;
     }

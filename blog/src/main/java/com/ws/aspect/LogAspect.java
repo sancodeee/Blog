@@ -1,6 +1,5 @@
 package com.ws.aspect;
 
-//日志处理：通过aop设置切面处理
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
@@ -8,45 +7,63 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
+/**
+ * 日志处理：通过aop设置切面处理
+ *
+ * @author wangsen
+ * @date 2022/01/08
+ */
 @Aspect
 @Component
 public class LogAspect {
 
-    private  final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Pointcut("execution(* com.ws.web.*.*(..))")
-    public void log(){}
+    public void log() {
+    }
 
     @Before("log()")
-    public void doBefore(JoinPoint joinPoint){
+    public void doBefore(JoinPoint joinPoint) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
-        String url = request.getRequestURL().toString();
-        String ip = request.getRemoteAddr();
-        String classMethod = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
-        Object[] args = joinPoint.getArgs();
-        RequestLog requestLog = new RequestLog(url,ip,classMethod,args);
-        logger.info("Request : {}",requestLog);
+        if (attributes != null) {
+            HttpServletRequest request = attributes.getRequest();
+            // 获取request中的url
+            String url = request.getRequestURL().toString();
+            // 获取客户端的IP地址
+            String ip = request.getRemoteAddr();
+            String classMethod = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
+            Object[] args = joinPoint.getArgs();
+            RequestLog requestLog = new RequestLog(url, ip, classMethod, args);
+            // 请求信息
+            logger.info("Request : {}", requestLog);
+        }
     }
 
     @After("log()")
-    public void doAfter(){
-//        logger.info("--------------doAfter--------------");
+    public void doAfter() {
     }
 
-    @AfterReturning(returning = "result",pointcut = "log()")
-    public void doAfterReturn(Object result){
-        logger.info("Result : {}",result);
+    @AfterReturning(returning = "result", pointcut = "log()")
+    public void doAfterReturn(Object result) {
+        logger.info("Result : {}", result);
     }
 
-    private class RequestLog{
-        private String url;
-        private String ip;
-        private String classMethod;
-        private Object[] args;
+    /**
+     * 内部类请求日志
+     *
+     * @author wangsen
+     * @date 2022/03/08
+     */
+    private static class RequestLog {
+        private final String url;
+        private final String ip;
+        private final String classMethod;
+        private final Object[] args;
 
         public RequestLog(String url, String ip, String classMethod, Object[] args) {
             this.url = url;
@@ -57,12 +74,7 @@ public class LogAspect {
 
         @Override
         public String toString() {
-            return "RequestLog{" +
-                    "url='" + url + '\'' +
-                    ", ip='" + ip + '\'' +
-                    ", classMethod='" + classMethod + '\'' +
-                    ", args=" + Arrays.toString(args) +
-                    '}';
+            return "RequestLog{" + "url='" + url + '\'' + ", ip='" + ip + '\'' + ", classMethod='" + classMethod + '\'' + ", args=" + Arrays.toString(args) + '}';
         }
     }
 

@@ -8,6 +8,12 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 博客服务
+ *
+ * @author wangsen
+ * @date 2022/03/08
+ */
 public interface BlogService {
 
     Blog getBlog(Long id);

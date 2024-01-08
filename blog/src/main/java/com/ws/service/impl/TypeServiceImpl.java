@@ -1,10 +1,9 @@
-package com.ws.service;
+package com.ws.service.impl;
 
-import com.ws.NotFoundException;
 import com.ws.dao.TypeRepository;
 import com.ws.po.Type;
+import com.ws.service.TypeService;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -23,8 +22,11 @@ import java.util.List;
 @CacheConfig(cacheNames = "type")
 public class TypeServiceImpl implements TypeService {
 
-    @Autowired
-    private TypeRepository typeRepository;
+    private final TypeRepository typeRepository;
+
+    public TypeServiceImpl(TypeRepository typeRepository) {
+        this.typeRepository = typeRepository;
+    }
 
     @CachePut(key = "T(String).valueOf(#type.id)")
     @Transactional
@@ -68,9 +70,6 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public Type updateType(Long id, Type type) {
         Type t = typeRepository.getById(id);
-        if (t == null) {
-            throw new NotFoundException("不存在该类型");
-        }
         BeanUtils.copyProperties(type, t);
         return typeRepository.save(t);
     }
