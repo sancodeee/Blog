@@ -1,5 +1,7 @@
 package com.ws.aspect;
 
+import lombok.Data;
+import lombok.ToString;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
@@ -9,10 +11,11 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
 
 /**
  * 日志处理：通过aop设置切面处理
+ * <p>
+ * 作用：打印请求信息
  *
  * @author wangsen
  * @date 2022/01/08
@@ -23,8 +26,10 @@ public class LogAspect {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    // @Pointcut("execution(* com.ws.web.*.*(..))") 定义了一个切入点，表示匹配com.ws.web包下所有类的所有方法作为切点
     @Pointcut("execution(* com.ws.web.*.*(..))")
     public void log() {
+        // 该方法只是一个占位符，即便是有内容，也不会被执行
     }
 
     @Before("log()")
@@ -36,7 +41,9 @@ public class LogAspect {
             String url = request.getRequestURL().toString();
             // 获取客户端的IP地址
             String ip = request.getRemoteAddr();
+
             String classMethod = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
+            // 获取参数列表
             Object[] args = joinPoint.getArgs();
             RequestLog requestLog = new RequestLog(url, ip, classMethod, args);
             // 请求信息
@@ -59,6 +66,8 @@ public class LogAspect {
      * @author wangsen
      * @date 2022/03/08
      */
+    @Data
+    @ToString
     private static class RequestLog {
         private final String url;
         private final String ip;
@@ -70,11 +79,6 @@ public class LogAspect {
             this.ip = ip;
             this.classMethod = classMethod;
             this.args = args;
-        }
-
-        @Override
-        public String toString() {
-            return "RequestLog{" + "url='" + url + '\'' + ", ip='" + ip + '\'' + ", classMethod='" + classMethod + '\'' + ", args=" + Arrays.toString(args) + '}';
         }
     }
 
