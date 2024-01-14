@@ -52,12 +52,18 @@ public class MarkdownUtils {
         List<Extension> tableExtension = Collections.singletonList(TablesExtension.create());
         Parser parser = Parser.builder().extensions(tableExtension).build();
         Node document = parser.parse(markdown);
-        HtmlRenderer renderer = HtmlRenderer.builder().extensions(headingAnchorExtensions).extensions(tableExtension).attributeProviderFactory(context -> new CustomAttributeProvider()).build();
+        HtmlRenderer renderer = HtmlRenderer.builder()
+                .extensions(headingAnchorExtensions)
+                .extensions(tableExtension)
+                .attributeProviderFactory(context -> new CustomAttributeProvider()).build();
         return renderer.render(document);
     }
 
     /**
      * 处理标签的属性
+     *
+     * @author wangsen
+     * @date 2024/01/14
      */
     static class CustomAttributeProvider implements AttributeProvider {
         @Override
