@@ -6,12 +6,11 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.5.12</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.ws</groupId>
     <artifactId>blog</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>blog</name>
     <description>Blog project for Spring Boot</description>
