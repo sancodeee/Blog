@@ -27,9 +27,8 @@ spring:
     cache-names: blog,tag,tag-name,type,type-name,user   #通过默认的RedisCacheManager在启动时创建其缓存空间
 
   redis:
-    host: 101.42.176.44
+    host: localhost
     port: 6379
-    password: 169167866Spl.
     timeout: 5000
     database: 0
 
