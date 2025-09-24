@@ -27,7 +27,7 @@ public class TagShowController {
     public String tags(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                        @PathVariable Long id, Model model) {
         List<Tag> tags = tagService.listTagTop(10000);
-        if (id == -1) {
+        if (id == -1 && !tags.isEmpty()) {
             id = tags.get(0).getId();
         }
         model.addAttribute("tags", tags);

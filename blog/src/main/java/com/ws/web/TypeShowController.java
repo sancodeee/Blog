@@ -28,7 +28,7 @@ public class TypeShowController {
     public String types(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         @PathVariable Long id, Model model) {
         List<Type> types = typeService.listTypeTop(10000);
-        if (id == -1) {
+        if (id == -1 && !types.isEmpty()) {
             id = types.get(0).getId();
         }
         BlogQuery blogQuery = new BlogQuery();
