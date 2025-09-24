@@ -3,10 +3,11 @@ spring:
     mode: HTML
   profiles:
     active: dev
-  resources:
-    add-mappings: true
   messages:
     basename: i18n/messages
+  web:
+    resources:
+      add-mappings: true
 
 
 comment.avatar: /images/avatar.png
