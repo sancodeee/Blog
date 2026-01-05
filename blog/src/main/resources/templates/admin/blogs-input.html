@@ -48,7 +48,7 @@
 <!--------------------------------------------中间部分------------------------------------->
 <div class="m-container m-padded-tb-big animated fadeInDown ">
     <div class="ui container ">
-        <form id="blog-form" action="#" th:object="${blog}" th:action="@{/admin/blogs}" method="post" class="ui form">  <!-- -->
+        <form id="blog-form" action="#" th:object="${blog}" th:action="@{/admin/blogs}" method="post" class="ui form" th:classappend="${#fields.hasErrors('*') ? 'error' : ''}">  <!-- -->
             <input type="hidden" name="published" th:value="*{published}">
             <input type="hidden" name="id" th:value="*{id}">      <!-- -->
             <div class="requried field">
@@ -141,7 +141,11 @@
                 </div>
             </div>
 
-            <div class="ui error message"></div>
+            <div class="ui error message">
+                <ul>
+                    <li th:each="err : ${#fields.detailedErrors()}" th:text="${err.message}">错误信息</li>
+                </ul>
+            </div>
 
             <div class="ui right aligned container">
                 <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>

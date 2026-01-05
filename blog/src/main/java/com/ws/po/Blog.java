@@ -6,7 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -33,6 +36,8 @@ public class Blog implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotEmpty(message = "博客标题不能为空")
+    @Size(max = 100, message = "博客标题长度不能超过100个字符")
     @ApiModelProperty(value = "博客标题")
     private String title;
 
@@ -41,9 +46,11 @@ public class Blog implements Serializable {
     @ApiModelProperty(value = "博客文本内容")
     private String content;
 
+    @Size(max = 255, message = "博客首图URL长度不能超过255个字符")
     @ApiModelProperty(value = "博客首图")
     private String firstPicture;
 
+    @Size(max = 50, message = "博客标志位长度不能超过50个字符")
     @ApiModelProperty(value = "博客标志位")
     private String flag;
 
@@ -93,6 +100,7 @@ public class Blog implements Serializable {
     @Transient
     private String tagIds;
 
+    @Size(max = 200, message = "博客描述长度不能超过200个字符")
     @ApiModelProperty(value = "描述")
     private String description;
 

@@ -5,7 +5,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: 169167866Spl.
+    password: 123456
   data:
     redis:
       repositories:
