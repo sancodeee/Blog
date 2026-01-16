@@ -95,10 +95,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="blog,iterStat : ${page.content}">
+                <tr th:each="blog,iterStat : ${page.records}">
                     <td th:text="${iterStat.count}">1</td>
                     <td th:text="${blog.title}">可以联系我</td>
-                    <td th:text="${blog.type.name}">认知升级</td>
+                    <td th:text="${blog.type != null ? blog.type.name : '未分类'}">认知升级</td>
                     <td th:text="${blog.recommend} ? '是':'否'">是</td>
                     <td th:text="${blog.updateTime}">2022-4-11 11:55</td>
                     <td th:text="${blog.published} ? '已发布':'草稿'">草稿</td>
@@ -114,8 +114,8 @@
                 <tr>
                     <th colspan="7">
                         <div class="ui mini pagination menu">
-                            <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>
-                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>
+                            <a onclick="page(this)" th:attr="data-page=${page.current}-1" class="item" th:unless="${page.current == 1}">上一页</a>
+                            <a onclick="page(this)" th:attr="data-page=${page.current}+1" class=" item" th:unless="${page.current == page.pages}">下一页</a>
                         </div>
                         <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated orange basic button m-margin-tb">新增</a>
                     </th>

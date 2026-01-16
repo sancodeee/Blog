@@ -69,9 +69,7 @@
 
             <div class="required field">
                 <div id="md-content" style="z-index: 1 !important;">
-                    <textarea placeholder="博客内容" name="content" style="display: none" th:text="*{content}">
-
-                    </textarea>
+                    <textarea placeholder="博客内容" name="content" id="content" style="display: none;" th:text="*{content}"></textarea>
                 </div>
             </div>
 
@@ -225,7 +223,7 @@
             dialogMaskBgColor:"#000",
             imageUpload: true,
             imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-
+            saveHTMLToTextarea: true  // 关键配置：将 HTML 内容保存到 textarea
         });
     });
 
@@ -237,14 +235,33 @@
         on: 'click'
     });
 
+    // 表单提交处理函数
+    function submitForm(published) {
+        // 同步编辑器内容到 textarea
+        if (contentEditor) {
+            // 获取 Markdown 内容并设置到 textarea
+            var markdownContent = contentEditor.getMarkdown();
+            $('#content').val(markdownContent);
+        }
+
+        // 设置发布状态
+        $('[name="published"]').val(published);
+
+        // 验证表单
+        $('.ui.form').form('validate form');
+
+        // 检查表单是否有效
+        if ($('.ui.form').form('is valid')) {
+            $('#blog-form').submit();
+        }
+    }
+
     $('#save-btn').click(function () {
-        $('[name="published"]').val(false);
-        $('#blog-form').submit();
+        submitForm(false);
     });
 
     $('#publish-btn').click(function () {
-        $('[name="published"]').val(true);
-        $('#blog-form').submit();
+        submitForm(true);
     });
 
     $('.ui.form').form({

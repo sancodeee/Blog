@@ -1,8 +1,8 @@
 package com.ws.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ws.po.Tag;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public interface TagService {
 
     Tag getTagByName(String name);
 
-    Page<Tag> listTag(Pageable pageable);
+    IPage<Tag> listTag(Page<Tag> pageable);
 
     List<Tag> listTag();
 

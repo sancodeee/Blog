@@ -1,8 +1,16 @@
 package com.ws.service.impl;
 
-import com.ws.dao.BlogRepository;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.ws.dao.BlogMapper;
+import com.ws.dao.TagMapper;
+import com.ws.dao.TypeMapper;
+import com.ws.dao.UserMapper;
 import com.ws.po.Blog;
+import com.ws.po.Tag;
 import com.ws.po.Type;
+import com.ws.po.User;
 import com.ws.service.BlogService;
 import com.ws.util.MarkdownUtils;
 import com.ws.util.MyBeanUtils;
@@ -12,15 +20,9 @@ import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.criteria.Join;
-import javax.persistence.criteria.Predicate;
 import java.util.*;
 
 /**
@@ -33,10 +35,17 @@ import java.util.*;
 @CacheConfig(cacheNames = "blog")
 public class BlogServiceImpl implements BlogService {
 
-    private final BlogRepository blogRepository;
+    private final BlogMapper blogMapper;
+    private final TagMapper tagMapper;
+    private final TypeMapper typeMapper;
+    private final UserMapper userMapper;
 
-    public BlogServiceImpl(BlogRepository blogRepository) {
-        this.blogRepository = blogRepository;
+    public BlogServiceImpl(BlogMapper blogMapper, TagMapper tagMapper,
+                           TypeMapper typeMapper, UserMapper userMapper) {
+        this.blogMapper = blogMapper;
+        this.tagMapper = tagMapper;
+        this.typeMapper = typeMapper;
+        this.userMapper = userMapper;
     }
 
     /**
@@ -48,7 +57,11 @@ public class BlogServiceImpl implements BlogService {
     @Cacheable(cacheNames = "blog", key = "T(String).valueOf(#id)")
     @Override
     public Blog getBlog(Long id) {
-        return blogRepository.getById(id);
+        Blog blog = blogMapper.selectById(id);
+        if (blog != null) {
+            loadTagsForBlog(blog);
+        }
+        return blog;
     }
 
     /**
@@ -60,84 +73,174 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public Blog getAndConvert(Long id) {
-        Blog blog = blogRepository.getById(id);
+        Blog blog = blogMapper.selectById(id);
+        if (blog == null) {
+            return null;
+        }
+        // 加载关联数据
+        loadTagsForBlog(blog);
+        loadTypeForBlog(blog);
+        loadUserForBlog(blog);
+
         Blog b = new Blog();
         BeanUtils.copyProperties(blog, b);
+        // 手动设置关联对象（BeanUtils.copyProperties 不会复制关联对象）
+        b.setUser(blog.getUser());
+        b.setType(blog.getType());
+        b.setTags(blog.getTags());
         String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
-        blogRepository.updateViews(id);
+        blogMapper.updateViews(id);
         return b;
+    }
+
+    /**
+     * 加载博客的标签（多对多关联）
+     *
+     * @param blog 博客对象
+     */
+    private void loadTagsForBlog(Blog blog) {
+        if (blog != null && blog.getId() != null) {
+            List<Tag> tags = blogMapper.selectTagsByBlogId(blog.getId());
+            blog.setTags(tags);
+            blog.init(); // 更新 tagIds 字段
+        }
+    }
+
+    /**
+     * 加载博客的分类（多对一关联）
+     *
+     * @param blog 博客对象
+     */
+    private void loadTypeForBlog(Blog blog) {
+        if (blog != null && blog.getTypeId() != null) {
+            Type type = typeMapper.selectById(blog.getTypeId());
+            blog.setType(type);
+        }
+    }
+
+    /**
+     * 加载博客的作者（多对一关联）
+     *
+     * @param blog 博客对象
+     */
+    private void loadUserForBlog(Blog blog) {
+        if (blog != null && blog.getUserId() != null) {
+            User user = userMapper.selectById(blog.getUserId());
+            blog.setUser(user);
+        }
     }
 
     /**
      * 博客列表-分页查询
      *
-     * @param pageable 可分页
+     * @param page 可分页
      * @param blog     博客
-     * @return {@link Page}<{@link Blog}>
+     * @return {@link IPage}<{@link Blog}>
      */
     @Override
-    public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
-        return blogRepository.findAll((root, cq, cb) -> {
-            List<Predicate> predicates = new ArrayList<>();
-            if (!"".equals(blog.getTitle()) && blog.getTitle() != null) {
-                predicates.add(cb.like(root.<String>get("title"), "%" + blog.getTitle() + "%"));
-            }
-            if (blog.getTypeId() != null) {
-                predicates.add(cb.equal(root.<Type>get("type").get("id"), blog.getTypeId()));
-            }
-            if (blog.isRecommend()) {
-                predicates.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
-            }
-            cq.where(predicates.toArray(new Predicate[0]));
-            return null;
-        }, pageable);
+    public IPage<Blog> listBlog(Page<Blog> page, BlogQuery blog) {
+        // 使用 QueryWrapper 构建动态查询条件（替代 JPA Specification）
+        QueryWrapper<Blog> queryWrapper = new QueryWrapper<>();
+        if (blog.getTitle() != null && !"".equals(blog.getTitle())) {
+            queryWrapper.like("title", blog.getTitle());
+        }
+        if (blog.getTypeId() != null) {
+            queryWrapper.eq("type_id", blog.getTypeId());
+        }
+        if (blog.isRecommend()) {
+            queryWrapper.eq("recommend", true);
+        }
+        queryWrapper.orderByDesc("create_time");
+        IPage<Blog> result = blogMapper.selectPage(page, queryWrapper);
+        // 为每个博客加载关联数据（user, type, tags）
+        for (Blog b : result.getRecords()) {
+            loadUserForBlog(b);
+            loadTypeForBlog(b);
+            loadTagsForBlog(b);
+        }
+        return result;
     }
 
     /**
      * 博客列表
      *
-     * @param pageable 可分页
-     * @return {@link Page}<{@link Blog}>
+     * @param page 可分页
+     * @return {@link IPage}<{@link Blog}>
      */
     @Override
-    public Page<Blog> listBlog(Pageable pageable) {
-        return blogRepository.findAll(pageable);
+    public IPage<Blog> listBlog(Page<Blog> page) {
+        IPage<Blog> result = blogMapper.selectPage(page, null);
+        // 为每个博客加载关联数据（user, type, tags）
+        for (Blog blog : result.getRecords()) {
+            loadUserForBlog(blog);
+            loadTypeForBlog(blog);
+            loadTagsForBlog(blog);
+        }
+        return result;
     }
 
     @Override
-    public Page<Blog> listBlog(Long tagId, Pageable pageable) {
-        return blogRepository.findAll((root, cq, cb) -> {
-            Join<Object, Object> join = root.join("tags");
-            return cb.equal(join.get("id"), tagId);
-        }, pageable);
+    public IPage<Blog> listBlog(Long tagId, Page<Blog> page) {
+        // 多对多关联查询：通过中间表 t_blog_tags 查询
+        IPage<Blog> result = blogMapper.selectBlogsByTagId(tagId, page);
+        // 为每个博客加载关联数据（user, type, tags）
+        for (Blog blog : result.getRecords()) {
+            loadUserForBlog(blog);
+            loadTypeForBlog(blog);
+            loadTagsForBlog(blog);
+        }
+        return result;
     }
 
     @Override
-    public Page<Blog> listBlog(String query, Pageable pageable) {
-        return blogRepository.findByQuery(query, pageable);
+    public IPage<Blog> listBlog(String query, Page<Blog> page) {
+        // 使用 BlogMapper 自定义的 findByQuery 方法
+        IPage<Blog> result = blogMapper.findByQuery(query, page);
+        // 为每个博客加载关联数据（user, type, tags）
+        for (Blog blog : result.getRecords()) {
+            loadUserForBlog(blog);
+            loadTypeForBlog(blog);
+            loadTagsForBlog(blog);
+        }
+        return result;
     }
 
     @Override
     public List<Blog> listRecommendBlogTop(Integer size) {
-        Sort sort = Sort.by(Sort.Direction.DESC, "updateTime");
-        Pageable pageable = PageRequest.of(0, size, sort);
-        return blogRepository.findTop(pageable);
+        // 使用 BlogMapper 自定义的 findTop 方法
+        Page<Blog> page = new Page<>(1, size);
+        IPage<Blog> result = blogMapper.findTop(page);
+        List<Blog> blogs = result.getRecords();
+        // 为每个博客加载关联数据（user, type, tags）
+        for (Blog blog : blogs) {
+            loadUserForBlog(blog);
+            loadTypeForBlog(blog);
+            loadTagsForBlog(blog);
+        }
+        return blogs;
     }
 
     @Override
     public Map<String, List<Blog>> archiveBlog() {
-        List<String> years = blogRepository.findGroupYear();
+        List<String> years = blogMapper.findGroupYear();
         Map<String, List<Blog>> map = new HashMap<>();
         for (String year : years) {
-            map.put(year, blogRepository.findByYear(year));
+            List<Blog> blogs = blogMapper.findByYear(year);
+            // 为每个博客加载关联数据（user, type, tags）
+            for (Blog blog : blogs) {
+                loadUserForBlog(blog);
+                loadTypeForBlog(blog);
+                loadTagsForBlog(blog);
+            }
+            map.put(year, blogs);
         }
         return map;
     }
 
     @Override
     public Long countBlog() {
-        return blogRepository.count();
+        return blogMapper.selectCount(null);
     }
 
     @CachePut(cacheNames = "blog", key = "T(String).valueOf(#blog.id)")
@@ -145,23 +248,60 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Blog saveBlog(Blog blog) {
         if (blog.getId() == null) {
+            // 新增博客
             blog.setCreateTime(new Date());
             blog.setUpdateTime(new Date());
             blog.setViews(0);
+            blogMapper.insert(blog);
         } else {
+            // 更新博客：先删除旧的标签关联，再保存新的
             blog.setUpdateTime(new Date());
+            blogMapper.updateById(blog);
+            // 删除旧的标签关联
+            blogMapper.deleteBlogTags(blog.getId());
         }
-        return blogRepository.save(blog);
+
+        // 保存标签关联（多对多关系）
+        if (blog.getTags() != null && !blog.getTags().isEmpty()) {
+            List<Long> tagIds = new ArrayList<>();
+            for (Tag tag : blog.getTags()) {
+                if (tag.getId() != null) {
+                    tagIds.add(tag.getId());
+                }
+            }
+            if (!tagIds.isEmpty()) {
+                blogMapper.insertBlogTags(blog.getId(), tagIds);
+            }
+        }
+
+        return blog;
     }
 
     @CachePut(cacheNames = "blog", key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public Blog updateBlog(Long id, Blog blog) {
-        Blog b = blogRepository.getById(id);
-        BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));
-        b.setUpdateTime(new Date());
-        return blogRepository.save(b);
+        Blog b = blogMapper.selectById(id);
+        if (b != null) {
+            BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));
+            b.setUpdateTime(new Date());
+            blogMapper.updateById(b);
+
+            // 更新标签关联：先删除旧的，再插入新的
+            if (blog.getTags() != null) {
+                blogMapper.deleteBlogTags(id);
+                List<Long> tagIds = new ArrayList<>();
+                for (Tag tag : blog.getTags()) {
+                    if (tag.getId() != null) {
+                        tagIds.add(tag.getId());
+                    }
+                }
+                if (!tagIds.isEmpty()) {
+                    blogMapper.insertBlogTags(id, tagIds);
+                }
+            }
+        }
+        return b;
     }
 
     /*根据id删除blog*/
@@ -169,6 +309,9 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public void deleteBlog(Long id) {
-        blogRepository.deleteById(id);
+        // 先删除标签关联（多对多关系）
+        blogMapper.deleteBlogTags(id);
+        // 再删除博客本身
+        blogMapper.deleteById(id);
     }
 }

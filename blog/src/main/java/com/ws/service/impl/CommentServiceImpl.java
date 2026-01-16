@@ -1,13 +1,12 @@
 package com.ws.service.impl;
 
-import com.ws.dao.CommentRepository;
+import com.ws.dao.CommentMapper;
 import com.ws.po.Comment;
 import com.ws.service.CommentService;
 import org.springframework.beans.BeanUtils;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,30 +14,65 @@ import java.util.List;
 @Service
 public class CommentServiceImpl implements CommentService {
 
-    private final CommentRepository commentRepository;
+    private final CommentMapper commentMapper;
 
-    public CommentServiceImpl(CommentRepository commentRepository) {
-        this.commentRepository = commentRepository;
+    public CommentServiceImpl(CommentMapper commentMapper) {
+        this.commentMapper = commentMapper;
     }
 
     @Override
     public List<Comment> listCommentByBlogId(Long blogId) {
-        Sort sort = Sort.by("createTime");
-        List<Comment> comments = commentRepository.findByBlogIdAndParentCommentNull(blogId, sort);
+        List<Comment> comments = commentMapper.findByBlogIdAndParentCommentNull(blogId);
+        // 为每个评论加载子评论（因为 MyBatis-Plus 不自动加载关联）
+        for (Comment comment : comments) {
+            List<Comment> replyComments = loadReplyComments(comment.getId());
+            comment.setReplyComments(replyComments);
+        }
         return eachComment(comments);
+    }
+
+    /**
+     * 递归加载回复评论
+     */
+    private List<Comment> loadReplyComments(Long parentCommentId) {
+        // 使用 MyBatis-Plus 查询条件查询子评论
+        List<Comment> comments = commentMapper.selectList(
+            new com.baomidou.mybatisplus.core.conditions.query.QueryWrapper<Comment>()
+                .eq("parent_comment_id", parentCommentId)
+                .orderByDesc("create_time")
+        );
+        for (Comment comment : comments) {
+            // 加载父评论信息（用于显示"@某人"）
+            // 注意：从数据库查询出来的 comment.getParentComment() 是 null
+            // 需要使用 comment.getParentCommentId() 来获取父评论ID
+            if (comment.getParentCommentId() != null) {
+                Comment parentComment = commentMapper.selectById(comment.getParentCommentId());
+                comment.setParentComment(parentComment);
+            }
+            List<Comment> replyComments = loadReplyComments(comment.getId());
+            comment.setReplyComments(replyComments);
+        }
+        return comments;
     }
 
     @Transactional
     @Override
     public Comment saveComment(Comment comment) {
-        Long parentCommentId = comment.getParentComment().getId();
-        if (parentCommentId != -1) {
-            comment.setParentComment(commentRepository.getById(parentCommentId));
+        // 添加空值检查，防止 NullPointerException
+        if (comment.getParentComment() != null) {
+            Long parentCommentId = comment.getParentComment().getId();
+            if (parentCommentId != null && parentCommentId != -1) {
+                comment.setParentComment(commentMapper.selectById(parentCommentId));
+            } else {
+                comment.setParentComment(null);
+            }
         } else {
             comment.setParentComment(null);
         }
         comment.setCreateTime(new Date());
-        return commentRepository.save(comment);
+        // MyBatis-Plus 使用 insert 方法
+        commentMapper.insert(comment);
+        return comment;
     }
 
 

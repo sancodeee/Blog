@@ -3,22 +3,27 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 169167866Spl.
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
   data:
     redis:
       repositories:
         enabled: false
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-      use-new-id-generator-mappings: false
-    show-sql: true
-    properties:
-      hibernate:
-        enable_lazy_load_no_trans: true
+  # MyBatis-Plus 配置
+  mybatis-plus:
+    type-aliases-package: com.ws.po  # 实体类包名
+    mapper-locations: classpath:mapper/*.xml  # Mapper XML 文件位置
+    configuration:
+      map-underscore-to-camel-case: true  # 下划线转驼峰
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 日志输出（SQL 显示）
   cache:
     type: redis
     redis:
@@ -38,7 +43,7 @@ logging:
     root: info
     com.lrm: debug
   file:
-    path: log/blog-dev.log
+    path: log/blog-prod.log
 
 
 

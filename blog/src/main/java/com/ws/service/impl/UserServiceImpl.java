@@ -1,6 +1,6 @@
 package com.ws.service.impl;
 
-import com.ws.dao.UserRepository;
+import com.ws.dao.UserMapper;
 import com.ws.po.User;
 import com.ws.service.UserService;
 import com.ws.util.MD5Utils;
@@ -10,15 +10,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final UserRepository userRepository;
+    private final UserMapper userMapper;
 
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserServiceImpl(UserMapper userMapper) {
+        this.userMapper = userMapper;
     }
 
     @Cacheable(cacheNames = "user", key = "#username", unless = "#result == null ")
     @Override
     public User checkUser(String username, String password) {
-        return userRepository.findByUsernameAndPassword(username, MD5Utils.code(password));
+        return userMapper.findByUsernameAndPassword(username, MD5Utils.code(password));
     }
 }

@@ -1,10 +1,13 @@
 package com.ws.po;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,8 +22,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "t_comment")
-@Table
+@TableName("t_comment")
 public class Comment implements Serializable {
 
     private static final long serialVersionUID = -362529354341985688L;
@@ -28,8 +30,7 @@ public class Comment implements Serializable {
     /**
      * id
      */
-    @Id
-    @GeneratedValue
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -52,25 +53,40 @@ public class Comment implements Serializable {
     /**
      * 创建时间
      */
-    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
     /**
-     * 博客
+     * 博客ID（外键）
      */
-    @ManyToOne
+    private Long blogId;
+
+    /**
+     * 父评论ID（外键）
+     */
+    private Long parentCommentId;
+
+    /**
+     * 博客
+     * MyBatis-Plus 不自动处理关联关系，需要手动查询
+     * 使用 @TableField(exist = false) 标记为非数据库字段
+     */
+    @TableField(exist = false)
     private Blog blog;
 
     /**
-     * 回复评论
+     * 回复评论列表
+     * MyBatis-Plus 不自动处理关联关系，需要手动查询
+     * 使用 @TableField(exist = false) 标记为非数据库字段
      */
-    @OneToMany(mappedBy = "parentComment")
+    @TableField(exist = false)
     private List<Comment> replyComments = new ArrayList<>();
 
     /**
      * 父评论
+     * MyBatis-Plus 不自动处理关联关系，需要手动查询
+     * 使用 @TableField(exist = false) 标记为非数据库字段
      */
-    @ManyToOne
+    @TableField(exist = false)
     private Comment parentComment;
 
     /**

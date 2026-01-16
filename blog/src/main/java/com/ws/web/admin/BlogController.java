@@ -1,5 +1,6 @@
 package com.ws.web.admin;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ws.po.Blog;
 import com.ws.po.User;
 import com.ws.service.BlogService;
@@ -8,9 +9,6 @@ import com.ws.service.TypeService;
 import com.ws.vo.BlogQuery;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
@@ -45,17 +44,21 @@ public class BlogController {
     private TagService tagService;
 
     @GetMapping("/blogs")
-    public String blogs(@PageableDefault(size = 5, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String blogs(@RequestParam(defaultValue = "1") Integer pageNum,
+                        @RequestParam(defaultValue = "5") Integer pageSize,
                         BlogQuery blog, Model model) {
         model.addAttribute("types", typeService.listType());
-        model.addAttribute("page", blogService.listBlog(pageable, blog));
+        Page<Blog> page = new Page<>(pageNum, pageSize);
+        model.addAttribute("page", blogService.listBlog(page, blog));
         return LIST;
     }
 
     @PostMapping("/blogs/search")
-    public String search(@PageableDefault(size = 5, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String search(@RequestParam(defaultValue = "1") Integer pageNum,
+                         @RequestParam(defaultValue = "5") Integer pageSize,
                          BlogQuery blog, Model model) {
-        model.addAttribute("page", blogService.listBlog(pageable, blog));
+        Page<Blog> page = new Page<>(pageNum, pageSize);
+        model.addAttribute("page", blogService.listBlog(page, blog));
         return "admin/blogs :: blogList";
     }
 
@@ -89,9 +92,28 @@ public class BlogController {
             return INPUT;
         }
 
-        blog.setUser((User) session.getAttribute("user"));
-        blog.setType(typeService.getType(blog.getType().getId()));
-        blog.setTags(tagService.listTag(blog.getTagIds()));
+        User user = (User) session.getAttribute("user");
+        log.info("从 session 获取的 user 对象: {}", user);
+        log.info("user.getId(): {}", user != null ? user.getId() : "user is null");
+        blog.setUser(user);
+        // 设置 userId（MyBatis-Plus 需要 userId 字段）
+        if (user != null) {
+            blog.setUserId(user.getId());
+            log.info("设置 blog.getUserId(): {}", blog.getUserId());
+        }
+        // 安全处理 type 和 tags
+        // 表单提交使用 type.id，需要从 blog.type.getId() 获取 typeId
+        if (blog.getType() != null && blog.getType().getId() != null) {
+            blog.setTypeId(blog.getType().getId());
+            blog.setType(typeService.getType(blog.getTypeId()));
+        } else if (blog.getTypeId() != null) {
+            blog.setType(typeService.getType(blog.getTypeId()));
+        }
+        // 处理 tags（tagIds 可能为空字符串）
+        String tagIds = blog.getTagIds();
+        if (tagIds != null && !tagIds.trim().isEmpty()) {
+            blog.setTags(tagService.listTag(tagIds));
+        }
         Blog b;
         if (blog.getId() == null) {
             b = blogService.saveBlog(blog);

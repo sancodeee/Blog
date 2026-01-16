@@ -1,9 +1,9 @@
 package com.ws.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ws.po.Blog;
 import com.ws.vo.BlogQuery;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Map;
@@ -20,13 +20,13 @@ public interface BlogService {
 
     Blog getAndConvert(Long id);
 
-    Page<Blog> listBlog(Pageable pageable, BlogQuery blog);
+    IPage<Blog> listBlog(Page<Blog> pageable, BlogQuery blog);
 
-    Page<Blog> listBlog(Pageable pageable);
+    IPage<Blog> listBlog(Page<Blog> pageable);
 
-    Page<Blog> listBlog(Long tagId, Pageable pageable);
+    IPage<Blog> listBlog(Long tagId, Page<Blog> pageable);
 
-    Page<Blog> listBlog(String query, Pageable pageable);
+    IPage<Blog> listBlog(String query, Page<Blog> pageable);
 
     List<Blog> listRecommendBlogTop(Integer size);
 

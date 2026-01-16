@@ -1,17 +1,15 @@
 package com.ws.web;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.ws.po.Blog;
 import com.ws.service.BlogService;
 import com.ws.service.TagService;
 import com.ws.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -28,19 +26,23 @@ public class IndexController {
     private TagService tagService;
 
     @GetMapping("/")
-    public String index(@PageableDefault(size = 6, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String index(@RequestParam(defaultValue = "1") Integer pageNum,
+                        @RequestParam(defaultValue = "6") Integer pageSize,
                         Model model) {
-        model.addAttribute("page", blogService.listBlog(pageable));
+        Page<Blog> page = new Page<>(pageNum, pageSize);
+        model.addAttribute("page", blogService.listBlog(page));
         model.addAttribute("types", typeService.listTypeTop(6));
         model.addAttribute("tags", tagService.listTagTop(10));
         model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(8));
         return "index";
     }
 
-    @PostMapping("/search")
-    public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    @GetMapping("/search")
+    public String search(@RequestParam(defaultValue = "1") Integer pageNum,
+                         @RequestParam(defaultValue = "8") Integer pageSize,
                          @RequestParam String query, Model model) {
-        model.addAttribute("page", blogService.listBlog("%" + query + "%", pageable));
+        Page<Blog> page = new Page<>(pageNum, pageSize);
+        model.addAttribute("page", blogService.listBlog("%" + query + "%", page));
         model.addAttribute("query", query);
         return "search";
     }

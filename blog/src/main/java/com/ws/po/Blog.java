@@ -1,5 +1,9 @@
 package com.ws.po;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -8,7 +12,6 @@ import lombok.NoArgsConstructor;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -24,16 +27,14 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "t_blog")
+@TableName("t_blog")
 @ApiModel(value = "博客实体类")
-@Table
 public class Blog implements Serializable {
 
     private static final long serialVersionUID = -5541812433648018526L;
 
-    @Id
+    @TableId(type = IdType.AUTO)
     @ApiModelProperty(value = "主键id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotEmpty(message = "博客标题不能为空")
@@ -41,8 +42,11 @@ public class Blog implements Serializable {
     @ApiModelProperty(value = "博客标题")
     private String title;
 
-    @Basic(fetch = FetchType.LAZY)
-    @Lob
+    /**
+     * 博客文本内容
+     * MyBatis-Plus 自动处理大文本，无需 @Lob 注解
+     */
+    @NotEmpty(message = "博客内容不能为空")
     @ApiModelProperty(value = "博客文本内容")
     private String content;
 
@@ -72,32 +76,73 @@ public class Blog implements Serializable {
     @ApiModelProperty(value = "是否推荐")
     private boolean recommend;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    /**
+     * 创建时间
+     * MyBatis-Plus 自动处理 Date 类型，无需 @Temporal 注解
+     */
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
+    /**
+     * 更新时间
+     * MyBatis-Plus 自动处理 Date 类型，无需 @Temporal 注解
+     */
     @ApiModelProperty(value = "更新时间")
-    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
+    /**
+     * 分类ID（外键）
+     */
+    @ApiModelProperty(value = "分类ID")
+    private Long typeId;
+
+    /**
+     * 用户ID（外键）
+     */
+    @ApiModelProperty(value = "用户ID")
+    private Long userId;
+
+    /**
+     * 分类
+     * MyBatis-Plus 不自动处理关联关系，需要手动查询
+     * 使用 @TableField(exist = false) 标记为非数据库字段
+     */
     @ApiModelProperty(value = "分类")
-    @ManyToOne
+    @TableField(exist = false)
     private Type type;
 
+    /**
+     * 标签列表
+     * MyBatis-Plus 不自动处理多对多关系，需要手动处理
+     * 使用 @TableField(exist = false) 标记为非数据库字段
+     */
     @ApiModelProperty(value = "标签")
-    @ManyToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
+    @TableField(exist = false)
     private List<Tag> tags = new ArrayList<>();
 
+    /**
+     * 用户作者
+     * MyBatis-Plus 不自动处理关联关系，需要手动查询
+     * 使用 @TableField(exist = false) 标记为非数据库字段
+     */
     @ApiModelProperty(value = "用户作者")
-    @ManyToOne
+    @TableField(exist = false)
     private User user;
 
+    /**
+     * 评论列表
+     * MyBatis-Plus 不自动处理关联关系，需要手动查询
+     * 使用 @TableField(exist = false) 标记为非数据库字段
+     */
     @ApiModelProperty(value = "评论")
-    @OneToMany(mappedBy = "blog")
+    @TableField(exist = false)
     private List<Comment> comments = new ArrayList<>();
 
+    /**
+     * 标签id（非数据库字段，用于前端展示）
+     */
     @ApiModelProperty(value = "标签id")
-    @Transient
+    @TableField(exist = false)
     private String tagIds;
 
     @Size(max = 200, message = "博客描述长度不能超过200个字符")
