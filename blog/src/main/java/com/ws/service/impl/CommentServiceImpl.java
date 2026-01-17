@@ -63,11 +63,15 @@ public class CommentServiceImpl implements CommentService {
             Long parentCommentId = comment.getParentComment().getId();
             if (parentCommentId != null && parentCommentId != -1) {
                 comment.setParentComment(commentMapper.selectById(parentCommentId));
+                // 设置 parentCommentId（MyBatis-Plus 需要此字段来映射到数据库）
+                comment.setParentCommentId(parentCommentId);
             } else {
                 comment.setParentComment(null);
+                comment.setParentCommentId(null);
             }
         } else {
             comment.setParentComment(null);
+            comment.setParentCommentId(null);
         }
         comment.setCreateTime(new Date());
         // MyBatis-Plus 使用 insert 方法

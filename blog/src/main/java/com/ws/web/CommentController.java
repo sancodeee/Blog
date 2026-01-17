@@ -38,6 +38,8 @@ public class CommentController {
     public String post(Comment comment, HttpSession session) {
         Long blogId = comment.getBlog().getId();
         comment.setBlog(blogService.getBlog(blogId));
+        // 设置 blogId（MyBatis-Plus 需要此字段来映射到数据库）
+        comment.setBlogId(blogId);
         User user = (User) session.getAttribute("user");
         if (user != null) {
             comment.setAvatar(user.getAvatar());
