@@ -251,26 +251,26 @@
             <div id="comment-form" class="ui form">
                 <input type="hidden" name="blog.id" th:value="${blog.id}">
                 <input type="hidden" name="parentComment.id" value="-1">
-                <div class="fields">
+                <div class="field">
                     <textarea name="content" placeholder="输入评论信息..."></textarea>
                 </div>
-                <div class="fields">
-                    <div class="field m-mobile-wide m-margin-bottom-small">
-                        <div class="ui left icon input">
+                <div class="ui stackable three column grid">
+                    <div class="column m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input fluid">
                             <i class="user icon"></i>
                             <input type="text" name="nickname" placeholder="姓名"
                                    th:value="${session.user}!=null ? ${session.user.nickname}">
                         </div>
                     </div>
-                    <div class="field m-mobile-wide m-margin-bottom-small">
-                        <div class="ui left icon input">
+                    <div class="column m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input fluid">
                             <i class="mail icon"></i>
                             <input type="text" name="email" placeholder="邮箱"
                                    th:value="${session.user}!=null ? ${session.user.email}">
                         </div>
                     </div>
-                    <div class="field m-mobile-wide m-margin-bottom-small">
-                        <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i
+                    <div class="column m-mobile-wide m-margin-bottom-small">
+                        <button id="commentpost-btn" type="button" class="ui teal button fluid"><i
                                 class="edit icon"></i>发布
                         </button>
                     </div>
