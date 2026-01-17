@@ -202,9 +202,15 @@
                                        th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}"
                                        onclick="reply(this)">回复</a>
                                 </div>
+                                <div class="actions" th:if="${#arrays.length(comment.replyComments)}>0" style="margin-top: 5px;">
+                                    <a class="expand-replies" onclick="toggleReplies(this)">
+                                        <span class="expand-text" th:text="|展开${#arrays.length(comment.replyComments)}条回复|">展开回复</span>
+                                        <i class="angle down icon"></i>
+                                    </a>
+                                </div>
                             </div>
                             <!--内层-->
-                            <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
+                            <div class="comments collapsed" th:if="${#arrays.length(comment.replyComments)}>0">
                                 <div class="comment" th:each="reply : ${comment.replyComments}">
                                     <a class="avatar">
                                         <img src="https://picsum.photos/seed/picsum/100/100"
@@ -480,6 +486,30 @@
         $("[name='content']").attr("placeholder", "@" + commentNickname).focus();
         $("[name='parentComment.id']").val(commentId);
         $(window).scrollTo($('#comment-form'), 500);
+    }
+
+    function toggleReplies(element) {
+        var $commentItem = $(element).closest('.comment');
+        var $commentsContainer = $commentItem.find('> .comments');
+        var $expandText = $(element).find('.expand-text');
+        var isExpanded = $(element).hasClass('expanded');
+
+        if (isExpanded) {
+            // 收起：添加 collapsed class，恢复原始文本
+            $commentsContainer.slideUp(300);
+            $commentsContainer.addClass('collapsed');
+            $(element).removeClass('expanded');
+            $expandText.text($(element).data('original-text'));
+        } else {
+            // 展开：移除 collapsed class，保存原始文本并显示"收起"
+            if (!$(element).data('original-text')) {
+                $(element).data('original-text', $expandText.text());
+            }
+            $commentsContainer.removeClass('collapsed');
+            $commentsContainer.slideDown(300);
+            $(element).addClass('expanded');
+            $expandText.text('收起');
+        }
     }
 
 

@@ -258,3 +258,38 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+
+/*-----------------------评论展开/收起样式-----------------------*/
+.comments.collapsed {
+    display: none !important;
+}
+
+.expand-replies {
+    color: rgba(0, 0, 0, 0.4) !important;
+    font-size: 0.9em !important;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.expand-replies:hover {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.expand-replies .reply-count {
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.3);
+    margin-left: 4px;
+}
+
+.expand-replies i.angle.down.icon {
+    transition: transform 0.3s ease;
+    margin-left: 4px;
+}
+
+.expand-replies.expanded i.angle.down.icon {
+    transform: rotate(180deg);
+}
+
+.comments {
+    transition: all 0.3s ease;
+}
