@@ -36,10 +36,11 @@
 </nav>
 
 <!--------------------------------------------中间部分------------------------------------->
-<div id="waypoint" class="m-container-small m-padded-tb-big animated bounceInLeft ">
-
-    <div class="ui container ">
-        <div class="ui top attached segment ">
+<div id="waypoint" class="m-container m-padded-tb-big animated bounceInLeft">
+    <div class="ui container">
+        <div class="ui stackable centered grid">
+            <div class="fourteen wide column m-opacity-background">
+                <div class="ui top attached segment">
             <div class="ui horizontal link list">
                 <div class="item" th:if="${blog.user}">
                     <img src="https://picsum.photos/seed/picsum/100/100" th:src="@{${blog.user.avatar}}" alt=""
@@ -67,7 +68,7 @@
         <div class="ui attached padded segment">
             <!--           内容-->
             <div class="ui right aligned basic segment">
-                <div class="ui pink basic label" th:text="${blog.flag}">原创</div>
+                <div class="ui pink basic label" th:text="${#strings.isEmpty(blog.flag) ? '原创' : blog.flag}">原创</div>
             </div>
             <h2 class="ui center aligned header" th:text="${blog.title}">关于刻意练习的清单</h2>
             <br>
@@ -275,9 +276,9 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </div>
-
 </div>
 <div id="toolbar" class="m-padded-mini m-fixed m-right-bottom" style="display: none">
     <div class="ui vertical icon buttons animated bounceInRight">
