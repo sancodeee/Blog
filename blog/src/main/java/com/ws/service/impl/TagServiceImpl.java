@@ -63,10 +63,13 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public List<Tag> listTagTop(Integer size) {
-        // 使用 TagMapper 自定义的 findTop 方法
-        Page<Tag> page = new Page<>(1, size);
-        IPage<Tag> result = tagMapper.findTop(page);
-        return result.getRecords();
+        // 使用带博客数量统计的方法
+        List<Tag> tags = tagMapper.findAllWithBlogCount();
+        // 如果指定了大小限制，只返回前 N 个
+        if (size != null && size < tags.size()) {
+            return tags.subList(0, size);
+        }
+        return tags;
     }
 
     @Override

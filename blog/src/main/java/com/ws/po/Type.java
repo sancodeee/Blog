@@ -35,6 +35,13 @@ public class Type implements Serializable {
     private String name;
 
     /**
+     * 该分类下的博客数量
+     * 使用 @TableField(exist = false) 标记为非数据库字段
+     */
+    @TableField(exist = false)
+    private Integer blogCount;
+
+    /**
      * 关联的博客列表
      * MyBatis-Plus 不自动处理关联关系，需要手动查询
      * 使用 @TableField(exist = false) 标记为非数据库字段

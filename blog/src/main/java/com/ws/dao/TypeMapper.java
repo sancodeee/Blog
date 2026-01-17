@@ -37,4 +37,15 @@ public interface TypeMapper extends BaseMapper<Type> {
     @Select("SELECT * FROM t_type ORDER BY id")
     IPage<Type> findTop(IPage<Type> page);
 
+    /**
+     * 查询所有分类及其博客数量
+     *
+     * @return 分类列表（包含 blogCount）
+     */
+    @Select("SELECT t.*, " +
+            "(SELECT COUNT(*) FROM t_blog WHERE type_id = t.id) AS blog_count " +
+            "FROM t_type t " +
+            "ORDER BY t.id")
+    List<Type> findAllWithBlogCount();
+
 }

@@ -63,10 +63,13 @@ public class TypeServiceImpl implements TypeService {
 
     @Override
     public List<Type> listTypeTop(Integer size) {
-        // 使用 TypeMapper 自定义的 findTop 方法
-        Page<Type> page = new Page<>(1, size);
-        IPage<Type> result = typeMapper.findTop(page);
-        return result.getRecords();
+        // 使用带博客数量统计的方法
+        List<Type> types = typeMapper.findAllWithBlogCount();
+        // 如果指定了大小限制，只返回前 N 个
+        if (size != null && size < types.size()) {
+            return types.subList(0, size);
+        }
+        return types;
     }
 
     @Cacheable(key = "T(String).valueOf(#id)")

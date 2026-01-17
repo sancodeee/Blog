@@ -32,6 +32,13 @@ public class Tag implements Serializable {
     private String name;
 
     /**
+     * 该标签下的博客数量
+     * 使用 @TableField(exist = false) 标记为非数据库字段
+     */
+    @TableField(exist = false)
+    private Integer blogCount;
+
+    /**
      * 关联的博客列表
      * MyBatis-Plus 不自动处理多对多关系，需要手动处理
      * 使用 @TableField(exist = false) 标记为非数据库字段

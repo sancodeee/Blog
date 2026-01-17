@@ -52,7 +52,7 @@
                class="_blank ui basic left pointing m-padded-tb label m-margin-tb-tiney"
                th:classappend="${tag.id==activeTagId} ? 'teal'" th:each="tag : ${tags}">
                 <span th:text="${tag.name}">方法论</span>
-                <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
+                <div class="detail" th:text="${tag.blogCount}">23</div>
             </a>
         </div>
 

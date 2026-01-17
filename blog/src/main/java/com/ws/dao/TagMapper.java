@@ -37,4 +37,15 @@ public interface TagMapper extends BaseMapper<Tag> {
     @Select("SELECT * FROM t_tag ORDER BY id")
     IPage<Tag> findTop(IPage<Tag> page);
 
+    /**
+     * 查询所有标签及其博客数量
+     *
+     * @return 标签列表（包含 blogCount）
+     */
+    @Select("SELECT t.*, " +
+            "(SELECT COUNT(*) FROM t_blog_tags bt WHERE bt.tags_id = t.id) AS blog_count " +
+            "FROM t_tag t " +
+            "ORDER BY t.id")
+    List<Tag> findAllWithBlogCount();
+
 }
