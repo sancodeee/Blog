@@ -55,7 +55,7 @@
                 <div class="ui attached segment ">
                     <div class="ui vertical segment m-padded-tb m-blog-item" th:each="blog : ${page.records}">
                         <div class="ui mobile reversed stackable grid m-blog-content">
-                            <div class="eleven wide column">
+                            <div class="eleven wide column m-blog-content-column">
                                 <h3 class="ui header m-blog-title"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你理解什么是真正的财富自由吗？</a></h3>
                                 <p class="m-blog-description" th:text="|${blog.description}......|">
                                     中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人</p>

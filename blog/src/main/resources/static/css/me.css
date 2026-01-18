@@ -341,6 +341,46 @@ body {
     justify-content: center !important;
 }
 
+/* 左侧内容列固定高度 - 与图片容器保持一致 */
+.m-blog-content-column {
+    height: 200px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* 标签页专用 - 紧凑布局以在200px内容纳标签行 */
+.m-blog-content-column-compact {
+    height: 200px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* 标签页专用 - 描述只显示1行 */
+.m-blog-description-compact {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.6 !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 1 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    min-height: 1.6em !important;
+    max-height: 1.6em !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* 标签页专用 - 紧凑标签行 */
+.m-blog-tags-compact {
+    margin-top: 0.3em !important;
+}
+
+.m-blog-tags-compact .ui.basic.left.pointing.label {
+    padding: 0.3em 0.6em !important;
+    font-size: 0.85em !important;
+    margin: 0.1em !important;
+}
+
 .m-blog-image-container img {
     width: 100% !important;
     height: 100% !important;
