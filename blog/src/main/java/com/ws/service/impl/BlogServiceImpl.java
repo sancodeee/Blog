@@ -170,7 +170,11 @@ public class BlogServiceImpl implements BlogService {
      */
     @Override
     public IPage<Blog> listBlog(Page<Blog> page) {
-        IPage<Blog> result = blogMapper.selectPage(page, null);
+        // 创建查询条件，按更新时间倒序排序
+        QueryWrapper<Blog> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("update_time");
+        IPage<Blog> result = blogMapper.selectPage(page, queryWrapper);
+
         // 为每个博客加载关联数据（user, type, tags）
         for (Blog blog : result.getRecords()) {
             loadUserForBlog(blog);

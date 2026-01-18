@@ -53,8 +53,8 @@
 
                 <!--               content                 -->
                 <div class="ui attached segment ">
-                    <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.records}">
-                        <div class="ui middle aligned mobile reversed stackable grid">
+                    <div class="ui vertical segment m-padded-tb-middle" th:each="blog : ${page.records}">
+                        <div class="ui mobile reversed stackable grid" style="align-items: stretch !important;">
                             <div class="eleven wide column">
                                 <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你理解什么是真正的财富自由吗？</a></h3>
                                 <p class="m-text" th:text="|${blog.description}......|">
@@ -81,9 +81,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="five wide column">
-                                <a href="" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
-                                    <img src="https://picsum.photos/id/237/800/500" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image">
+                            <div class="five wide column" style="display: flex; align-items: stretch;">
+                                <a href="" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" style="width: 100%; height: 100%;">
+                                    <img src="https://picsum.photos/id/237/800/500" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                                 </a>
                             </div>
                         </div>
