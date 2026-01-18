@@ -53,13 +53,13 @@
 
                 <!--               content                 -->
                 <div class="ui attached segment ">
-                    <div class="ui vertical segment m-padded-tb-middle" th:each="blog : ${page.records}">
-                        <div class="ui mobile reversed stackable grid" style="align-items: stretch !important;">
+                    <div class="ui vertical segment m-padded-tb m-blog-item" th:each="blog : ${page.records}">
+                        <div class="ui mobile reversed stackable grid m-blog-content">
                             <div class="eleven wide column">
-                                <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你理解什么是真正的财富自由吗？</a></h3>
-                                <p class="m-text" th:text="|${blog.description}......|">
+                                <h3 class="ui header m-blog-title"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你理解什么是真正的财富自由吗？</a></h3>
+                                <p class="m-blog-description" th:text="|${blog.description}......|">
                                     中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人中国人不打中国人</p>
-                                <div class="ui grid">
+                                <div class="ui grid m-blog-meta">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
@@ -81,9 +81,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="five wide column" style="display: flex; align-items: stretch;">
-                                <a href="" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" style="width: 100%; height: 100%;">
-                                    <img src="https://picsum.photos/id/237/800/500" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <div class="five wide column m-blog-image-container">
+                                <a href="" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" style="display: flex; width: 100%; height: 100%; align-items: center; justify-content: center;">
+                                    <img src="https://picsum.photos/id/237/800/500" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image">
                                 </a>
                             </div>
                         </div>

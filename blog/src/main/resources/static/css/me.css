@@ -293,3 +293,90 @@ body {
 .comments {
     transition: all 0.3s ease;
 }
+
+/*-----------------------博客列表高度统一样式-----------------------*/
+
+/* 博客列表项容器 - 调整高度 */
+.m-blog-item {
+    /* 根据用户需求调整至 200px */
+    min-height: 200px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    /* 覆盖 Semantic UI vertical segment 的默认间距 */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* 博客内容区域 - 保持 Semantic UI grid 布局 */
+.m-blog-content {
+    /* 不设置 display: flex，保持 Semantic UI 的 grid 行为 */
+    align-items: stretch !important;
+}
+
+/* 描述文本限制 - 2行省略 */
+.m-blog-description {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8 !important;
+
+    /* 多行文本省略核心样式 */
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 2 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+
+    /* 固定高度确保一致性 */
+    min-height: 3.6em !important;
+    max-height: 3.6em !important;
+    margin-bottom: 1em !important;
+}
+
+/* 图片容器固定高度 */
+.m-blog-image-container {
+    height: 200px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.m-blog-image-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* 博客标题限制为单行 */
+.m-blog-title {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* 元信息容器 - 确保底部对齐 */
+.m-blog-meta {
+    margin-top: auto !important;
+}
+
+/* 响应式设计 - 移动端适配 */
+@media screen and (max-width: 768px) {
+    /* 移动端增加描述行数到3行 */
+    .m-blog-description {
+        -webkit-line-clamp: 3 !important;
+        min-height: 5.4em !important;
+        max-height: 5.4em !important;
+    }
+
+    /* 移动端调整图片容器高度 */
+    .m-blog-image-container {
+        height: 180px !important;
+    }
+
+    /* 移动端调整整体高度 */
+    .m-blog-item {
+        min-height: auto !important;
+    }
+}
