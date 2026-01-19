@@ -65,6 +65,7 @@ public class BlogServiceImpl implements BlogService {
         Blog blog = blogMapper.selectById(id);
         if (blog != null) {
             loadTagsForBlog(blog);
+            loadTypeForBlog(blog);
         }
         return blog;
     }
