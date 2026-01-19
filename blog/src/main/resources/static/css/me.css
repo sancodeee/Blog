@@ -193,6 +193,11 @@ body {
     margin: auto !important;
 }
 
+.m-container-large {
+    max-width: 100em !important;
+    margin: auto !important;
+}
+
 /*------------------------shadow--------------------------*/
 .m-shadow-small {
     -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
@@ -300,6 +305,22 @@ body {
 }
 
 /*-----------------------博客列表高度统一样式-----------------------*/
+
+/*-----------------------管理后台博客列表表格样式-----------------------*/
+/* 标题列文本溢出处理 */
+.ui.table tbody tr td:nth-child(2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 0;
+}
+
+/* 鼠标悬停显示完整标题 */
+.ui.table tbody tr td:nth-child(2):hover {
+    white-space: normal;
+    word-break: break-all;
+}
+
 
 /* 博客列表项容器 - 调整高度 */
 .m-blog-item {
