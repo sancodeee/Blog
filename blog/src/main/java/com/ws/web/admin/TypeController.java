@@ -65,7 +65,7 @@ public class TypeController {
     @PostMapping("/types/{id}")
     public String editPost(@Valid Type type, BindingResult result, @PathVariable Long id, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
-        if (type1 != null) {
+        if (type1 != null && !type1.getId().equals(id)) {
             result.rejectValue("name", "nameError", "不能添加重复的分类");
         }
         if (result.hasErrors()) {

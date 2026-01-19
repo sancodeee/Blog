@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ws.dao.BlogMapper;
+import com.ws.dao.CommentMapper;
 import com.ws.dao.TagMapper;
 import com.ws.dao.TypeMapper;
 import com.ws.dao.UserMapper;
@@ -40,13 +41,16 @@ public class BlogServiceImpl implements BlogService {
     private final TagMapper tagMapper;
     private final TypeMapper typeMapper;
     private final UserMapper userMapper;
+    private final CommentMapper commentMapper;
 
     public BlogServiceImpl(BlogMapper blogMapper, TagMapper tagMapper,
-                           TypeMapper typeMapper, UserMapper userMapper) {
+                           TypeMapper typeMapper, UserMapper userMapper,
+                           CommentMapper commentMapper) {
         this.blogMapper = blogMapper;
         this.tagMapper = tagMapper;
         this.typeMapper = typeMapper;
         this.userMapper = userMapper;
+        this.commentMapper = commentMapper;
     }
 
     /**
@@ -318,9 +322,17 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public void deleteBlog(Long id) {
-        // 先删除标签关联（多对多关系）
+        // 先删除子评论（有父评论的评论）
+        QueryWrapper<com.ws.po.Comment> childWrapper = new QueryWrapper<>();
+        childWrapper.eq("blog_id", id).isNotNull("parent_comment_id");
+        commentMapper.delete(childWrapper);
+        // 再删除父评论（顶级评论）
+        QueryWrapper<com.ws.po.Comment> parentWrapper = new QueryWrapper<>();
+        parentWrapper.eq("blog_id", id).isNull("parent_comment_id");
+        commentMapper.delete(parentWrapper);
+        // 再删除标签关联（多对多关系）
         blogMapper.deleteBlogTags(id);
-        // 再删除博客本身
+        // 最后删除博客本身
         blogMapper.deleteById(id);
     }
 

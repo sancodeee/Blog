@@ -72,7 +72,7 @@ public class TagController {
     @PostMapping("/tags/{id}")
     public String editPost(@Valid Tag tag, BindingResult result, @PathVariable Long id, RedirectAttributes attributes) {
         Tag tag1 = tagService.getTagByName(tag.getName());
-        if (tag1 != null) {
+        if (tag1 != null && !tag1.getId().equals(id)) {
             result.rejectValue("name", "nameError", "不能添加重复的分类");
         }
         if (result.hasErrors()) {

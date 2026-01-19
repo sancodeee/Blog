@@ -72,7 +72,7 @@ public class TypeServiceImpl implements TypeService {
         return types;
     }
 
-    @Cacheable(key = "T(String).valueOf(#id)")
+    @CachePut(key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public Type updateType(Long id, Type type) {

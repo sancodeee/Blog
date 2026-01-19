@@ -89,7 +89,7 @@ public class TagServiceImpl implements TagService {
         return list;
     }
 
-    @Cacheable(key = "T(String).valueOf(#id)")
+    @CachePut(key = "T(String).valueOf(#id)")
     @Transactional
     @Override
     public Tag updateTag(Long id, Tag tag) {
