@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 博客服务实现
@@ -73,10 +74,14 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public Blog getAndConvert(Long id) {
+        // 先使用数据库级别的原子更新（避免并发导致的重复计数）
+        blogMapper.updateViews(id);
+
         Blog blog = blogMapper.selectById(id);
         if (blog == null) {
             return null;
         }
+
         // 加载关联数据
         loadTagsForBlog(blog);
         loadTypeForBlog(blog);
@@ -90,7 +95,7 @@ public class BlogServiceImpl implements BlogService {
         b.setTags(blog.getTags());
         String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
-        blogMapper.updateViews(id);
+
         return b;
     }
 
@@ -317,5 +322,29 @@ public class BlogServiceImpl implements BlogService {
         blogMapper.deleteBlogTags(id);
         // 再删除博客本身
         blogMapper.deleteById(id);
+    }
+
+    /**
+     * 批量获取博客浏览次数
+     *
+     * @param ids 博客ID列表
+     * @return ID -> 浏览次数的映射
+     */
+    @Override
+    public Map<Long, Integer> getViewsByIds(List<Long> ids) {
+        if (ids == null || ids.isEmpty()) {
+            return Collections.emptyMap();
+        }
+
+        // 使用 MyBatis-Plus 的批量查询
+        List<Blog> blogs = blogMapper.selectBatchIds(ids);
+
+        // 转换为 Map
+        return blogs.stream()
+                .collect(Collectors.toMap(
+                        Blog::getId,
+                        Blog::getViews,
+                        (v1, v2) -> v1  // 处理重复 key
+                ));
     }
 }

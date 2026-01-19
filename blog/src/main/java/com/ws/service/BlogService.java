@@ -40,4 +40,12 @@ public interface BlogService {
 
     void deleteBlog(Long id);
 
+    /**
+     * 批量获取博客浏览次数
+     *
+     * @param ids 博客ID列表
+     * @return ID -> 浏览次数的映射
+     */
+    Map<Long, Integer> getViewsByIds(List<Long> ids);
+
 }

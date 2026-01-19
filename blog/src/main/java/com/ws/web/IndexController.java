@@ -11,6 +11,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 @Controller
@@ -57,5 +63,20 @@ public class IndexController {
     public String newblogs(Model model) {
         model.addAttribute("newblogs", blogService.listRecommendBlogTop(3));
         return "_fragments :: newblogList";
+    }
+
+    /**
+     * 批量获取博客浏览次数
+     *
+     * @param ids 博客ID列表，逗号分隔
+     * @return 博客浏览次数的 Map
+     */
+    @GetMapping("/api/blogs/views")
+    @ResponseBody
+    public Map<Long, Integer> getBlogsViews(@RequestParam String ids) {
+        List<Long> idList = Arrays.stream(ids.split(","))
+                .map(Long::valueOf)
+                .collect(Collectors.toList());
+        return blogService.getViewsByIds(idList);
     }
 }
