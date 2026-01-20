@@ -114,11 +114,11 @@
                 <div class="ui bottom attached segment" th:if="${page.pages}>1">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <a href="#" th:href="@{'/tags/'+${activeTagId}(page=${page.current}-1)}" th:unless="${page.first}"
+                            <a href="#" th:href="@{'/tags/'+${activeTagId}(pageNum=${page.current}-1)}" th:unless="${page.first}"
                                class="ui mini teal basic button">上一页</a>
                         </div>
                         <div class="right aligned column">
-                            <a href="#" th:href="@{'/tags/'+${activeTagId}(page=${page.current}+1)}" th:unless="${page.last}"
+                            <a href="#" th:href="@{'/tags/'+${activeTagId}(pageNum=${page.current}+1)}" th:unless="${page.last}"
                                class="ui mini teal basic button">下一页</a>
                         </div>
                     </div>

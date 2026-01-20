@@ -78,8 +78,8 @@
             <tr>
                 <th colspan="6">
                     <div class="ui mini pagination menu" th:if="${page.pages}>1">
-                        <a th:href="@{/admin/types(page=${page.current}-1)}" href="#" class="item" th:unless="${page.current == 1}">上一页</a>
-                        <a th:href="@{/admin/types(page=${page.current}+1)}" href="#" class="item" th:unless="${page.current == page.pages}">下一页</a>
+                        <a th:href="@{/admin/types(pageNum=${page.current}-1)}" href="#" class="item" th:unless="${page.current == 1}">上一页</a>
+                        <a th:href="@{/admin/types(pageNum=${page.current}+1)}" href="#" class="item" th:unless="${page.current == page.pages}">下一页</a>
                     </div>
                     <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated orange basic button m-margin-tb">新增</a>
                 </th>

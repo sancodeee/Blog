@@ -2,7 +2,7 @@
  * 管理后台删除确认功能
  * 统一处理所有删除操作的二次确认
  */
-(function() {
+(function () {
     'use strict';
 
     // 配置
@@ -31,13 +31,13 @@
         $modal.modal({
             closable: true,
             allowMultiple: false,
-            onDeny: function() {
+            onDeny: function () {
                 console.log('[删除确认] onDeny 触发');
                 isConfirmed = false;
                 currentDeleteUrl = null;
                 return false;  // 阻止默认关闭行为
             },
-            onApprove: function() {
+            onApprove: function () {
                 console.log('[删除确认] onApprove 触发，URL:', currentDeleteUrl);
                 // 添加额外检查
                 if (!isConfirmed || !currentDeleteUrl) {
@@ -51,7 +51,7 @@
         });
 
         // 绑定删除按钮点击事件
-        $(document).on('click', '.' + CONFIG.deleteButtonClass, function(event) {
+        $(document).on('click', '.' + CONFIG.deleteButtonClass, function (event) {
             event.preventDefault();
             event.stopPropagation();
 
@@ -73,8 +73,8 @@
 
             // 设置确认消息
             const message = itemTitle
-                ? '确定要删除【' + itemName + '】' + itemTitle + '吗？此操作不可恢复。'
-                : '确定要删除该【' + itemName + '】吗？此操作不可恢复。';
+                ? '确定要删除【' + itemName + '】' + ':' + '【' + itemTitle + '】' + '吗？此操作不可恢复'
+                : '确定要删除该【' + itemName + '】吗？此操作不可恢复';
 
             $modal.find('.delete-message').text(message);
             $modal.find('.delete-title').text('删除' + itemName);
@@ -85,7 +85,7 @@
         });
 
         // 手动绑定取消按钮（使用更精确的选择器）
-        $modal.find('.actions .cancel.button').on('click.cancel', function(e) {
+        $modal.find('.actions .cancel.button').on('click.cancel', function (e) {
             console.log('[删除确认] 手动取消按钮触发');
             e.preventDefault();
             e.stopPropagation();
@@ -98,7 +98,7 @@
         });
 
         // 手动绑定确认删除按钮
-        $modal.find('.actions .ok.button').on('click.confirm', function(e) {
+        $modal.find('.actions .ok.button').on('click.confirm', function (e) {
             console.log('[删除确认] 手动确认按钮触发');
             e.preventDefault();
             e.stopPropagation();
@@ -106,7 +106,7 @@
             isConfirmed = true;
             $modal.modal('hide');  // 先关闭模态框
             // 延迟执行删除，确保模态框完全关闭
-            setTimeout(function() {
+            setTimeout(function () {
                 if (currentDeleteUrl) {
                     console.log('[删除确认] 执行删除，URL:', currentDeleteUrl);
                     window.location.href = currentDeleteUrl;
@@ -119,7 +119,7 @@
     }
 
     // 使用 jQuery 确保 DOM 加载完成后初始化
-    $(function() {
+    $(function () {
         init();
     });
 })();

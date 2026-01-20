@@ -44,8 +44,8 @@
 </div>
 
 <!--------------------------------------------中间部分------------------------------------->
-<div class="m-container-large m-padded-tb-big" id="main-content" style="visibility: hidden; opacity: 0;">
-    <div>
+<div class="m-container m-padded-tb-big" id="main-content" style="visibility: hidden; opacity: 0;">
+    <div class="ui container">
         <div class="ui secondary segment form">
             <input type="hidden" name="page">
             <div class="inline fields m-margin-tb-tiney">
@@ -239,7 +239,7 @@
             title : $("[name='title']").val(),
             typeId : $("[name='typeId']").val(),
             recommend : $("[name='recommend']").prop('checked'),
-            page : $("[name='page']").val()
+            pageNum : $("[name='page']").val()
         });
     }
 
