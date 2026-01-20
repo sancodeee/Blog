@@ -44,7 +44,7 @@
 </div>
 
 <!--------------------------------------------中间部分------------------------------------->
-<div class="m-container-large m-padded-tb-big animated fadeInDown">
+<div class="m-container-large m-padded-tb-big" id="main-content" style="visibility: hidden; opacity: 0;">
     <div>
         <div class="ui secondary segment form">
             <input type="hidden" name="page">
@@ -182,6 +182,17 @@
 <!--/*/</th:block>/*/-->
 
 <script>
+    // 使用 JavaScript 触发动画，防止白屏闪烁和 footer 跳动
+    $(document).ready(function() {
+        var $content = $('#main-content');
+        // 先设置可见，但保持透明
+        $content[0].style.visibility = 'visible';
+        // 强制浏览器重新计算布局
+        void $content[0].offsetWidth;
+        // 添加动画类
+        $content.addClass('animated lightSpeedIn');
+    });
+
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });

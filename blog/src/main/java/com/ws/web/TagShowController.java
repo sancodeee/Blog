@@ -28,9 +28,20 @@ public class TagShowController {
                        @RequestParam(defaultValue = "8") Integer pageSize,
                        @PathVariable Long id, Model model) {
         List<Tag> tags = tagService.listTagTop(10000);
-        if (id == -1 && !tags.isEmpty()) {
+
+        // 如果标签列表为空，返回空分页结果
+        if (tags.isEmpty()) {
+            model.addAttribute("tags", tags);
+            model.addAttribute("page", new Page<Blog>(pageNum, pageSize));
+            model.addAttribute("activeTagId", id);
+            return "tags";
+        }
+
+        // 如果 id 为 -1，使用第一个标签的 ID
+        if (id == -1) {
             id = tags.get(0).getId();
         }
+
         Page<Blog> page = new Page<>(pageNum, pageSize);
         model.addAttribute("tags", tags);
         model.addAttribute("page", blogService.listBlog(id, page));
