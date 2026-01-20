@@ -101,6 +101,27 @@
     </div>
 </footer>
 
+<!-- 删除确认模态框 -->
+<div th:fragment="deleteConfirmModal" class="ui modal delete-confirm-modal">
+    <div class="ui icon header">
+        <i class="trash icon"></i>
+        <span class="delete-title">删除确认</span>
+    </div>
+    <div class="content">
+        <p class="delete-message">确定要删除吗？此操作不可恢复。</p>
+    </div>
+    <div class="actions">
+        <div class="ui red basic cancel button">
+            <i class="remove icon"></i>
+            取消
+        </div>
+        <div class="ui green ok button">
+            <i class="checkmark icon"></i>
+            确认删除
+        </div>
+    </div>
+</div>
+
 <th:block th:fragment="script">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>

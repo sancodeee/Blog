@@ -65,7 +65,11 @@
                 <td th:text="${type.name}">刻意练习清单</td>
                 <td>
                     <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini green button">编辑</a>
-                    <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini red button">删除</a>
+                    <a href="javascript:void(0)"
+                       th:data-url="@{/admin/types/{id}/delete(id=${type.id})}"
+                       class="ui mini red button delete-btn"
+                       th:data-item-name="'分类'"
+                       th:data-item-title="${type.name}">删除</a>
                 </td>
             </tr>
             </tbody>
@@ -132,6 +136,9 @@
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <!--/*/</th:block>/*/-->
 
+<!-- 删除确认模态框 -->
+<div th:replace="admin/_fragments :: deleteConfirmModal"></div>
+<script th:src="@{/js/admin-delete-confirm.js}"></script>
 
 <script>
     // 使用 JavaScript 触发动画，防止白屏闪烁和 footer 跳动
